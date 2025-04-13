@@ -1,0 +1,92 @@
+\chapter{Quantum-Resistant Cryptography}
+
+\section{Post-Quantum Cryptography Overview}
+Post-quantum cryptography refers to cryptographic algorithms believed to be secure against quantum computer attacks. Unlike current public-key systems, these approaches rely on mathematical problems that remain hard even for quantum computers.
+
+\section{Lattice-Based Cryptography}
+Lattice-based cryptography bases its security on problems in lattice theory that are computationally difficult:
+
+\begin{itemize}
+    \item \textbf{Learning With Errors (LWE):} Forms the basis for many lattice-based systems
+    \item \textbf{NTRU:} One of the oldest lattice-based systems
+    \item \textbf{CRYSTALS-Kyber:} Selected by NIST for key encapsulation
+\end{itemize}
+
+% Temporarily commenting out problematic image - replace with actual PNG file later
+% \begin{figure}[h]
+%     \centering
+%     \includegraphics[width=0.7\textwidth]{src/images/lattice_cryptography.png}
+%     \caption{Basic Concept of Lattice Cryptography}
+% \end{figure}
+
+\section{Hash-Based Signatures}
+Hash-based signatures rely only on the security of cryptographic hash functions:
+
+\begin{itemize}
+    \item \textbf{Merkle Signature Scheme:} Uses a binary hash tree
+    \item \textbf{SPHINCS+:} A stateless hash-based signature scheme selected by NIST
+\end{itemize}
+
+These systems have strong security proofs but produce larger signatures than traditional algorithms.
+
+\section{Code-Based Cryptography}
+Code-based systems use error-correcting codes for security:
+
+\begin{itemize}
+    \item \textbf{McEliece:} Proposed in 1978, one of the oldest post-quantum candidates
+    \item Uses the difficulty of decoding general linear codes
+\end{itemize}
+
+While secure, these systems typically require large key sizes.
+
+\section{Multivariate Cryptography}
+Multivariate cryptography is based on the difficulty of solving systems of multivariate polynomial equations:
+
+\begin{itemize}
+    \item Efficient for signatures but less practical for encryption
+    \item Vulnerable to specific attacks in some implementations
+\end{itemize}
+
+\section{NIST Standardization Process}
+The National Institute of Standards and Technology (NIST) initiated a post-quantum cryptography standardization process in 2016:
+
+\begin{itemize}
+    \item 69 candidate algorithms initially submitted
+    \item Multiple rounds of evaluation for security, performance, and implementation characteristics
+    \item Selected algorithms include CRYSTALS-Kyber (key encapsulation) and CRYSTALS-Dilithium, FALCON, and SPHINCS+ (digital signatures)
+\end{itemize}
+
+% Temporarily commenting out problematic image - replace with actual PNG file later
+% \begin{figure}[h]
+%     \centering
+%     \includegraphics[width=0.7\textwidth]{src/images/post_quantum_comparison.png}
+%     \caption{Comparison of Post-Quantum Cryptographic Approaches}
+% \end{figure}
+
+\section{Quantum Key Distribution}
+Unlike post-quantum cryptography, quantum key distribution (QKD) uses quantum mechanics itself for secure communication:
+
+\begin{itemize}
+    \item Based on the principle that measurement disturbs quantum states
+    \item Can detect eavesdropping attempts
+    \item Requires specialized hardware and direct optical links
+    \item Limited by distance (typically <100km without quantum repeaters)
+\end{itemize}
+
+% Temporarily commenting out problematic image - replace with actual PNG file later
+% \begin{figure}[h]
+%     \centering
+%     \includegraphics[width=0.6\textwidth]{src/images/quantum_key_distribution.png}
+%     \caption{Basic Quantum Key Distribution Process}
+% \end{figure}
+
+\section{Hybrid Approaches}
+During the transition period, hybrid approaches combining classical and post-quantum algorithms provide the best security:
+
+\begin{itemize}
+    \item Combine traditional algorithms (RSA/ECC) with post-quantum candidates
+    \item Security relies on the stronger of the two schemes
+    \item Provides backward compatibility while adding quantum resistance
+\end{itemize}
+
+Google, Cloudflare, and other major tech companies have already begun experimenting with such hybrid approaches in TLS implementations.

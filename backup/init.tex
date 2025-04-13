@@ -1,0 +1,666 @@
+\documentclass{report}
+\usepackage{hyperref}
+\usepackage{url}
+\usepackage{amsmath}
+\usepackage{graphicx}
+\usepackage[
+backend=biber,
+style=numeric,
+bibstyle=reading,
+sorting=ynt
+]{biblatex}
+
+\addbibresource{intro.bib}
+\title{Quantum Computing and Its Impact on Cryptography}
+\author{Lou Sergonne}
+\date{2024-2025}
+
+\begin{document}
+
+\maketitle
+\tableofcontents
+
+\chapter{Introduction}
+\section{Overview of Quantum Computing}
+Brief overview of quantum computing principles.
+
+\section{Importance of Quantum Computing}
+Discussion on the potential applications and significance.
+
+\section{Comparison with Classical Computing}
+Highlighting key differences between quantum and classical computing.
+
+
+\chapter{Fundamentals of Quantum Computing}
+
+Quantum computing marks a major shift in computation, relying on quantum mechanics. Unlike classical computing with bits, quantum computing uses qubits, which utilize superposition and entanglement to perform calculations beyond classical capabilities.
+
+This chapter introduces quantum-computing’s foundational concepts, including wave-particle duality, superposition, and entanglement, which are key principles explaining quantum behaviour.
+
+In this chapter, we will explore quantum states and qubits, their representation, and manipulation. Additionally, this chapter covers quantum gates and circuits, which are essential for quantum algorithms, and highlights Shor's and Grover's algorithms to showcase the practical potential of quantum computing. By the end of this chapter, readers should have a solid foundation in basic quantum computing principles, allowing them to further ponder the future of cryptography.
+
+\section{Quantum Mechanics Principles}
+
+\subsection{Wave-Particle Duality}
+Wave-particle duality is a cornerstone of quantum mechanics. Basically it demonstrates that particles such as photons and electrons exhibit both wave-like and particle-like properties. This duality challenges classical notions of physics and is crucial for understanding quantum phenomena, including those leveraged in quantum computing.
+
+The concept of wave-particle duality emerged from experiments like the double-slit experiment, first performed by Thomas Young in 1801 \cite{imperialDoubleslitExperiment}, which revealed the double nature of light through interference patterns. 
+
+The experiment consists of shining a coherent light source, such as a laser, through a barrier with two closely spaced slits. On the other side, a detection screen captures the light’s behavior. Instead of producing two bright spots corresponding to the slits, the screen displays an interference pattern of alternating bright and dark fringes, characteristic of wave behavior. This demonstrated that light travels as a wave.
+
+Later, Einstein’s explanation of the photoelectric effect revealed light’s particle-like nature. He proposed that light consists of discrete packets of energy, or photons, which could eject electrons from a metal surface. This duality was further extended by Louis de Broglie, who suggested that particles such as electrons exhibit wave-like properties, confirmed experimentally by electron diffraction.
+
+ 
+
+\begin{figure}
+    \centering
+    \includegraphics[width=0.75\linewidth]{wave-particle-duality1.png}
+    \caption{Visual representation of the double slit experiment}
+    \label{fig:double-slit}
+\end{figure}
+
+As visualized in \ref{fig:double-slit} , particles can behave as waves under certain conditions. This duality is fundamental to quantum computing as it shows the probabilistic nature of quantum states and enables phenomena like superposition and interference.
+
+In the following chapters, the importance of this duality and its consequences will be explored further, particularly its implications for quantum algorithms and computational efficiency.
+\cite{photonterraceWaveparticleDuality}
+\cite{Quantum101yt}
+\cite{wavedualityyt}
+\cite{physicsminute}
+\cite{QuantumLeaps}
+
+ 
+ 
+
+\subsection{Quantum Superposition}
+\label{quantum-superposition}
+A superposition is the term used to describe a quantum system that exists in a combination of two or more states simultaneously. This means that until the system is observed or measured, it does not have a definite state but rather a probability distribution over all possible states. Electrons, for example, do not have a fixed location but instead exist within a probabilistic region known as an electron cloud. Within this sphere of probabilities, the electron’s exact position cannot be determined until it is observed or measured, reflecting the inherent uncertainty and probabilistic nature of quantum mechanics. This probabilistic behavior is fundamental to understanding quantum systems and highlights the departure from classical deterministic models.
+
+For instance, a qubit, the fundamental unit of quantum computing, can exist in a state represented by a combination of ‘0’ and ‘1’, unlike classical bits which are restricted to one of these values at any given time. This principle allows quantum computers to process vast amounts of information in parallel, as the qubits leverage their probabilistic nature to represent and compute multiple possibilities simultaneously.
+
+Probabilities in quantum mechanics are often represented using the Born rule, which calculates the probability of an outcome as the square of the amplitude's magnitude. For example, if a quantum state \(\psi\) is expressed as \(\psi=a|0\rangle+b|1\rangle \) the probabilities of observing \(|0\rangle\) or \(|1\rangle\) are \(|a|^2\) and \(|b|^2\), respectively. Here, \textbf{a} and \textbf{b} are complex coefficients, and their squared magnitudes sum to 1: \(|a|^2+|b|^2=1\). This scientific representation encapsulates the probabilistic nature of a quantum superposition.
+
+ \cite{wikipediaDoubleslitExperiment}
+\cite{umdQuantumSuperposition}
+ 
+\subsection{Quantum Entanglement}
+
+Quantum entanglement stands as one of the most intriguing and non-intuitive phenomena of quantum mechanics. It describes a quantum mechanical state in which two or more particles become fundamentally interconnected in such a way that the state of one particle cannot be described independently of the state of the other(s). This correlation persists even if the entangled particles are light-years apart, a phenomenon that Albert Einstein famously referred to as “spooky action at a distance”, and marks a departure from classical physics.
+
+When particles become entangled, the measurement of a quantum property (such as spin, polarization, or momentum) on one particle instantaneously correlates with the corresponding property of its entangled partner(s). This correlation is not a result of pre-existing properties but emerges upon measurement, challenging our classical intuitions about locality and causality.
+
+The key characteristic of entanglement is that it leads to non-local correlations between particles. For example, in a typical entangled photon experiment, two photons are generated in an entangled state, and their properties (e.g., polarization) are measured. If the polarization of one photon is measured to be vertically polarized, the other photon, when measured, will necessarily show the opposite polarization, regardless of the distance between them.
+This immediate exchange of information is the aspect of this principle that is most mind-boggling. This is counterintuitive because it suggests a form of instant communication between particles, which defies the classical understanding that nothing can travel faster than light, making this phenomenon particularly perplexing.
+
+The conflict between quantum entanglement and local realism, often referred to as the Einstein-Podolsky-Rosen (EPR) paradox, highlights the tension between the quantum mechanical phenomenon where particles become interlinked and influence each other instantly at any distance, and the principle of locality which asserts that an object is influenced only by its immediate surroundings as introduced in the provided footnote.
+
+\cite{scientificamericanQuantumEntanglement}
+\cite{veritasiumentanglemet}
+\cite{caltechWhatEntanglement}
+
+\subsection{Heisenberg Uncertainty Principle}
+
+The Heisenberg Uncertainty Principle, formulated by Werner Heisenberg in 1927, asserts that certain pairs of physical properties, such as position and momentum, cannot be simultaneously measured with arbitrary precision. More specifically, the more precisely one property is measured, the less precisely the other can be known. This inherent limitation arises not from the imperfection of measurement instruments, but from the fundamental nature of quantum systems themselves.
+
+Mathematically, the Heisenberg Uncertainty Principle is often expressed as:
+
+\begin{equation}
+    \Delta x \cdot \Delta p \geq \frac{\hbar}{2}
+    \label{eq:heisenberg_uncertainty}
+\end{equation}
+where \(\Delta x\) is the uncertainty in position, \(\Delta p\) is the uncertainty in momentum, and \(\hbar\) is the reduced Planck constant. This inequality shows us the relation between the two uncertainties, where if one shrinks, the other increases in size.
+
+The Uncertainty Principle challenges classical physics, where position and momentum can be measured independently and simultaneously to any desired degree of precision. In quantum mechanics, however, the act of measuring one property disturbs the system, making the precise measurement of the related property impossible. 
+
+The implications of the Uncertainty Principle are profound. It implies that at the quantum scale, the concept of a particle having both a well-defined position and momentum is not meaningful. Instead, quantum systems are described by wavefunctions, which provide a probability distribution for where a particle might be found or what its momentum might be. As a result, quantum mechanics is fundamentally probabilistic rather than deterministic.
+
+In addition to position and momentum, the Heisenberg Uncertainty Principle applies to other pairs of complementary properties, such as energy and time, or angular momentum components. This principle plays a crucial role in various quantum phenomena, including quantum tunneling and the stability of atoms. It also lays the groundwork for the development of quantum technologies, where uncertainty can be manipulated for practical applications such as quantum computing and quantum cryptography.
+
+In summary, the Heisenberg Uncertainty Principle encapsulates the limitations of measurement at the quantum scale. It challenges classical intuitions about determinism and measurement, showing us the difference between quantum and classical physics.
+
+\cite{caltechWhatUncertainty}
+\cite{britannicaUncertaintyPrinciple}
+\cite{heisenbergyt}
+
+\section{Qubits}
+A qubit ("quantum bit")  is the basic unit of quantum information, but unlike classical bits which can be either 0 or 1, a qubit can be in a superposition of both states simultaneously. As explained in the chapter \ref{quantum-superposition}  the probability is represented with two complex numbers that satisfy the condition \(
+    \lvert \alpha \rvert^{2} +\lvert \beta \rvert^{2} = 1
+    \label{eq:custom_eq} \), to ensure the total condition of finding the qubit in one of its two states adds up to one.
+This concept is the key difference between regulare bits and qubits. Until measured a qubit stays in that superposition and upon measurement "collapses" into one of the two states.
+
+In practice quantum states are often represented on the Bloch Sphere, a geometric representation of the state space of a single qubit.
+\begin{figure}
+    \centering
+    \includegraphics[width=0.5\linewidth]{220px-Bloch_sphere.svg.png}
+    \caption{Bloch Sphere}
+    \label{fig:bloch-sphere}
+\end{figure}
+To convert an arbitrary superposition of 0 and 1 to a point on the sphere, the parametrization 
+
+\[
+    |\psi \rangle = cos(\frac{\theta}{2})|0 \rangle + e^{\phi i}sin(\frac{\theta}{2})|1⟩
+\]
+where:
+\(\theta\) is the polar angle \((0 \leq \theta \leq \pi)\)
+\(\psi\) is the azimuthal (horizontal) angle \((0 \leq \psi \leq 2\pi)\)
+
+\cite{geeksforgeeksQubitRepresentation}
+\cite{stackexchangeUnderstandingBloch}
+\cite{cam}
+\cite{microsoftWhatQubit}
+
+\section{Quantum Gates and States}
+Quantum gates are the basic building blocks of quantum computing, similar to how classical logic gates work in traditional computers. However, quantum gates work with qubits, which can be in superpositions of states. These gates manipulate qubits by applying certain operations that change their state in specific ways.
+
+\cite{cam}
+\cite{fisica}
+
+\subsection{Quantum Gates}
+Quantum gates perform operations on qubits. and  can change the state(s) of one or more qubit based on its input similar to a regular gate, but it can create superpositions, which is the key distinction between the most basic gates.
+
+Because of the special probability constraints some regular gates are not possible in quantum computing, but therefore others appear such as Bill, Z and Hadamard Gates. The following subchapters will explain a chose list of important quantum gates, but there are many more one could delve into but it exceeds the scope of this work.
+
+\cite{wikipediaQuantumLogic}
+\cite{microsoftIntroductionQuantum2}
+
+\subsubsection{NOT Gate}
+The not gate is the most simple gate in both worlds. The NOT gates swap the input, so 0 -> 1, 0 -> 1, but with a quantum NOT gate there is the probabilistic aspect also included. 
+So \(\alpha |0\rangle + \beta |1 \rangle\) becomes \(\alpha |1\rangle + \beta | 0 \rangle\). The gate can be represented as X which swaps the roles of 0 and 1 in the state.
+\[X \equiv \begin{bmatrix}
+    0 & 1\\
+    1 & 0
+\end{bmatrix}\]
+\cite{pennylaneWhatQuantum}
+
+\subsubsection{Z Gate}
+The Z Gate is simple, it leaves \(|0\rangle\) unchanged and makes  \(|1\rangle\) negative. This is achieved by rotating around the Z axis of the qubit by \(\pi\) radians (180 degrees)
+\[Z \equiv \begin{bmatrix}
+    1 & 0\\
+    0 & -1
+\end{bmatrix}\]
+\cite{quantumcomputingukIntroductionQuantum}
+\cite{microsoftBeginnersGuide}
+
+\subsubsection{Hadamar Gate}
+This gate is a single-qubit operation that changes the state \(|0\rangle\) to \(\frac{|0\rangle + |1\rangle}{\sqrt{2}}\) and \(|1\rangle\) to \(\frac{|0\rangle - |1\rangle}{\sqrt{2}}\). Behind the scenes the qubit is rotated by \(\frac{\pi}{2}\) radians on the Y-axis, followed by a \(\pi\) radians rotation around the X-axis.
+\[H \equiv \frac{1}{\sqrt{2}}\begin{bmatrix}
+    1 & 1\\
+    1 & -1
+\end{bmatrix}\]
+\cite{microsoftBeginnersGuide}
+\cite{quantuminspireHadamardGate}
+
+
+\subsubsection{CNOT Gate}
+The CNOT gate has two qubits as input, the first one being the control qubit and the second is the target qubit. The control qubit dictates if the target qubit is changed, if the control bit is \(|0\rangle\) nothing happens, if the control bit is \(|1\rangle\), the NOT operation is performed on the target qubit.
+\[U_{CN} \equiv 
+\begin{bmatrix}
+    1 & 0 & 0 & 0 \\
+    0 & 1 & 0 & 0 \\
+    0 & 0 & 0 & 1 \\
+    0 & 0 & 1 & 0 
+\end{bmatrix}\]
+\cite{microsoftBeginnersGuide}
+\cite{quantuminspireCNOTGate}
+\subsubsection{Bell States}
+A Bell state is the term for a specifiy type of entangled quantum state including two qubits. There are 4 such states each representing one form of two-qubit entanglement.
+
+\begin{itemize}
+    \item \(|\phi^+\rangle=\frac{|00\rangle+|11\rangle}{\sqrt2}\)
+    \item \(|\phi^-\rangle=\frac{|00\rangle-|11\rangle}{\sqrt2}\)
+    \item \(|\psi^+\rangle=\frac{|01\rangle+|10\rangle}{\sqrt2}\)
+    \item \(|\psi^-\rangle=\frac{|01\rangle-|10\rangle}{\sqrt2}\)
+\end{itemize}
+
+When measuring qubits in Bell states, the measurement outcomes are always correlated: measuring one qubit instantly determines the state of the other, regardless of the physical separation between them. This property makes Bell states fundamental to quantum computing and quantum communication protocols. 
+
+\cite{queraWhatBell}
+
+\cite{microsoftBeginnersGuide}
+
+
+\section{Quantum Algorithms}
+
+
+\subsection{Shor's Algorithm}
+
+
+
+
+\subsection{Grover's Algorithm}
+Overview of key quantum algorithms.
+
+\chapter{Classical Computing vs. Quantum Computing}
+\label{chap:classical-vs-quantum}
+
+This chapter compares classical computing, the foundation of current information technology, with the emerging paradigm of quantum computing. It highlights the key differences in their underlying principles, computational capabilities, and potential applications.
+
+\section{Fundamental Principles}
+\label{sec:fundamental-principles}
+
+\subsection{Classical Computing: Bits and Logic Gates}
+\label{subsec:classical-bits-gates}
+
+\begin{itemize}
+    \item \textbf{Bits:} The fundamental unit of information in classical computing is the bit, which can be in one of two states: 0 or 1.  These states are typically represented by physical properties like voltage levels in a transistor.
+    \item \textbf{Logic Gates:} Classical computers use logic gates (AND, OR, NOT, XOR, etc.) to perform operations on bits. These gates manipulate bits according to Boolean logic.
+    \item \textbf{Deterministic Computation:} Classical computers are deterministic; given the same input, they will always produce the same output.
+    \item \textbf{Transistors:} The physical implementation of bits and logic gates relies on transistors, which act as switches controlling the flow of electrical current.
+\end{itemize}
+
+\subsection{Quantum Computing: Qubits and Quantum Gates}
+\label{subsec:quantum-qubits-gates}
+
+\begin{itemize}
+    \item \textbf{Qubits:} The fundamental unit of information in quantum computing is the qubit.  Unlike a bit, a qubit can exist in a superposition of both 0 and 1 simultaneously.  This is represented mathematically using a linear combination of the basis states \(|0\rangle\) and \(|1\rangle\): \(\alpha|0\rangle + \beta|1\rangle\), where \(\alpha\) and \(\beta\) are complex numbers and \(|\alpha|^2 + |\beta|^2 = 1\).
+    \item \textbf{Superposition:} The ability of a qubit to be in multiple states at once is called superposition.  This allows quantum computers to explore many possibilities simultaneously.
+    \item \textbf{Entanglement:}  Multiple qubits can be entangled, meaning their states are correlated in a way that cannot be described classically.  Measuring the state of one entangled qubit instantaneously influences the state of the others, regardless of the distance separating them.
+    \item \textbf{Quantum Gates:} Quantum computers use quantum gates to manipulate qubits.  These gates perform unitary transformations on the qubit states, exploiting superposition and entanglement.  Examples include the Hadamard gate (creates superposition), the CNOT gate (entangles qubits), and the Pauli gates (X, Y, Z).
+    \item \textbf{Probabilistic Computation:} Quantum computation is inherently probabilistic.  Measuring a qubit in superposition causes it to collapse into one of its basis states (0 or 1) with a probability determined by the coefficients \(\alpha\) and \(\beta\).
+    \item \textbf{Physical Realizations:} Qubits can be physically realized using various quantum systems, such as superconducting circuits, trapped ions, photons, and topological qubits.
+\end{itemize}
+
+\section{Computational Capabilities}
+\label{sec:computational-capabilities}
+
+\subsection{Classical Complexity Classes}
+\label{subsec:classical-complexity}
+
+\begin{itemize}
+    \item \textbf{P (Polynomial Time):} Problems that can be solved by a classical computer in polynomial time (i.e., the time required grows polynomially with the input size).
+    \item \textbf{NP (Nondeterministic Polynomial Time):} Problems for which a solution can be *verified* in polynomial time.  It is not known whether all NP problems can be *solved* in polynomial time (the P vs. NP problem).
+    \item \textbf{NP-Complete:} The hardest problems in NP. If one NP-complete problem can be solved in polynomial time, then all NP problems can be solved in polynomial time.
+\end{itemize}
+
+\subsection{Quantum Complexity Classes}
+\label{subsec:quantum-complexity}
+\begin{itemize}
+    \item \textbf{BQP (Bounded-Error Quantum Polynomial Time):} Problems that can be solved by a quantum computer in polynomial time with a bounded error probability. This class contains P and may contain some problems outside of NP.
+    \item \textbf{Relationship to Classical Classes:}  It is believed that BQP contains problems that are not in P (e.g., factoring, discrete logarithm). The precise relationship between BQP and NP is an open question, but it's widely believed that BQP is not a subset of NP, and vice-versa, although it's also believed that \(BQP \cap NP \neq \emptyset \).
+\end{itemize}
+
+
+\subsection{Quantum Advantage and Supremacy}
+\label{subsec:quantum-advantage}
+\begin{itemize}
+    \item \textbf{Quantum Advantage:} The point at which a quantum computer can perform a task significantly faster or more efficiently than any classical computer.
+        \item \textbf{Quantum Supremacy} When a Quantum Computer solves a problem no classical computer can solve in any feasible amount of time.
+    \item \textbf{Specific Examples:}
+    \begin{itemize}
+        \item \textbf{Factoring (Shor's Algorithm):} Quantum computers can factor large numbers exponentially faster than the best-known classical algorithms.
+        \item \textbf{Unstructured Search (Grover's Algorithm):}  Quantum computers can search an unsorted database quadratically faster than classical algorithms.
+        \item \textbf{Quantum Simulation:} Quantum computers can efficiently simulate quantum systems, which is intractable for classical computers.
+    \end{itemize}
+\end{itemize}
+
+\section{Applications and Limitations}
+\label{sec:applications-limitations}
+
+\subsection{Classical Computing Applications}
+\label{subsec:classical-applications}
+
+Classical computers are ubiquitous and used for a vast range of applications, including:
+
+\begin{itemize}
+    \item General-purpose computing (desktops, laptops, servers).
+    \item Data processing and analysis.
+    \item Scientific simulations.
+    \item Artificial intelligence and machine learning.
+    \item Communication and networking.
+\end{itemize}
+
+\subsection{Quantum Computing Applications}
+\label{subsec:quantum-applications}
+
+Quantum computing is still in its early stages of development, but it has the potential to revolutionize several fields:
+
+\begin{itemize}
+    \item \textbf{Cryptography:} Breaking existing public-key cryptosystems (RSA, ECC) and developing quantum-resistant cryptography.
+    \item \textbf{Drug discovery and materials science:} Simulating molecular interactions and designing new materials.
+    \item \textbf{Optimization:} Solving complex optimization problems in areas like logistics, finance, and machine learning.
+    \item \textbf{Machine learning:} Developing new quantum machine learning algorithms.
+    \item \textbf{Fundamental science:} Simulating quantum systems in physics and chemistry.
+\end{itemize}
+
+\subsection{Limitations of Current Quantum Computers}
+\label{subsec:quantum-limitations}
+
+\begin{itemize}
+    \item \textbf{Qubit Count:} Current quantum computers have a limited number of qubits.
+    \item \textbf{Coherence Time:} Qubits lose their quantum properties (decoherence) over time.
+    \item \textbf{Error Rates:} Quantum gates are prone to errors.
+    \item \textbf{Scalability:} Building large, fault-tolerant quantum computers is a major technological challenge.
+\end{itemize}
+
+\section{Conclusion}
+\label{sec:comparison-conclusion}
+
+Classical and quantum computers represent fundamentally different approaches to computation. While classical computers excel at many tasks, quantum computers offer the potential for significant speedups in specific areas, particularly those involving problems that are intractable for classical computers. However, quantum computing technology is still in its infancy, and significant challenges remain before it can be widely deployed. A table summarizing the key differences:
+
+\begin{table}[h!]
+    \centering
+    \begin{tabular}{|c|c|c|}
+        \hline
+        \textbf{Feature} & \textbf{Classical Computer} & \textbf{Quantum Computer} \\
+        \hline
+        Basic Unit & Bit (0 or 1) & Qubit (Superposition of 0 and 1) \\
+        \hline
+        Operations & Logic Gates (AND, OR, NOT, etc.) & Quantum Gates (Hadamard, CNOT, etc.) \\
+        \hline
+        Computation & Deterministic & Probabilistic \\
+        \hline
+        Key Principles & Boolean Logic & Superposition, Entanglement, Interference \\
+        \hline
+        Complexity Classes & P, NP, NP-Complete & BQP \\
+         \hline
+        Scalability & Relatively easy to scale& Extremely difficult to scale \\
+        \hline
+        Error Correction & Well-established techniques & Active area of research \\
+        \hline
+
+    \end{tabular}
+    \caption{Comparison of Classical and Quantum Computers}
+    \label{tab:classical-vs-quantum}
+\end{table}
+
+
+\chapter{Classical Cryptography}
+\section{Basics of Cryptography}
+\section{Symmetric Encryption}
+\section{Asymmetric Encryption}
+\section{Hash Functions}
+\section{Digital Signatures}
+Overview of classical cryptographic methods.
+
+
+\chapter{Impact of Quantum Computing on Cryptography}
+
+\chapter{Impact of Quantum Computing on Cryptography}
+\label{chap:quantum-impact}
+
+This chapter explores the significant threat that quantum computing poses to classical cryptographic systems.  It examines how quantum algorithms, particularly Shor's and Grover's algorithms, can break widely used cryptographic schemes and discusses the implications for data security.
+
+\section{Threats to Classical Cryptography}
+\label{sec:quantum-threats}
+
+\subsection{Breaking RSA and ECC with Shor's Algorithm}
+\label{subsec:breaking-rsa-ecc}
+
+Shor's algorithm \cite{shor} is a quantum algorithm that can efficiently factor large numbers and solve the discrete logarithm problem.  This has profound implications for public-key cryptography:
+
+\begin{itemize}
+    \item \textbf{RSA:**  The security of RSA relies on the computational difficulty of factoring large numbers.  Shor's algorithm can factor numbers in polynomial time on a quantum computer, effectively breaking RSA. This drastically reduces the time complexity compared to classical algorithms like the General Number Field Sieve (GNFS) \cite{lenstra1993number}.
+    \item \textbf{ECC:**  The security of ECC relies on the Elliptic Curve Discrete Logarithm Problem (ECDLP).  Shor's algorithm can also solve the ECDLP in polynomial time on a quantum computer, rendering ECC vulnerable.
+    \item \textbf{Key Size Implications:}  Current key sizes for RSA (e.g., 2048 bits, 4096 bits) and ECC (e.g., 256 bits, 384 bits) that provide adequate security against classical attacks become completely insecure against a sufficiently powerful quantum computer running Shor's algorithm.  The number of qubits required to break RSA is roughly twice the key size.
+\end{itemize}
+
+\subsection{Impact on Symmetric Encryption with Grover's Algorithm}
+\label{subsec:impact-symmetric}
+
+Grover's algorithm \cite{grover} is a quantum algorithm for searching an unsorted database.  While it doesn't provide an exponential speedup like Shor's algorithm, it does offer a quadratic speedup:
+
+\begin{itemize}
+    \item \textbf{Brute-Force Key Search:** Grover's algorithm can be used to speed up brute-force key search for symmetric ciphers.  A classical brute-force search on an \(n\)-bit key takes \(O(2^n)\) time.  Grover's algorithm can perform the search in \(O(2^{n/2})\) time.
+    \item \textbf{Key Size Adjustment:**  To maintain the same level of security against Grover's algorithm, the key size of symmetric ciphers needs to be doubled.  For example, AES-128, which provides 128 bits of security against classical attacks, would only provide roughly 64 bits of security against a quantum attack using Grover's algorithm.  AES-256 would provide roughly 128 bits of security against a quantum attack.
+    \item \textbf{AES and Symmetric Ciphers:** AES with a 256-bit key (AES-256) is generally considered to be quantum-resistant, as the required computational resources to break it with Grover's algorithm are still extremely high, even with a quantum computer.
+\end{itemize}
+
+\subsection{Impact on Hash Functions}
+\label{subsec:impact-hash}
+
+Quantum computers also affect the security of hash functions, though the impact is less severe than on asymmetric encryption.
+
+\begin{itemize}
+    \item \textbf{Collision Resistance:**  Quantum algorithms can provide some speedup for finding collisions in hash functions.  However, the speedup is generally less dramatic than for factoring or discrete logarithms.
+    \item \textbf{Preimage and Second Preimage Resistance:**  The impact on preimage and second preimage resistance is similar to the impact on collision resistance – a speedup is possible, but not an exponential one.
+    \item \textbf{Hash Function Output Size:**  Increasing the output size of hash functions can mitigate the impact of quantum attacks.
+\end{itemize}
+\section{Timeline and Predictions}
+\label{sec:timeline-predictions}
+
+Predicting the exact timeline for the development of a cryptographically relevant quantum computer (CRQC) – one powerful enough to break widely used cryptographic schemes – is challenging.
+
+\begin{itemize}
+    \item \textbf{Expert Opinions and Estimates:** Various organizations and experts have provided estimates, ranging from a few years to several decades \cite{mosca2018cybersecurity}.  There is significant uncertainty, but a consensus is emerging that a CRQC is a plausible threat within the next 10-20 years.  Some estimates are more aggressive.
+    \item \textbf{"Store Now, Decrypt Later" Attacks:} The possibility of "store now, decrypt later" attacks is a significant concern.  Adversaries can store encrypted data today, intending to decrypt it later when quantum computers become available. This highlights the need for proactive measures even before a CRQC is built.
+     \item \textbf{NIST and ENISA Recommendations:} Organizations like NIST (National Institute of Standards and Technology) \cite{nist_pqc_report} and ENISA (European Union Agency for Cybersecurity) are actively working on standardizing post-quantum cryptography and providing guidance on migration.
+\end{itemize}
+
+\section{Quantum Attacks on Cryptographic Systems}
+\label{sec:quantum-attacks}
+
+This section goes beyond just Shor's and Grover's algorithms and considers broader attack scenarios.
+
+\begin{itemize}
+    \item \textbf{Other Quantum Algorithms:** While Shor's and Grover's algorithms are the most well-known, research into other quantum algorithms with potential cryptographic implications continues.
+    \item \textbf{Attacks on QKD Systems:**  Even Quantum Key Distribution (QKD) systems, which are theoretically secure, are not immune to attacks in practice.  These attacks often target implementation flaws or side-channel vulnerabilities in the hardware.
+    \item \textbf{Hybrid Attacks:**  It's also possible that future attacks could combine classical and quantum techniques.
+\end{itemize}
+
+\section{Threats to Classical Cryptography}
+\subsection{Breaking RSA and ECC}
+\subsection{Impact on Symmetric Encryption}
+Discussion on vulnerabilities of classical cryptography.
+\section{Timeline and Predictions}
+Projected timeline for quantum threats to cryptography.
+\section{Quantum Attacks on Cryptographic Systems}
+Overview of potential quantum attack vectors.
+
+
+\chapter{Quantum-Resistant Cryptography}
+\section{Post-Quantum Cryptography}
+\subsection{Lattice-based Cryptography}
+\subsection{Hash-based Signatures}
+\subsection{Code-based Cryptography}
+\subsection{Multivariate Cryptography}
+Overview of post-quantum cryptographic methods.
+
+
+\section{NIST Post-Quantum Cryptography Standardization}
+Update on NIST's standardization efforts.
+\section{Quantum Key Distribution (QKD)}
+Introduction to QKD principles and applications.
+\chapter{Classical Cryptography}
+\label{chap:classical-crypto}
+
+This chapter provides an overview of classical cryptography, covering fundamental concepts, symmetric and asymmetric encryption, hash functions, and digital signatures.  Understanding these classical methods is crucial for appreciating the impact of quantum computing, as discussed in later chapters.
+
+\section{Basics of Cryptography}
+\label{sec:crypto-basics}
+
+\subsection{Introduction to Cryptography}
+\label{subsec:crypto-intro}
+
+Cryptography is the practice and study of techniques for secure communication in the presence of adversarial behavior \cite{katz_lindell}.  Its primary goal is to transform readable data (plaintext) into an unreadable format (ciphertext), ensuring that only authorized parties can reverse this transformation and access the original information.  The process of converting plaintext to ciphertext is called \emph{encryption}, and the reverse process is called \emph{decryption}.
+
+\subsection{Key Concepts}
+\label{subsec:crypto-key-concepts}
+
+\begin{itemize}
+    \item \textbf{Plaintext:} The original, readable message or data.
+    \item \textbf{Ciphertext:} The encrypted message, appearing as unintelligible data.
+    \item \textbf{Cipher (Algorithm):} The mathematical function used for encryption and decryption.
+    \item \textbf{Key:} A secret piece of information used in conjunction with the cipher to encrypt and decrypt data.  The security of a cryptographic system relies heavily on the secrecy of the key.
+    \item \textbf{Encryption:} The process of transforming plaintext into ciphertext using a cipher and a key.
+    \item \textbf{Decryption:} The process of transforming ciphertext back into plaintext using the corresponding cipher and key.
+\end{itemize}
+
+\subsection{Cryptographic Goals}
+\label{subsec:crypto-goals}
+
+Cryptography aims to achieve several key security goals \cite{stallings}:
+
+\begin{itemize}
+    \item \textbf{Confidentiality:} Ensuring that only authorized parties can access the information.
+    \item \textbf{Integrity:} Ensuring that the data has not been tampered with during transmission or storage.
+    \item \textbf{Authentication:} Verifying the identity of the sender or receiver.
+    \item \textbf{Non-repudiation:} Preventing the sender from denying that they sent the message.
+\end{itemize}
+
+\subsection{Kerckhoffs's Principle}
+\label{subsec:kerckhoffs}
+
+A fundamental principle in cryptography is Kerckhoffs's Principle \cite{kerckhoffs}, which states that a cryptosystem should be secure even if everything about the system, except the key, is public knowledge.  This means the security of the system should rely solely on the secrecy of the key, not the secrecy of the algorithm.
+
+\section{Symmetric Encryption}
+\label{sec:symmetric-encryption}
+
+Symmetric encryption uses the same secret key for both encryption and decryption \cite{menezes}. Both the sender and receiver must possess this shared secret key.
+
+\subsection{Block Ciphers vs. Stream Ciphers}
+\label{subsec:block-vs-stream}
+
+\begin{itemize}
+    \item \textbf{Block Ciphers:} Operate on fixed-size blocks of data (e.g., 128 bits).  Examples include AES and DES.
+    \item \textbf{Stream Ciphers:} Encrypt data bit by bit or byte by byte.  They typically use a pseudorandom keystream generated from the secret key.  An example is RC4 (although RC4 is now considered insecure).
+\end{itemize}
+
+\subsection{Advanced Encryption Standard (AES)}
+\label{subsec:aes}
+
+AES is the current standard symmetric block cipher, adopted by the U.S. National Institute of Standards and Technology (NIST) \cite{nist_aes}.  It supports key sizes of 128, 192, and 256 bits and operates on 128-bit blocks.  AES is based on the Rijndael cipher and is considered highly secure and efficient. The basic operations involve:
+\begin{enumerate}
+    \item \textbf{SubBytes:} A substitution step where each byte is replaced with another according to a lookup table.
+    \item \textbf{ShiftRows:} A transposition step where the last three rows of the state are shifted cyclically a certain number of steps.
+        \item \textbf{MixColumns:} A mixing operation which operates on the columns of the state, combining the four bytes in each column.
+    \item \textbf{AddRoundKey:} Each byte of the state is combined with the round key; each round key is derived from the cipher key using a key schedule.
+\end{enumerate}
+
+\subsection{Modes of Operation}
+\label{subsec:modes-of-operation}
+
+Block ciphers need different modes of operation to securely encrypt messages longer than a single block \cite{dworkin}.  Common modes include:
+
+\begin{itemize}
+    \item \textbf{Electronic Codebook (ECB):} Each block is encrypted independently.  This is insecure for many applications because identical plaintext blocks produce identical ciphertext blocks, revealing patterns in the data.
+    \item \textbf{Cipher Block Chaining (CBC):} Each plaintext block is XORed with the previous ciphertext block before encryption.  This introduces diffusion, making the ciphertext dependent on all previous blocks.  Requires an Initialization Vector (IV).
+    \item \textbf{Cipher Feedback (CFB):} Similar to CBC, but allows encryption of data streams smaller than the block size.
+    \item \textbf{Output Feedback (OFB):}  Generates a keystream independent of the plaintext and ciphertext.  This turns the block cipher into a synchronous stream cipher.
+    \item \textbf{Counter (CTR):}  Generates a keystream by encrypting successive values of a counter.  This is highly parallelizable and widely used.
+    \item \textbf{Galois/Counter Mode (GCM):}  A mode that combines CTR mode with a built-in authentication mechanism, providing both confidentiality and integrity.
+\end{itemize}
+
+\section{Asymmetric Encryption}
+\label{sec:asymmetric-encryption}
+
+Asymmetric encryption (also known as public-key cryptography) uses a pair of keys: a public key for encryption and a private key for decryption \cite{diffie_hellman}.  The public key can be freely distributed, while the private key must be kept secret.
+
+\subsection{RSA}
+\label{subsec:rsa}
+
+RSA is one of the most widely used public-key cryptosystems \cite{rivest}.  Its security relies on the difficulty of factoring large numbers.
+
+\begin{itemize}
+    \item \textbf{Key Generation:}
+    \begin{enumerate}
+        \item Choose two distinct prime numbers \(p\) and \(q\).
+        \item Compute \(n = p \times q\).  \(n\) is the modulus.
+        \item Compute the totient: \(\phi(n) = (p-1)(q-1)\).
+        \item Choose an integer \(e\) such that \(1 < e < \phi(n)\) and \(e\) is coprime to \(\phi(n)\). \(e\) is the public exponent.
+        \item Calculate \(d\) such that \(d \times e \equiv 1 \pmod{\phi(n)}\). \(d\) is the private exponent.
+    \end{enumerate}
+    The public key is \((n, e)\) and the private key is \((n, d)\).
+
+    \item \textbf{Encryption:} To encrypt a message \(m\) (represented as an integer less than \(n\)), compute the ciphertext \(c\):
+    \[c = m^e \pmod{n}\]
+
+    \item \textbf{Decryption:} To decrypt a ciphertext \(c\), compute the plaintext \(m\):
+    \[m = c^d \pmod{n}\]
+\end{itemize}
+
+\subsection{Elliptic Curve Cryptography (ECC)}
+\label{subsec:ecc}
+
+ECC relies on the algebraic structure of elliptic curves over finite fields \cite{koblitz_ecc}.  It offers equivalent security to RSA with smaller key sizes, making it more efficient for many applications. The security of ECC is based on the Elliptic Curve Discrete Logarithm Problem (ECDLP).
+
+\subsection{Diffie-Hellman Key Exchange}
+\label{subsec:diffie-hellman}
+
+Diffie-Hellman is a key exchange protocol that allows two parties to establish a shared secret key over an insecure channel \cite{diffie_hellman}.  The key is then used for symmetric encryption.  It's vulnerable to man-in-the-middle attacks if not authenticated.
+
+\section{Hash Functions}
+\label{sec:hash-functions}
+
+Cryptographic hash functions are one-way functions that take an arbitrary-length input and produce a fixed-size output (the hash or digest) \cite{menezes_hash}.
+
+\subsection{Properties of Cryptographic Hash Functions}
+\label{subsec:hash-properties}
+
+\begin{itemize}
+    \item \textbf{Preimage resistance (One-wayness):} Given a hash value \(h\), it should be computationally infeasible to find any input \(m\) such that \(H(m) = h\).
+    \item \textbf{Second preimage resistance:} Given an input \(m_1\), it should be computationally infeasible to find another input \(m_2\) (\(m_2 \neq m_1\)) such that \(H(m_1) = H(m_2)\).
+    \item \textbf{Collision resistance:} It should be computationally infeasible to find two distinct inputs \(m_1\) and \(m_2\) such that \(H(m_1) = H(m_2)\).
+\end{itemize}
+
+\subsection{SHA-2 and SHA-3}
+\label{subsec:sha2-sha3}
+
+\begin{itemize}
+    \item \textbf{SHA-2 Family:} Includes SHA-256 and SHA-512, which produce 256-bit and 512-bit hashes, respectively.  These are widely used in practice.
+    \item \textbf{SHA-3 (Keccak):}  The winner of the NIST hash function competition, designed as an alternative to SHA-2.  It uses a different construction (sponge construction).
+\end{itemize}
+
+\subsection{Applications of Hash Functions}
+\label{subsec:hash-applications}
+Hash functions are used for a multitude of tasks, including:
+\begin{itemize}
+    \item Data integrity verification.
+    \item Password storage (hashing and salting).
+    \item Digital signatures.
+    \item Message Authentication Codes (MACs).
+    \item Pseudorandom number generation.
+\end{itemize}
+
+\section{Digital Signatures}
+\label{sec:digital-signatures}
+
+Digital signatures provide authentication, non-repudiation, and data integrity \cite{menezes_signatures}.  They use asymmetric cryptography.
+
+\subsection{Digital Signature Process}
+\label{subsec:signature-process}
+
+\begin{enumerate}
+    \item The sender generates a hash of the message.
+    \item The sender encrypts the hash with their private key, creating the digital signature.
+    \item The sender sends the message along with the digital signature.
+    \item The receiver decrypts the digital signature using the sender's public key, obtaining the original hash.
+    \item The receiver computes the hash of the received message.
+    \item The receiver compares the two hashes. If they match, the signature is valid, confirming the message's authenticity and integrity.
+\end{enumerate}
+
+\subsection{RSA Signatures}
+\label{subsec:rsa-signatures}
+
+RSA can be used for digital signatures.  The process is essentially RSA encryption with the private key and decryption with the public key.
+
+\subsection{ECDSA (Elliptic Curve Digital Signature Algorithm)}
+\label{subsec:ecdsa}
+
+ECDSA is the elliptic curve analogue of the Digital Signature Algorithm (DSA) and is widely used, particularly in blockchain technologies.
+
+\chapter{Challenges in Quantum Cryptography}
+\section{Implementation Challenges}
+\section{Scalability Issues}
+\section{Cost and Infrastructure Requirements}
+\section{Quantum Noise and Error Correction}
+\section{Limitations of Current Quantum Technologies}
+Discussion on challenges in implementing quantum cryptography.
+
+\chapter{Future Prospects and Research Directions}
+\section{Advancements in Quantum Computing Hardware}
+\section{Quantum Internet and Quantum Networks}
+\section{Hybrid Classical-Quantum Systems}
+\section{Quantum-Safe Migration Strategies}
+Overview of future developments and research areas.
+
+
+\chapter{Societal and Ethical Implications}
+\section{Privacy and Security Concerns}
+\section{Economic Impact}
+\section{Geopolitical Considerations}
+Discussion on broader implications of quantum computing.
+
+
+\newpage
+\printbibliography[title={Sources}]
+
+\end{document}

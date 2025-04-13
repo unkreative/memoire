@@ -1,0 +1,35 @@
+{
+    "latex-workshop.latex.recipes": [
+        {
+            "name": "pdflatex",
+            "tools": [
+                "pdflatex",
+                "pdflatex"
+            ]
+        }
+    ],
+    "latex-workshop.latex.tools": [
+        {
+            "name": "pdflatex",
+            "command": "/Library/TeX/texbin/pdflatex",
+            "args": [
+                "-synctex=1",
+                "-interaction=nonstopmode",
+                "-file-line-error",
+                "%DOC%"
+            ],
+            "env": {
+                "PATH": "/Library/TeX/texbin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:${env:PATH}"
+            }
+        }
+    ],
+    "latex-workshop.latex.autoBuild.run": "onSave",
+    "latex-workshop.latex.rootFile.doNotPrompt": true,
+    "terminal.integrated.env.osx": {
+        "PATH": "/Library/TeX/texbin:${env:PATH}"
+    },
+    "latex-workshop.latex.rootFile.useSubFiles": false,
+    "latex-workshop.latex.rootFile.indicator": "%!TEX root =",
+    "latex-workshop.latex.root": "/Users/sergonnelou/memoire/main.tex",
+    "latex-workshop.latex.outDir": "%DIR%"
+}

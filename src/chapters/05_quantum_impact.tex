@@ -1,0 +1,136 @@
+\chapter{Quantum Computing's Impact on Cryptography}
+
+\section{Vulnerabilities in Classical Cryptography}
+
+Quantum computing threatens widely-used cryptographic systems:
+
+\begin{itemize}
+    \item \textbf{RSA:} Vulnerable to Shor's algorithm, which can factor large numbers exponentially faster
+    \item \textbf{Elliptic Curve Cryptography:} Also vulnerable to Shor's algorithm through solving the discrete logarithm problem
+    \item \textbf{Diffie-Hellman:} Mathematical foundation can be broken by quantum computers
+\end{itemize}
+
+% Temporarily commenting out problematic image - replace with actual PNG file later
+% \begin{figure}[h]
+%     \centering
+%     \includegraphics[width=0.7\textwidth]{src/images/quantum_vs_classical.png}
+%     \caption{Comparison of Classical vs. Quantum Attack Complexity}
+% \end{figure}
+
+\section{Shor's Algorithm}
+
+Shor's algorithm (1994) demonstrates that quantum computers can factor large integers in polynomial time, making it a serious threat to asymmetric cryptography.
+
+The algorithm works by converting factoring into finding a function's period, which quantum computers can do efficiently through quantum Fourier transform.
+
+\section{Grover's Algorithm}
+
+Grover's algorithm provides a quadratic speedup for unstructured search problems:
+
+\begin{itemize}
+    \item Reduces symmetric encryption security by half (e.g., AES-256 becomes equivalent to AES-128)
+    \item Affects hash functions similarly
+    \item Solution: Double key sizes for symmetric cryptography
+\end{itemize}
+
+\section{Timeline of Quantum Threat}
+
+Current estimates suggest quantum computers capable of breaking RSA-2048 might emerge within 5-15 years, though significant challenges remain:
+
+\begin{itemize}
+    \item Error correction is still difficult
+    \item Thousands of logical qubits needed for cryptographically relevant computations
+\end{itemize}
+
+% Temporarily commenting out problematic image - replace with actual PNG file later
+% \begin{figure}[h]
+%     \centering
+%     \includegraphics[width=0.7\textwidth]{src/images/nist_timeline.png}
+%     \caption{NIST Timeline for Quantum Threat Development}
+% \end{figure}
+
+\section{Store Now, Decrypt Later Attacks}
+
+A significant near-term risk involves adversaries storing encrypted data now to decrypt it when quantum computers become available. This particularly threatens data with long-term value, making quantum-resistant solutions necessary even before practical quantum computers exist.
+
+\section{Quantum-Resistant Algorithm Categories}
+In response to quantum threats, cryptographers have developed several approaches to post-quantum cryptography:
+
+\subsection{Lattice-Based Cryptography}
+Lattice-based cryptosystems base their security on the hardness of certain problems in lattice theory, such as the Shortest Vector Problem (SVP) and the Learning With Errors (LWE) problem. These problems are believed to be difficult even for quantum computers. Notable examples include:
+\begin{itemize}
+    \item NTRU (N-th degree Truncated polynomial Ring Units)
+    \item Kyber, a lattice-based key encapsulation mechanism selected by NIST for standardization
+\end{itemize}
+
+\subsection{Hash-Based Cryptography}
+Hash-based signatures rely on the security of cryptographic hash functions, which are less vulnerable to quantum attacks. They include:
+\begin{itemize}
+    \item Merkle signature scheme
+    \item XMSS (eXtended Merkle Signature Scheme), standardized by the IETF
+    \item SPHINCS+, a stateless hash-based signature scheme selected by NIST
+\end{itemize}
+
+\subsection{Code-Based Cryptography}
+Code-based cryptography uses error-correcting codes and derives its security from the difficulty of decoding general linear codes. McEliece, proposed in 1978, is one of the oldest post-quantum cryptographic systems and has withstood decades of cryptanalysis.
+
+\subsection{Multivariate Polynomial Cryptography}
+These systems base their security on the difficulty of solving systems of multivariate polynomials over finite fields, known to be NP-hard. Examples include the Rainbow signature scheme, though recent cryptanalysis has identified vulnerabilities in some variants.
+
+\subsection{Isogeny-Based Cryptography}
+Isogeny-based systems rely on the difficulty of finding isogenies between elliptic curves. SIKE (Supersingular Isogeny Key Encapsulation) was a notable example, though it was subsequently broken by classical attacks in 2022, highlighting the evolving nature of post-quantum cryptography research.
+
+\section{Standardization Efforts}
+The transition to quantum-resistant cryptography requires coordinated standardization efforts:
+
+\subsection{NIST Post-Quantum Cryptography Standardization}
+The U.S. National Institute of Standards and Technology launched its post-quantum cryptography standardization process in 2016. After multiple rounds of evaluation, NIST selected several algorithms for standardization in 2022:
+\begin{itemize}
+    \item For key encapsulation: CRYSTALS-Kyber
+    \item For digital signatures: CRYSTALS-Dilithium, FALCON, and SPHINCS+
+\end{itemize}
+
+Final standards are expected to be published by 2024-2025, with additional algorithms still under consideration for future standardization.
+
+\subsection{Other Standardization Bodies}
+In parallel with NIST, other organizations are contributing to post-quantum standardization:
+\begin{itemize}
+    \item The Internet Engineering Task Force (IETF) is developing protocols for incorporating post-quantum algorithms into TLS and other internet standards
+    \item The European Telecommunications Standards Institute (ETSI) has established a Quantum-Safe Cryptography working group
+    \item The International Organization for Standardization (ISO) is developing standards for quantum-resistant cryptographic techniques
+\end{itemize}
+
+\section{Transition Challenges}
+Migrating from classical to post-quantum cryptography presents significant challenges:
+
+\subsection{Computational and Bandwidth Overhead}
+Most post-quantum algorithms require larger key sizes and ciphertexts than their classical counterparts, imposing:
+\begin{itemize}
+    \item Increased computational demands on both servers and clients
+    \item Higher bandwidth requirements for communication protocols
+    \item Storage challenges for certificates and cryptographic artifacts
+\end{itemize}
+
+\subsection{Implementation and Deployment Considerations}
+The transition process involves numerous practical considerations:
+\begin{itemize}
+    \item Identifying all systems using vulnerable cryptography
+    \item Prioritizing critical infrastructure and long-term secrets
+    \item Developing migration strategies that maintain backward compatibility
+    \item Implementing hybrid approaches that combine classical and post-quantum algorithms during the transition period
+\end{itemize}
+
+\subsection{Cryptographic Agility}
+A key lesson from the quantum threat is the importance of building cryptographic agility into systems—the ability to quickly replace cryptographic algorithms without major system overhauls. This approach provides resilience against future cryptographic vulnerabilities, whether quantum-related or otherwise.
+
+\section{Current Industry Responses}
+Major technology companies and organizations have already begun implementing quantum-resistant approaches:
+\begin{itemize}
+    \item Google has tested post-quantum algorithms in Chrome and other products
+    \item Cloudflare has implemented experimental support for post-quantum TLS
+    \item Microsoft has developed quantum-resistant VPN solutions
+    \item Financial institutions are evaluating the impact on banking infrastructure and payment systems
+    \item Military and intelligence agencies worldwide are prioritizing quantum-resistant encryption for classified communications
+\end{itemize}
+
+These early adoption efforts provide valuable real-world testing for post-quantum algorithms while protecting particularly sensitive systems against future quantum threats.

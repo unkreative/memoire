@@ -1,0 +1,124 @@
+Okay, here is a list of potential sources organized by the key subjects in your project outline. This list exceeds 50 sources and provides a mix of seminal papers, textbooks, survey articles, standards documents, and reputable online resources. This should serve as an excellent starting point for your research.
+
+Note: Access to some journal articles or conference proceedings might require institutional subscriptions or purchase. Many university resources and ArXiv papers are freely available.
+
+Organized List of Potential Sources (Starting Point)
+
+I. Quantum Mechanics & Quantum Computing Fundamentals
+
+Textbooks (Comprehensive QC):
+
+Nielsen, M. A., & Chuang, I. L. (2010). Quantum Computation and Quantum Information: 10th Anniversary Edition. Cambridge University Press. (The standard reference textbook).
+
+Mermin, N. D. (2007). Quantum Computer Science: An Introduction. Cambridge University Press. (More concise, focused on computation).
+
+Kaye, P., Laflamme, R., & Mosca, M. (2007). An Introduction to Quantum Computing. Oxford University Press.
+
+Yanofsky, N. S., & Mannucci, M. A. (2008). Quantum Computing for Computer Scientists. Cambridge University Press.
+
+Rieffel, E. G., & Polak, W. H. (2011). Quantum Computing: A Gentle Introduction. MIT Press.
+
+Quantum Mechanics Principles:
+6. Feynman, R. P., Leighton, R. B., & Sands, M. (1965). The Feynman Lectures on Physics, Vol. III: Quantum Mechanics. Addison-Wesley. (Classic physics text).
+7. Griffiths, D. J., & Schroeter, D. F. (2018). Introduction to Quantum Mechanics. Cambridge University Press. (Standard undergraduate QM textbook).
+8. Arndt, M., Nairz, O., Vos-Andreae, J., Keller, C., Van Der Zouw, G., & Zeilinger, A. (1999). Wave–particle duality of C60 molecules. Nature, 401(6754), 680-682. (Experimental demonstration of duality for large molecules).
+9. Einstein, A., Podolsky, B., & Rosen, N. (1935). Can Quantum-Mechanical Description of Physical Reality Be Considered Complete?. Physical Review, 47(10), 777. (The famous EPR paper questioning completeness, related to entanglement).
+10. Bell, J. S. (1964). On the Einstein Podolsky Rosen paradox. Physics Physique Fizika, 1(3), 195. (Bell's theorem, foundational for understanding entanglement tests).
+11. Heisenberg, W. (1927). Über den anschaulichen Inhalt der quantentheoretischen Kinematik und Mechanik. Zeitschrift für Physik, 43(3-4), 172-198. (Original paper on the Uncertainty Principle - German, English translations available).
+
+Online Resources / Tutorials:
+12. IBM Quantum Experience Documentation: https://quantum-computing.ibm.com/docs/ (Excellent practical guides, tutorials on Qiskit, quantum concepts).
+13. Microsoft Quantum Documentation: https://docs.microsoft.com/en-us/quantum/ (Resources for Q#, quantum concepts, algorithms).
+14. Caltech Institute for Quantum Information and Matter (IQIM) Outreach: https://iqim.caltech.edu/outreach (Explanations of quantum concepts).
+15. Quanta Magazine - Quantum Physics Section: https://www.quantamagazine.org/tag/quantum-physics/ (High-quality articles on recent developments).
+16. Physics Stack Exchange: https://physics.stackexchange.com/ (Question/Answer forum for specific concepts).
+
+II. Quantum Algorithms
+
+Shor's Algorithm:
+17. Shor, P. W. (1994). Algorithms for quantum computation: discrete logarithms and factoring. Proceedings 35th Annual Symposium on Foundations of Computer Science, 124-134. (The seminal paper).
+18. Shor, P. W. (1997). Polynomial-Time Algorithms for Prime Factorization and Discrete Logarithms on a Quantum Computer. SIAM Journal on Computing, 26(5), 1484-1509. (Journal version).
+19. Beckman, D., Chari, A. N., Devabhaktuni, S., & Preskill, J. (1996). Efficient networks for quantum factoring. Physical Review A, 54(2), 1034. (Implementation details/circuit design).
+
+Grover's Algorithm:
+20. Grover, L. K. (1996). A fast quantum mechanical algorithm for database search. Proceedings, 28th Annual ACM Symposium on the Theory of Computing, 212-219. (The seminal paper).
+21. Grover, L. K. (1997). Quantum Mechanics Helps in Searching for a Needle in a Haystack. Physical Review Letters, 79(2), 325. (Journal version).
+22. Boyer, M., Brassard, G., Høyer, P., & Tapp, A. (1998). Tight bounds on quantum searching. Fortschritte der Physik: Progress of Physics, 46(4‐5), 493-505. (Analysis of optimality).
+
+III. Classical Cryptography
+
+Textbooks:
+23. Katz, J., & Lindell, Y. (2014). Introduction to Modern Cryptography. Chapman and Hall/CRC. (Widely used modern textbook).
+24. Stallings, W. (2017). Cryptography and Network Security: Principles and Practice. Pearson. (Comprehensive, practical focus).
+25. Menezes, A. J., Van Oorschot, P. C., & Vanstone, S. A. (1996). Handbook of Applied Cryptography. CRC Press. (The comprehensive reference, often called HAC).
+26. Paar, C., & Pelzl, J. (2010). Understanding Cryptography: A Textbook for Students and Practitioners. Springer.
+
+Seminal Papers / Standards:
+27. Diffie, W., & Hellman, M. (1976). New directions in cryptography. IEEE Transactions on Information Theory, 22(6), 644-654. (Introduced public-key cryptography and key exchange).
+28. Rivest, R. L., Shamir, A., & Adleman, L. (1978). A method for obtaining digital signatures and public-key cryptosystems. Communications of the ACM, 21(2), 120-126. (The RSA paper).
+29. National Institute of Standards and Technology (NIST). (2001). FIPS PUB 197: Advanced Encryption Standard (AES). https://csrc.nist.gov/publications/detail/fips/197/final
+30. Koblitz, N. (1987). Elliptic curve cryptosystems. Mathematics of Computation, 48(177), 203-209. (Introduced ECC).
+31. Miller, V. S. (1986). Use of elliptic curves in cryptography. Advances in Cryptology — CRYPTO ’85 Proceedings, 417-426. (Another foundational ECC paper).
+32. National Institute of Standards and Technology (NIST). FIPS PUB 180-4: Secure Hash Standard (SHS). https://csrc.nist.gov/publications/detail/fips/180-4/final (Defines SHA family).
+33. National Institute of Standards and Technology (NIST). FIPS PUB 202: SHA-3 Standard: Permutation-Based Hash and Extendable-Output Functions. https://csrc.nist.gov/publications/detail/fips/202/final
+34. Kerckhoffs, A. (1883). La cryptographie militaire. Journal des sciences militaires, vol. IX, pp. 5–38, Jan. 1883, pp. 161–191, Feb. 1883. (Origin of Kerckhoffs's Principle - French).
+
+IV. Impact of Quantum Computing on Cryptography
+
+Surveys / Reports:
+35. Mosca, M. (2018). Cybersecurity in an era with quantum computers: will we be ready?. EPJ Quantum Technology, 5(1), 1-15. (Often cited for timelines/risk). Updated versions/talks often available online.
+36. Bernstein, D. J., & Lange, T. (2017). Post-quantum cryptography. Nature, 549(7671), 188-194. (Good overview of the threat and solutions).
+37. European Union Agency for Cybersecurity (ENISA). Reports on Post-Quantum Cryptography. (Search ENISA website for latest reports, e.g., "Post-Quantum Cryptography: Current state and quantity recommendations"). https://www.enisa.europa.eu/
+38. National Academies of Sciences, Engineering, and Medicine. (2019). Quantum Computing: Progress and Prospects. National Academies Press. (Comprehensive report on the state of QC, including crypto impact). https://www.nap.edu/catalog/25196/quantum-computing-progress-and-prospects
+
+Specific Impact Analysis:
+39. Proos, J., & Zalka, C. (2003). Shor's discrete logarithm quantum algorithm for elliptic curves. Quantum Info. Comput., 3(4), 317-344. (Details on breaking ECC).
+40. Grassl, M., Langenberg, B., Roetteler, M., & Steinwandt, R. (2016). Applying Grover's algorithm to AES: quantum resource estimates. Post-Quantum Cryptography, 29-43. Springer. (Analysis of resources needed for Grover attack on AES).
+
+V. Quantum-Resistant Cryptography (PQC)
+
+NIST PQC Standardization Process:
+41. National Institute of Standards and Technology (NIST). Post-Quantum Cryptography Project Website. https://csrc.nist.gov/projects/post-quantum-cryptography (Primary source for standards, reports, selected algorithms).
+42. NIST Internal Report 8105: Report on Post-Quantum Cryptography (2016). https://csrc.nist.gov/publications/detail/nistir/8105/final (Initial report outlining the process).
+43. NIST Status Reports on the PQC Standardization Process (Multiple Rounds). (Available on the NIST PQC website).
+44. Alagic, G., et al. (2020). Status Report on the Second Round of the NIST Post-Quantum Cryptography Standardization Process. NISTIR 8309. https://csrc.nist.gov/publications/detail/nistir/8309/final (Example report - look for the latest).
+45. The specific algorithm specifications selected by NIST (e.g., CRYSTALS-Kyber, CRYSTALS-Dilithium, Falcon, SPHINCS+). (Available on the NIST PQC website).
+
+Surveys & Overviews of PQC Families:
+46. Bernstein, D. J., Buchmann, J., & Dahmen, E. (Eds.). (2009). Post-Quantum Cryptography. Springer. (Early, but foundational book).
+47. Alkim, E., Bindel, N., Buchmann, J., Dagdelen, Ö., & Pöppelmann, T. (2016). Post-quantum key exchange–a new hope. IACR Cryptology ePrint Archive, 2016/659. (Focuses on NewHope lattice scheme).
+48. Peikert, C. (2016). A decade of lattice cryptography. Foundations and Trends® in Theoretical Computer Science, 10(4), 283-424. (Excellent survey of lattice-based crypto).
+49. Hülsing, A. (2013). W-OTS+ – Shorter Signatures for Hash-Based Signature Schemes. Progress in Cryptology–AFRICACRYPT 2013, 173-190. (Example of hash-based signature research).
+50. Moody, D., Alagic, G., Apon, D. C., Cooper, D. A., Dang, Q. H., Kelsey, J. M., ... & Peralta, R. C. (2023). Getting ready for post-quantum cryptography: exploring challenges in the migration to PQC. ACM Computing Surveys. (Recent survey on migration challenges).
+
+Specific PQC Areas:
+51. Micciancio, D., & Regev, O. (2009). Lattice-based cryptography. Post-quantum cryptography, 147-191. Springer.
+52. Sendrier, N. (2017). Code-Based Cryptography: A Concise Overview. Journal of Mathematical Cryptology, 11(1), 3-11.
+53. Ding, J., Gower, J. E., & Schmidt, D. S. (2006). Multivariate public key cryptosystems. Advances in Information Security, Vol 25. Springer.
+
+VI. Quantum Key Distribution (QKD)
+
+Seminal Papers / Protocols:
+54. Bennett, C. H., & Brassard, G. (1984). Quantum cryptography: Public key distribution and coin tossing. Proceedings of IEEE International Conference on Computers, Systems and Signal Processing, 175-179. (The original BB84 protocol).
+55. Ekert, A. K. (1991). Quantum cryptography based on Bell’s theorem. Physical Review Letters, 67(6), 661. (Entanglement-based QKD - E91 protocol).
+
+Reviews / Textbooks:
+56. Scarani, V., Bechmann-Pasquinucci, H., Cerf, N. J., Dušek, M., Gisin, N., & Peev, M. (2009). The security of practical quantum key distribution. Reviews of Modern Physics, 81(3), 1301. (Comprehensive review of security aspects).
+57. Lo, H. K., Curty, M., & Tamaki, K. (2014). Secure quantum key distribution. Nature Photonics, 8(8), 595-604. (Review focusing on security proofs).
+58. Gisin, N., Ribordy, G., Tittel, W., & Zbinden, H. (2002). Quantum cryptography. Reviews of Modern Physics, 74(1), 145. (Earlier but still relevant review).
+
+VII. Challenges, Future Prospects, Societal Impact
+
+Error Correction / Fault Tolerance:
+59. Shor, P. W. (1995). Scheme for reducing decoherence in quantum computer memory. Physical Review A, 52(4), R2493. (Early work on quantum error correction).
+60. Terhal, B. M. (2015). Quantum error correction for quantum memories. Reviews of Modern Physics, 87(2), 307. (Comprehensive review).
+
+Quantum Internet:
+61. Wehner, S., Elkouss, D., & Hanson, R. (2018). Quantum internet: A vision for the road ahead. Science, 362(6412). (Vision paper).
+62. Kimble, H. J. (2008). The quantum internet. Nature, 453(7198), 1023-1030.
+
+Societal/Ethical:
+63. Dowling, J. P., & Milburn, G. J. (2003). Quantum technology: the second quantum revolution. Philosophical Transactions of the Royal Society of London. Series A: Mathematical, Physical and Engineering Sciences, 361(1809), 1655-1674. (Discusses broader impact).
+64. Check sources like World Economic Forum (WEF) reports or think tank publications discussing geopolitical and economic implications of quantum technology. (Search terms: "quantum computing economic impact," "geopolitics quantum technology").
+
+This list provides a strong foundation. As you delve deeper into specific sections, you will likely find more targeted papers and resources referenced within these initial sources. Good luck with your project!

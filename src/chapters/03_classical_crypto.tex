@@ -1,0 +1,50 @@
+\chapter{Classical Cryptography}
+
+\section{Historical Development of Cryptography}
+Cryptography has evolved from ancient simple ciphers to modern complex algorithms. Early examples include Egyptian hieroglyphs (circa 1900 BCE), with cryptography playing crucial roles in warfare, diplomacy, and commerce throughout history.
+
+Key historical milestones include:
+\begin{itemize}
+    \item \textbf{Caesar Cipher:} A simple substitution cipher from ancient Rome
+    \item \textbf{Enigma Machine:} Used in World War II, its breaking significantly influenced the war's outcome
+    \item \textbf{Data Encryption Standard (DES):} The first widely-adopted modern encryption standard (1977)
+\end{itemize}
+
+The transition to electronic computers revolutionized cryptography into the digital methods we use today.
+
+\section{Symmetric Key Cryptography}
+Symmetric cryptography uses the same key for both encryption and decryption. While efficient, it faces key distribution challenges.
+
+\subsection{Block Ciphers}
+Block ciphers process fixed-length groups of bits using a symmetric key. The Advanced Encryption Standard (AES), established in 2001, is the current standard, operating on 128-bit blocks with various key lengths.
+
+\section{Asymmetric Key Cryptography}
+Asymmetric (public-key) cryptography uses key pairs: a public key for encryption and a private key for decryption. This approach, introduced in 1976, solved the key distribution problem of symmetric systems.
+
+\subsection{RSA Encryption}
+RSA's security relies on the difficulty of factoring large prime numbers. It enables secure communication and digital signatures, typically using key sizes of 2048 bits or larger.
+
+\subsection{Elliptic Curve Cryptography (ECC)}
+ECC provides comparable security to RSA with smaller key sizes, making it suitable for mobile devices and IoT applications.
+
+\section{Cryptographic Hash Functions}
+Hash functions transform data of any size into fixed-size outputs and are essential for digital signatures and password verification. They are designed to be:
+\begin{itemize}
+    \item One-way (cannot derive input from output)
+    \item Collision-resistant (difficult to find two inputs producing the same output)
+    \item Sensitive to small input changes
+\end{itemize}
+
+Common hash functions include SHA-256 and SHA-3.
+
+\section{Digital Signatures and PKI}
+Digital signatures provide authentication and integrity verification by combining asymmetric cryptography with hash functions. Public Key Infrastructure (PKI) manages digital certificates that securely bind public keys to entities, enabling secure communication over networks like the internet.
+
+\section{Security Foundations}
+Classical cryptography's security is based on mathematical problems considered difficult for classical computers:
+\begin{itemize}
+    \item Integer factorization (basis for RSA)
+    \item Discrete logarithm problems (basis for other cryptosystems)
+\end{itemize}
+
+These mathematical foundations, while secure against classical computing, face potential vulnerabilities from quantum computing as we'll explore in later chapters.

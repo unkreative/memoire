@@ -1,0 +1,42 @@
+\documentclass[12pt,a4paper]{report}
+\usepackage{hyperref}
+\usepackage{url}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{graphicx}
+\usepackage{booktabs}
+\usepackage{caption}
+\usepackage{subcaption}
+\usepackage{csquotes}
+\usepackage{xcolor}
+\usepackage{listings}
+% Temporarily commenting out unavailable packages
+% \usepackage{algorithm}
+% \usepackage{algpseudocode}
+% \usepackage{physics}
+\usepackage{microtype}
+\usepackage[margin=1in]{geometry}
+\usepackage[
+backend=biber,
+style=alphabetic,
+bibstyle=reading,
+sorting=nyt
+]{biblatex}
+
+% Configure hyperref for better PDF navigation
+\hypersetup{
+    colorlinks=true,
+    linkcolor=blue,
+    filecolor=magenta,
+    urlcolor=cyan,
+    pdftitle={Quantum Computing and Its Impact on Cryptography},
+    pdfauthor={Lou Sergonne}
+}
+
+% Configure graphicx to look for images in the src/images directory
+\graphicspath{{src/images/}}
+
+\addbibresource{src/bibliography/bibliography.bib}
+\title{\LARGE{\textbf{Quantum Computing and Its Impact on Cryptography}}}
+\author{\Large{Lou Sergonne}}
+\date{2024-2025}
