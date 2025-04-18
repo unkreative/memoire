@@ -1,53 +1,91 @@
-\chapter{Quantum Computing's Impact on Cryptography}
+\chapter{Quantum Computing's Impact on Cryptography}\label{chap:quantum_impact}
 
 \section{Vulnerabilities in Classical Cryptography}
 
-Quantum computing threatens widely-used cryptographic systems:
+As quantum computing technology progresses, it poses a significant threat to the security of widely-used cryptographic systems.  Let's consider some key examples \parencite{shor1997polynomial,mosca2018cybersecurity}:
 
 \begin{itemize}
-    \item \textbf{RSA:} Vulnerable to Shor's algorithm, which can factor large numbers exponentially faster
-    \item \textbf{Elliptic Curve Cryptography:} Also vulnerable to Shor's algorithm through solving the discrete logarithm problem
-    \item \textbf{Diffie-Hellman:} Mathematical foundation can be broken by quantum computers
+    \item \textbf{RSA:}  This widely used system is vulnerable to Shor's algorithm. Quantum computers could factor the large numbers RSA relies on much faster than classical computers \parencite{rivest1978method}.
+    \item \textbf{Elliptic Curve Cryptography:}  ECC, another cornerstone of modern encryption, is also susceptible to Shor's algorithm. Quantum computers could solve the discrete logarithm problem on elliptic curves, undermining ECC's security.
+    \item \textbf{Diffie-Hellman:} The Diffie-Hellman key exchange, fundamental to secure communication, relies on mathematical problems that quantum computers can efficiently solve \parencite{diffie1976new}.
 \end{itemize}
 
-% Temporarily commenting out problematic image - replace with actual PNG file later
-% \begin{figure}[h]
-%     \centering
-%     \includegraphics[width=0.7\textwidth]{src/images/quantum_vs_classical.png}
-%     \caption{Comparison of Classical vs. Quantum Attack Complexity}
-% \end{figure}
+% Temporarily commenting out figures for debugging
+%\begin{figure}[h]
+%    \centering
+%    \includegraphics[width=0.7\textwidth]{quantum_vs_classical.png}
+%    \caption{Comparison of Classical vs. Quantum Attack Complexity}
+%    \label{fig:quantum_vs_classical}
+%\end{figure}
 
-\section{Shor's Algorithm}
+\section{Shor's Algorithm}\label{sec:shors_algorithm}
 
-Shor's algorithm (1994) demonstrates that quantum computers can factor large integers in polynomial time, making it a serious threat to asymmetric cryptography.
+Developed by Peter Shor in 1994 \parencite{shor1994algorithms}, Shor's algorithm is a landmark achievement. It demonstrates that quantum computers have the potential to factor large integers in polynomial time. This capability represents a serious threat to asymmetric cryptography, which depends on the computational difficulty of this very problem for its security \parencite{beckman1996efficient}.
 
-The algorithm works by converting factoring into finding a function's period, which quantum computers can do efficiently through quantum Fourier transform.
+The algorithm cleverly transforms the problem of factoring into one of finding the period of a function. Quantum computers can then efficiently determine this period using the quantum Fourier transform.
 
-\section{Grover's Algorithm}
+\begin{equation}\label{eq:shor_period}
+    f(x) = a^x \bmod N
+\end{equation}
 
-Grover's algorithm provides a quadratic speedup for unstructured search problems:
+where $N$ is the number to be factored and $a$ is a randomly chosen integer.
+
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=0.8\textwidth]{05_Quantum_Impact_on_Cryptography/shor_algorithm}
+    \caption{Quantum circuit implementation of Shor's algorithm}
+    \label{fig:shor_circuit}
+\end{figure}
+
+\section{Impact on RSA}\label{sec:rsa_impact}
+
+The security of RSA depends on the difficulty of factoring:
+
+\begin{equation}\label{eq:rsa_complexity}
+    T_{\text{classical}} = O(e^{(\log N)^{1/3}(\log \log N)^{2/3}})
+\end{equation}
+
+Versus Shor's algorithm:
+\begin{equation}\label{eq:shor_complexity}
+    T_{\text{quantum}} = O((\log N)^2(\log \log N)(\log \log \log N))
+\end{equation}
+
+\section{Grover's Algorithm}\label{sec:grovers_algorithm}
+
+While Shor's algorithm targets asymmetric cryptography, Grover's algorithm \parencite{grover1996fast} presents a different kind of challenge. It offers a quadratic speedup for unstructured search problems. What does this mean for cryptography?
 
 \begin{itemize}
-    \item Reduces symmetric encryption security by half (e.g., AES-256 becomes equivalent to AES-128)
-    \item Affects hash functions similarly
-    \item Solution: Double key sizes for symmetric cryptography
+    \item \textbf{Symmetric Encryption:} Grover's algorithm effectively reduces the security of symmetric encryption by half. For example, AES-256 would become roughly equivalent in security to AES-128 against a quantum attacker \parencite{nist2001aes}.
+    \item \textbf{Hash Functions:} Hash functions are similarly affected. Finding preimages or collisions becomes somewhat faster with Grover's algorithm.
+    \item \textbf{The Solution: Key Size Increase:} To counteract Grover's algorithm, a straightforward approach is to double the key sizes for symmetric cryptography.
 \end{itemize}
 
-\section{Timeline of Quantum Threat}
+\begin{equation}\label{eq:grover_speedup}
+    T_{\text{quantum}} = O(\sqrt{N})
+\end{equation}
 
-Current estimates suggest quantum computers capable of breaking RSA-2048 might emerge within 5-15 years, though significant challenges remain:
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=0.8\textwidth]{05_Quantum_Impact_on_Cryptography/grovers_algorithm}
+    \caption{Quantum circuit for Grover's algorithm}
+    \label{fig:grover_circuit}
+\end{figure}
+
+\section{Timeline of Quantum Threat}\label{sec:timeline}
+
+When might we expect quantum computers powerful enough to break current cryptography?  Estimates vary, but current thinking suggests that quantum computers capable of breaking RSA-2048 could potentially emerge within the next 5 to 15 years \parencite{mosca2018cybersecurity}.  However, significant hurdles remain:
 
 \begin{itemize}
-    \item Error correction is still difficult
-    \item Thousands of logical qubits needed for cryptographically relevant computations
+    \item \textbf{Error Correction:} Building quantum computers with sufficiently low error rates is a major technical challenge. Current error correction techniques are still imperfect \parencite{preskill2018quantum}.
+    \item \textbf{Scalability:} Cryptographically relevant computations will likely require thousands of logical qubits. Scaling up current quantum computer prototypes to this size is a significant engineering undertaking.
 \end{itemize}
 
-% Temporarily commenting out problematic image - replace with actual PNG file later
-% \begin{figure}[h]
-%     \centering
-%     \includegraphics[width=0.7\textwidth]{src/images/nist_timeline.png}
-%     \caption{NIST Timeline for Quantum Threat Development}
-% \end{figure}
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=0.8\textwidth]{06_Challenges_in_Transition/nist_timeline}
+    \caption{NIST's projected timeline for quantum computer development}
+    \label{fig:nist_timeline}
+\end{figure}
 
 \section{Store Now, Decrypt Later Attacks}
 
@@ -134,3 +172,37 @@ Major technology companies and organizations have already begun implementing qua
 \end{itemize}
 
 These early adoption efforts provide valuable real-world testing for post-quantum algorithms while protecting particularly sensitive systems against future quantum threats.
+
+\section{Comparative Analysis}\label{sec:comparison}
+
+\begin{table}[h]
+    \centering
+    \caption{Impact of Quantum Computing on Classical Cryptography}
+    \label{tab:quantum_impact}
+    \begin{tabular}{|l|c|c|}
+        \hline
+        \textbf{Algorithm} & \textbf{Classical Security} & \textbf{Quantum Security} \\
+        \hline
+        RSA-2048 & 112 bits & 0 bits \\
+        AES-256 & 256 bits & 128 bits \\
+        ECC-256 & 128 bits & 0 bits \\
+        \hline
+    \end{tabular}
+\end{table}
+
+\section{Required Security Levels}\label{sec:security_levels}
+
+To maintain security against quantum attacks:
+
+\begin{itemize}
+    \item \textbf{Symmetric Key Algorithms:} Double the key length
+    \item \textbf{Hash Functions:} Double the output length
+    \item \textbf{Public Key Algorithms:} Replace with quantum-resistant alternatives
+\end{itemize}
+
+The required security level $S$ against quantum attacks is:
+\begin{equation}\label{eq:quantum_security}
+    S_{\text{quantum}} = \frac{S_{\text{classical}}}{2}
+\end{equation}
+
+This chapter demonstrates the urgent need for quantum-resistant cryptography, which we will explore in subsequent chapters.

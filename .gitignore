@@ -1,4 +1,4 @@
-## Core latex/pdflatex auxiliary files:
+## Core latex/pdflatex auxiliary files - ignore these during version control:
 *.aux
 *.lof
 *.log
@@ -12,12 +12,12 @@
 *.cb2
 .*.lb
 
-## Intermediate documents:
+## Intermediate documents - also not needed in version control:
 *.dvi
 *.xdv
 *-converted-to.*
 
-## Bibliography auxiliary files (bibtex/biblatex/biber):
+## Bibliography auxiliary files (bibtex/biblatex/biber) - generated files:
 *.bbl
 *.bcf
 *.blg
@@ -25,7 +25,7 @@
 *-blx.bib
 *.run.xml
 
-## Build tool auxiliary files:
+## Build tool auxiliary files - temporary build artifacts:
 *.fdb_latexmk
 *.synctex
 *.synctex(busy)
@@ -33,8 +33,8 @@
 *.synctex.gz(busy)
 *.pdfsync
 
-## Other generated files
+## Other generated files - like the PDF itself:
 *.pdf
 
-## Temporary files
+## Temporary files - editor backups and such:
 *~

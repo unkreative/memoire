@@ -1,42 +1,51 @@
 \documentclass[12pt,a4paper]{report}
-\usepackage{hyperref}
-\usepackage{url}
-\usepackage{amsmath}
-\usepackage{amssymb}
-\usepackage{graphicx}
-\usepackage{booktabs}
-\usepackage{caption}
-\usepackage{subcaption}
-\usepackage{csquotes}
-\usepackage{xcolor}
-\usepackage{listings}
-% Temporarily commenting out unavailable packages
-% \usepackage{algorithm}
-% \usepackage{algpseudocode}
-% \usepackage{physics}
-\usepackage{microtype}
-\usepackage[margin=1in]{geometry}
+\usepackage{hyperref} % For hyperlinks in the document
+\usepackage{url}      % For formatting URLs
+\usepackage{amsmath}  % For advanced mathematical typesetting
+\usepackage{amssymb}  % For mathematical symbols
+\usepackage{graphicx} % For including images
+\usepackage{tikz}     % For creating diagrams
+\usetikzlibrary{positioning,arrows.meta,shapes.geometric,calc}  % Additional TikZ libraries
+\usepackage{booktabs} % For better tables
+\usepackage{caption}  % For customizing captions
+\usepackage{subcaption} % For subfigures and subcaptions
+\usepackage{csquotes} % For better quotation handling
+\usepackage{xcolor}   % For colors
+\usepackage{listings} % For code listings
+% Temporarily commenting out unavailable packages - these might need to be installed in your LaTeX environment
+% \usepackage{algorithm}   % For algorithms environment
+% \usepackage{algpseudocode} % For pseudocode in algorithms
+% \usepackage{physics}     % For physics notation
+\usepackage{microtype}  % For micro-typography adjustments
+\usepackage[margin=1in]{geometry} % Setting document margins
 \usepackage[
-backend=biber,
-style=alphabetic,
-bibstyle=reading,
-sorting=nyt
-]{biblatex}
+backend=biber, % Use biber as the bibliography backend
+style=alphabetic, % Use alphabetic citation style (e.g., [ABC12])
+bibstyle=reading, % Style for the bibliography itself
+sorting=nyt       % Sort bibliography entries by name, year, title
+]{biblatex} % For bibliography management with BibLaTeX and biber
 
-% Configure hyperref for better PDF navigation
+% Configure hyperref for improved PDF navigation and appearance
 \hypersetup{
-    colorlinks=true,
-    linkcolor=blue,
-    filecolor=magenta,
-    urlcolor=cyan,
-    pdftitle={Quantum Computing and Its Impact on Cryptography},
-    pdfauthor={Lou Sergonne}
+    colorlinks=true,       % Colors for links instead of boxes
+    linkcolor=blue,        % Color of internal links
+    filecolor=magenta,     % Color of file links
+    urlcolor=cyan,         % Color of URLs
+    pdftitle={Quantum Computing and Its Impact on Cryptography}, % PDF title metadata
+    pdfauthor={Lou Sergonne}          % PDF author metadata
 }
 
-% Configure graphicx to look for images in the src/images directory
+% Configure graphicx to search for images in the src/images directory
 \graphicspath{{src/images/}}
 
+% Specify the bibliography file to use
 \addbibresource{src/bibliography/bibliography.bib}
+
+% Document title
 \title{\LARGE{\textbf{Quantum Computing and Its Impact on Cryptography}}}
+
+% Author name
 \author{\Large{Lou Sergonne}}
+
+% Date - you can set a specific date or use \today for the current date
 \date{2024-2025}

@@ -1,50 +1,28 @@
-\chapter{Introduction}
+\chapter{Introduction}\label{chap:introduction}
 
-The intersection of quantum computing and cryptography represents one of the most significant technological shifts of our era. This thesis explores how quantum computers could transform cryptographic systems and examines emerging solutions.
+Quantum computers are changing the world of online security. This memoire looks at two main things: how quantum computers can break current security methods, and what we can do to stay secure in the future.
 
-\section{Research Motivation}
+Our online world relies on security systems (cryptography) that are designed to be too hard for regular computers to crack. But quantum computers are different. They are much more powerful for certain tasks and can break many of these security systems.
 
-Modern digital infrastructure relies heavily on cryptographic systems designed to resist classical computing attacks. However, quantum computing threatens these foundations through algorithms like Shor's, which can efficiently solve problems that are currently computationally infeasible.
+\includegraphics[width=0.8\textwidth]{01_Introduction/quantum_vs_classical}
 
-As quantum computing advances, we face both opportunities and challenges:
+This quantum threat is a big deal because:
 \begin{itemize}
-    \item Existing cryptographic systems may become vulnerable
-    \item New quantum-resistant approaches are needed
-    \item Quantum technologies offer novel cryptographic methods
+    \item Our current online security might not work against quantum computers.
+    \item We urgently need to find new security methods that can resist quantum computers.
+    \item Quantum technology itself might also offer new ways to keep things secure.
 \end{itemize}
 
-\section{Research Questions}
+\section{Structure of this Memoire}
 
-This thesis addresses several key questions:
-\begin{enumerate}
-    \item How do quantum computing principles fundamentally differ from classical computing?
-    \item What specific threats does quantum computing pose to current cryptographic systems?
-    \item What are the most promising quantum-resistant cryptographic approaches?
-    \item What implementation challenges exist for quantum-resistant cryptography?
-    \item How might the transition to post-quantum cryptography affect society?
-\end{enumerate}
-
-\section{Methodology}
-
-This research combines literature review with analysis of current standards development, focusing on:
+This paper is organized chapter by chapter:
 \begin{itemize}
-    \item Academic research on quantum computing and cryptography
-    \item Industry standards and NIST's post-quantum cryptography standardization process
-    \item Implementation considerations across different technology sectors
+    \item \textbf{Chapter 2: Basics of Quantum Computing} --- Explains the core ideas of quantum computing
+    \item \textbf{Chapter 3: Regular vs. Quantum Computing} --- Compares regular and quantum computers and why this matters for security
+    \item \textbf{Chapter 4: How Current Security Works} --- Reviews the security methods we use today and how they are supposed to be secure
+    \item \textbf{Chapter 5: Quantum Threats to Security} --- Explains exactly how quantum computers can break current security systems
+    \item \textbf{Chapter 6: Making the Change} --- Looks at the challenges of switching to new, quantum-resistant security systems
+    \item \textbf{Chapter 7: New Security Methods} --- Explores security solutions that should work even against quantum computers
+    \item \textbf{Chapter 8: What's Next?} --- Considers future developments and trends in this area \parencite{preskill2018quantum}
+    \item \textbf{Chapter 9: Impact on Society} --- Discusses the wider effects of these changes beyond just technology
 \end{itemize}
-
-\section{Thesis Structure}
-
-The thesis progresses from foundational concepts to specific applications:
-\begin{itemize}
-    \item Chapter 2 explains fundamental quantum computing principles
-    \item Chapter 3 compares classical and quantum computing paradigms
-    \item Chapter 4 reviews classical cryptographic foundations
-    \item Chapter 5 analyzes quantum computing's impact on current cryptography
-    \item Chapter 6 examines quantum-resistant cryptographic approaches
-    \item Chapter 7 discusses implementation challenges
-    \item Chapter 8 explores future research directions
-    \item Chapter 9 considers societal implications
-\end{itemize}
-
-This work aims to provide a balanced assessment of the changing cryptographic landscape as we enter the quantum computing era.

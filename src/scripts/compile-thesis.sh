@@ -1,38 +1,38 @@
 #!/bin/bash
 
-# Enhanced script to compile the LaTeX thesis with organized directories
-echo "Compiling LaTeX thesis..."
+# Script to compile the LaTeX thesis, now with organized directories for clarity
+echo "Starting LaTeX thesis compilation..."
 
-# Set working directory to the project root
+# Move to the project root directory for consistent operations
 cd "$(dirname "$0")/../.."
 
-# Set the PATH to include TeX binaries
+# Ensure TeX binaries are in the PATH for pdflatex and biber
 export PATH="/Library/TeX/texbin:$PATH"
 
-# Create build directory if it doesn't exist
+# Create the build directory if it's not already there - keeps things tidy
 mkdir -p build
 
-# Create a symlink to the bibliography file in the build directory
+# Create a symbolic link to the bibliography in the build directory if it doesn't exist
 if [ ! -L "build/bibliography.bib" ]; then
   ln -sf "$(pwd)/src/bibliography/bibliography.bib" "build/bibliography.bib"
 fi
 
-# Run pdflatex on main.tex with output directory set to build
-echo "Running first pdflatex pass..."
+# First pass of pdflatex: compile main.tex, output to build directory
+echo "Running pdflatex (pass 1)..."
 pdflatex -synctex=1 -interaction=nonstopmode -file-line-error -output-directory=build main.tex
 
-# Run biber for bibliography
-echo "Running biber for bibliography..."
+# Run biber to process the bibliography for citations
+echo "Running biber..."
 biber --output-directory build build/main
 
-# Run pdflatex twice more to resolve references
-echo "Running second pdflatex pass..."
+# Second and third pdflatex passes to resolve references and citations
+echo "Running pdflatex (pass 2)..."
 pdflatex -synctex=1 -interaction=nonstopmode -file-line-error -output-directory=build main.tex
-echo "Running final pdflatex pass..."
+echo "Running pdflatex (final pass)..."
 pdflatex -synctex=1 -interaction=nonstopmode -file-line-error -output-directory=build main.tex
 
-# Copy the final PDF to the main directory for convenience
+# Copy the generated PDF to the main directory for easy access
 echo "Copying PDF to main directory..."
-cp build/main.pdf . 2>/dev/null || echo "Warning: No PDF was generated"
+cp build/main.pdf . 2>/dev/null || echo "Warning: PDF generation might have failed"
 
-echo "Compilation complete. Check for main.pdf in the output."
+echo "LaTeX thesis compilation is complete. Look for main.pdf in the output."

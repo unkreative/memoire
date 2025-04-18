@@ -1,0 +1,206 @@
+{
+  "main": {
+    "id": "037ce32216dedc9d",
+    "type": "split",
+    "children": [
+      {
+        "id": "cec97a37006ebde8",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "156a7f31c7276ef7",
+            "type": "leaf",
+            "state": {
+              "type": "codeview",
+              "state": {
+                "file": "src/chapters/03_classical_crypto.tex"
+              },
+              "icon": "lucide-file",
+              "title": "03_classical_crypto"
+            }
+          },
+          {
+            "id": "8e844e0f20ab2fcb",
+            "type": "leaf",
+            "state": {
+              "type": "codeview",
+              "state": {
+                "file": "src/chapters/02_fundamentals.tex"
+              },
+              "icon": "lucide-file",
+              "title": "02_fundamentals"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "66afa5e54be8e241",
+    "type": "split",
+    "children": [
+      {
+        "id": "1decd9e0f0a44bbf",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "e60b1895e95b4bf2",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {
+                "sortOrder": "alphabetical",
+                "autoReveal": false
+              },
+              "icon": "lucide-folder-closed",
+              "title": "Files"
+            }
+          },
+          {
+            "id": "8922c440365fbebe",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              },
+              "icon": "lucide-search",
+              "title": "Search"
+            }
+          },
+          {
+            "id": "e476a9e5e8cf1203",
+            "type": "leaf",
+            "state": {
+              "type": "bookmarks",
+              "state": {},
+              "icon": "lucide-bookmark",
+              "title": "Bookmarks"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300
+  },
+  "right": {
+    "id": "04c6480b5ecca1c4",
+    "type": "split",
+    "children": [
+      {
+        "id": "7fdc22c5b9a32c1f",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "39da90639fd462c0",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "file": "main.pdf",
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-coming-in",
+              "title": "Backlinks for main"
+            }
+          },
+          {
+            "id": "1a7c39dd2b6a3e2d",
+            "type": "leaf",
+            "state": {
+              "type": "outgoing-link",
+              "state": {
+                "file": "main.pdf",
+                "linksCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-going-out",
+              "title": "Outgoing links from main"
+            }
+          },
+          {
+            "id": "919475d13c4ece35",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "frequency",
+                "useHierarchy": true,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-tags",
+              "title": "Tags"
+            }
+          },
+          {
+            "id": "55172815d6c86d67",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {
+                "file": "main.pdf",
+                "followCursor": false,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-list",
+              "title": "Outline of main"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300,
+    "collapsed": true
+  },
+  "left-ribbon": {
+    "hiddenItems": {
+      "switcher:Open quick switcher": false,
+      "graph:Open graph view": false,
+      "canvas:Create new canvas": false,
+      "daily-notes:Open today's daily note": false,
+      "templates:Insert template": false,
+      "command-palette:Open command palette": false
+    }
+  },
+  "active": "156a7f31c7276ef7",
+  "lastOpenFiles": [
+    "build/main.synctex(busy)",
+    "main.pdf",
+    "main.toc",
+    "main.bcf",
+    "main.out",
+    "main.aux",
+    "main.log",
+    "build/main.synctex.gz",
+    "build/main.bbl",
+    "build/main.pdf",
+    "src/thesis_todo.md",
+    "src/images/09_Societal_Implications/word_distribution.png",
+    "src/images/06_Challenges_in_Transition/quantum_key_distribution.png",
+    "src/images/06_Challenges_in_Transition/post_quantum_comparison.png",
+    "src/images/06_Challenges_in_Transition/nist_timeline.png",
+    "src/images/06_Challenges_in_Transition/lattice_cryptography.png",
+    "src/images/05_Quantum_Impact_on_Cryptography/shor_algorithm.png",
+    "src/images/05_Quantum_Impact_on_Cryptography/grovers_algorithm.png",
+    "src/images/03_Classical_Cryptography/rsa_encryption.png",
+    "src/images/03_Classical_Cryptography/pki_trust_model.png",
+    "src/images/03_Classical_Cryptography/enigma_rotors.jpg",
+    "src/images/09_Societal_Implications"
+  ]
+}
