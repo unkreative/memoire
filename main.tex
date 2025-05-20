@@ -3,19 +3,38 @@
 
 \begin{document}
 
-\maketitle % Creates the title page
+\input{src/chapters/cover} % Add the cover page first
+% \maketitle % Creates the title page
 \tableofcontents % Generates the table of contents
 
-\input{src/chapters/01_introduction}         % Include Introduction chapter
-\input{src/chapters/02_fundamentals}          % Include Fundamentals chapter
-\input{src/chapters/03_classical_crypto}       % Include Classical Crypto chapter
-\input{src/chapters/04_classical_vs_quantum}   % Include Classical vs Quantum chapter
-\input{src/chapters/05_quantum_impact}        % Include Quantum Impact chapter
-\input{src/chapters/06_challenges}           % Include Challenges chapter
-\input{src/chapters/07_quantum_resistant}      % Include Quantum Resistant chapter
-\input{src/chapters/08_future_prospects}      % Include Future Prospects chapter
-\input{src/chapters/09_societal_implications} % Include Societal Implications chapter
+% Foundation Layer (85-90% complete)
+\input{src/chapters/01_introduction}        % Introduction
+\input{src/chapters/02_fundamentals}        % Quantum Fundamentals
+\input{src/chapters/03_classical_crypto}    % Classical Cryptography
 
+% Analysis Layer (75-80% complete)
+\input{src/chapters/04_classical_vs_quantum} % Classical vs Quantum Computing
+\input{src/chapters/05_quantum_impact}      % Quantum Impact on Cryptography
+
+% Solutions Layer (55-60% complete)
+\input{src/chapters/06_quantum_resistant}    % Quantum-Resistant Cryptography
+\input{src/chapters/07_challenges}          % Challenges in PQC Transition
+
+% Conclusion (10% complete)
+\input{src/chapters/08_conclusion}          % Conclusion
+
+% Back Matter
+% \nocite{*} % Include all sources from the .bib file, even uncited ones
+
+% Add glossary
+\clearpage
+\glsaddall % Ensure all defined entries are processed for linking
+\printglossary[title=Glossary of Terms and Concepts]
+\clearpage
+
+\clearpage % Ensure bibliography starts on a new page
+% \nocitecategory{ytvideos} % Remove this
+\nocite{EyeOnTech2022,Makarov2014,QNuLabs2024,IITKanpur2024,QuantumBasics2022,UpAndAtom2017,Lucerne2024,crypto1,crypto2,crypto3,crypto4,crypto5,crypto6,quanta2021,preskill2021,ekert2021,byrnes2022,veritasium2023,mit2024,wsf2024,soar2024,wiebe2021,gharibian2021} % Add all keys from yt.bib
 \printbibliography[title={Sources}] % Prints the bibliography at the end
 
 \end{document}

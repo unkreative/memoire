@@ -1,0 +1,4 @@
+Context Snippet: [\section{Quantum Gates and Circuits}\label{sec:quantum_gates}\n\n]
+Sentence: [Quantum computations are performed by applying sequences of \glspl{quantum-gate} to \glspl{qubit}.]
+Key: [WikipediaQuantumCircuit]
+--- 

@@ -1,0 +1,4 @@
+Context Snippet: [(Figure~\ref{fig:bloch_sphere}), ]
+Sentence: [where any point on the surface of the sphere represents a possible pure state of a single qubit.]
+Key: [WikipediaBlochSphere]
+--- 

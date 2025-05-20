@@ -1,0 +1,3 @@
+Source: https://modern-physics.org/quantum-mechanics/, Key: votatera2024quantum, Relevant Location(s): sec:quantum_principles, subsec:superposition
+Source: https://en.wikipedia.org/wiki/Quantum_mechanics, Key: wikipedia2025quantum, Relevant Location(s): sec:quantum_principles
+

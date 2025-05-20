@@ -38,3 +38,41 @@
 
 ## Temporary files - editor backups and such:
 *~
+
+# LaTeX temporary files
+*.aux
+*.bcf
+*.log
+*.out
+*.toc
+*.blg
+*.bbl
+*.fls
+*.fdb_latexmk
+*.synctex.gz
+*.pdfsync
+
+# Build directory
+build/
+
+# System files
+.DS_Store
+Thumbs.db
+
+# Editor directories and files
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# Backup files
+*.bak
+*.backup
+*~
+
+# Obsidian
+.obsidian/
+
+# Temporary files
+*.tmp
+*.temp

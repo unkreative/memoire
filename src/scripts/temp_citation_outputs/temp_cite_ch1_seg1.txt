@@ -1,0 +1,9 @@
+Context/Sentence: 'This necessitates doubling key sizes to maintain equivalent security levels against quantum attackers.', Key: Regenscheid2024TransitionTP
+
+Context/Sentence: 'This necessitates doubling key sizes to maintain equivalent security levels against quantum attackers.', Key: Regenscheid2024TransitionTP
+
+Additionally, \gls{grovers-algorithm} provides a quadratic speedup for unstructured search problems, effectively halving the security strength of symmetric encryption algorithms like \gls{aes}.', Key: grover1996fast
+
+Context/Sentence: 'The \gls{sndl} threat, where adversaries collect encrypted data today to decrypt it once quantum computers become available, makes addressing these vulnerabilities urgent, even if large-scale quantum computers are still years away.', Key: Cellcrypt2024SNDL
+
+Context/Sentence: 'Organizations with data that must remain confidential for extended periods need to begin transitioning to \gls{post-quantum-cryptography} solutions now.', Key: Geremew2024PreparingCI

@@ -1,0 +1,3 @@
+Context/Sentence: The advent of \gls{quantum-gate} based computing represents a significant departure from classical computing paradigms., Key: Liu2023IntroductionTQ
+Context/Sentence: Unlike classical bits, \glspl{qubit} can exist in multiple states simultaneously due to the quantum mechanical property of \gls{superposition}., Key: ibm_quantum_intro
+Context/Sentence: Additionally, \gls{entanglement} allows qubits to be correlated in ways that have no classical analogue, enabling computational capabilities beyond what is possible with traditional computing architectures., Key: Ding2007EntanglementReview 

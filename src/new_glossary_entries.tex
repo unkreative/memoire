@@ -1,0 +1,244 @@
+% New glossary entries identified from Chapter 1
+
+\newglossaryentry{quantum-mechanics}{
+    name={quantum mechanics},
+    description={The fundamental theory in physics describing the properties of nature at the scale of atoms and subatomic particles. Relevant concepts include superposition and entanglement. Mentioned in Chapter \ref{chap:introduction}}
+}
+
+\newglossaryentry{classical-computer}{
+    name={classical computer},
+    description={A computer that operates based on classical physics, using bits (0s and 1s) as the basic unit of information. Contrasted with quantum computers. Mentioned in Chapter \ref{chap:introduction}}
+}
+
+\newglossaryentry{cryptography}{
+    name={cryptography},
+    description={The practice and study of techniques for secure communication in the presence of third parties called adversaries. Mentioned in Chapter \ref{chap:introduction}}
+}
+
+\newglossaryentry{dh}{
+    name={DH},
+    description={Diffie-Hellman key exchange; a method for securely exchanging cryptographic keys over a public channel. Vulnerable to Shor's algorithm. Mentioned in Chapter \ref{chap:introduction}}
+}
+
+\newglossaryentry{polynomial-time}{
+    name={polynomial time},
+    description={An algorithm runtime complexity where the number of steps scales polynomially with the input size. Considered efficient for classical computation. See also \gls{bqp}. Mentioned in Chapter \ref{chap:introduction}}
+}
+
+\newglossaryentry{symmetric-cipher}{
+    name={symmetric cipher},
+    description={A type of encryption algorithm that uses the same key for both encryption and decryption (e.g., \gls{aes}). Weakened by Grover's algorithm. Mentioned in Chapter \ref{chap:introduction}}
+}
+
+\newglossaryentry{brute-force-attack}{
+    name={brute-force attack},
+    description={A cryptanalytic attack that tries all possible keys or passwords until the correct one is found. Grover's algorithm provides a quadratic speedup for these attacks against symmetric ciphers. Mentioned in Chapter \ref{chap:introduction}}
+}
+
+% New glossary entries identified from Chapter 3
+
+\newglossaryentry{classical-cryptography}{
+    name={classical cryptography},
+    description={Cryptographic techniques developed before the advent of quantum computing, primarily relying on computational hardness assumptions believed to hold for classical computers. See Chapter \ref{chap:classical_crypto}.}
+}
+
+\newglossaryentry{transposition-cipher}{
+    name={transposition cipher},
+    description={A method of encryption where the positions held by units of plaintext are shifted according to a regular system. Mentioned in Section \ref{sec:crypto_fundamentals_ch3_rev}.}
+}
+
+\newglossaryentry{substitution-cipher}{
+    name={substitution cipher},
+    description={A method of encryption where units of plaintext are replaced with ciphertext according to a fixed system. Mentioned in Section \ref{sec:crypto_fundamentals_ch3_rev}.}
+}
+
+\newglossaryentry{monoalphabetic-cipher}{
+    name={monoalphabetic cipher},
+    description={A substitution cipher using a single, fixed substitution alphabet for the entire message. Mentioned in Section \ref{sec:crypto_fundamentals_ch3_rev}.}
+}
+
+\newglossaryentry{polyalphabetic-cipher}{
+    name={polyalphabetic cipher},
+    description={A substitution cipher using multiple substitution alphabets, making frequency analysis harder. Mentioned in Section \ref{sec:crypto_fundamentals_ch3_rev}.}
+}
+
+\newglossaryentry{frequency-analysis}{
+    name={frequency analysis},
+    description={The study of letter/group frequencies in ciphertext to break classical ciphers. Mentioned in Section \ref{sec:crypto_fundamentals_ch3_rev}.}
+}
+
+\newglossaryentry{digraph-cipher}{
+    name={digraph cipher},
+    description={A cipher encrypting pairs of letters (digraphs) rather than single letters. Mentioned in Section \ref{sec:crypto_fundamentals_ch3_rev}.}
+}
+
+\newglossaryentry{hill-cipher}{
+    name={Hill cipher},
+    description={A polygraphic substitution cipher based on linear algebra. Mentioned in Section \ref{sec:crypto_fundamentals_ch3_rev}.}
+}
+
+\newglossaryentry{enigma}{
+    name={Enigma machine},
+    description={Electro-mechanical rotor cipher machine used for encrypting secret messages. Mentioned in Section \ref{sec:crypto_fundamentals_ch3_rev}.}
+}
+
+\newglossaryentry{des}{
+    name={DES},
+    description={Data Encryption Standard; a symmetric-key block cipher (1977), now insecure due to small key size. Mentioned in Section \ref{sec:crypto_fundamentals_ch3_rev}.}
+}
+
+\newglossaryentry{confidentiality}{
+    name={confidentiality},
+    description={Security goal ensuring information is not disclosed to unauthorized parties. Mentioned in Section \ref{sec:crypto_fundamentals_ch3_rev}.}
+}
+
+\newglossaryentry{integrity}{
+    name={integrity},
+    description={Security goal ensuring data has not been altered unauthorizedly. Mentioned in Section \ref{sec:crypto_fundamentals_ch3_rev}.}
+}
+
+\newglossaryentry{authentication}{
+    name={authentication},
+    description={Security goal verifying the identity of a user or system. Mentioned in Section \ref{sec:crypto_fundamentals_ch3_rev}.}
+}
+
+\newglossaryentry{non-repudiation}{
+    name={non-repudiation},
+    description={Security goal preventing denial of authenticity of a signature or message origin. Mentioned in Section \ref{sec:crypto_fundamentals_ch3_rev}.}
+}
+
+\newglossaryentry{one-way-function}{
+    name={one-way function},
+    description={A function easy to compute but hard to invert. Mentioned in Section \ref{subsec:hardness_assumptions_ch3_rev}.}
+}
+
+\newglossaryentry{trapdoor-function}{
+    name={trapdoor function},
+    description={A one-way function hard to invert without secret information (the trapdoor). Mentioned in Section \ref{subsec:hardness_assumptions_ch3_rev}.}
+}
+
+\newglossaryentry{symmetric-key-cryptography}{
+    name={symmetric-key cryptography},
+    description={Encryption methods using the same key for encryption and decryption. See Section \ref{sec:symmetric_key_ch3_rev}.}
+}
+
+\newglossaryentry{block-cipher}{
+    name={block cipher},
+    description={A symmetric cipher operating on fixed-length blocks of data. See Section \ref{sec:symmetric_key_ch3_rev}.}
+}
+
+\newglossaryentry{confusion}{
+    name={confusion},
+    description={Cryptographic principle obscuring the relationship between the key and ciphertext (e.g., via substitution). Mentioned in Section \ref{sec:symmetric_key_ch3_rev}.}
+}
+
+\newglossaryentry{diffusion}{
+    name={diffusion},
+    description={Cryptographic principle spreading plaintext influence across ciphertext (e.g., via permutation). Mentioned in Section \ref{sec:symmetric_key_ch3_rev}.}
+}
+
+\newglossaryentry{key-schedule}{
+    name={key schedule},
+    description={Algorithm generating round keys from the main key in block ciphers. Mentioned in Section \ref{sec:symmetric_key_ch3_rev}.}
+}
+
+\newglossaryentry{timing-attack}{
+    name={timing attack},
+    description={Side-channel attack analyzing time taken for cryptographic operations. Mentioned in Section \ref{sec:symmetric_key_ch3_rev} and \ref{sec:protocol_design_ch3_rev}.}
+}
+
+\newglossaryentry{power-analysis}{
+    name={power analysis},
+    description={Side-channel attack studying power consumption of cryptographic hardware. Mentioned in Section \ref{sec:symmetric_key_ch3_rev} and \ref{sec:protocol_design_ch3_rev}.}
+}
+
+\newglossaryentry{mode-of-operation}{
+    name={mode of operation},
+    description={Method for using block ciphers on messages longer than one block. See Section \ref{sec:symmetric_key_ch3_rev}.}
+}
+
+\newglossaryentry{ecb}{
+    name={ECB},
+    description={Electronic Codebook; the simplest block cipher mode, encrypting blocks independently (insecure). See Section \ref{sec:symmetric_key_ch3_rev}.}
+}
+
+\newglossaryentry{oaep}{
+    name={OAEP},
+    description={Optimal Asymmetric Encryption Padding; padding scheme for RSA to prevent attacks. Mentioned in Section \ref{subsec:rsa_ch3_rev}.}
+}
+
+\newglossaryentry{diffie-hellman}{
+    name={Diffie-Hellman Key Exchange},
+    description={Method to establish a shared secret over an insecure channel (DH). See Section \ref{subsec:dh_ch3_rev}.}
+}
+
+\newglossaryentry{hash-function}{
+    name={hash function},
+    plural={hash functions},
+    description={A cryptographic function that takes an arbitrary input size and produces a fixed-size output (hash value). See Section \ref{sec:hash_functions_ch3}.}
+}
+
+\newglossaryentry{preimage-resistance}{
+    name={preimage resistance},
+    description={Hash property: hard to find input m for a given hash h such that H(m)=h. Mentioned in Section \ref{sec:hash_functions_ch3_rev}.}
+}
+
+\newglossaryentry{second-preimage-resistance}{
+    name={second preimage resistance},
+    description={Hash property: hard to find different input m2 for a given m1 such that H(m1)=H(m2). Mentioned in Section \ref{sec:hash_functions_ch3_rev}.}
+}
+
+\newglossaryentry{collision-resistance}{
+    name={collision resistance},
+    description={Hash property: hard to find two distinct inputs m1, m2 such that H(m1)=H(m2). Mentioned in Section \ref{sec:hash_functions_ch3_rev}.}
+}
+
+\newglossaryentry{md5}{
+    name={MD5},
+    description={Message Digest 5; 128-bit hash function, now broken (collisions found). Mentioned in Section \ref{sec:hash_functions_ch3_rev}.}
+}
+
+\newglossaryentry{sha-1}{
+    name={SHA-1},
+    description={Secure Hash Algorithm 1; 160-bit hash function, deprecated (collisions found). Mentioned in Section \ref{sec:hash_functions_ch3_rev}.}
+}
+
+\newglossaryentry{sha-2}{
+    name={SHA-2},
+    description={Secure Hash Algorithm 2; family of hash functions (e.g., SHA-256), currently secure. Mentioned in Section \ref{sec:hash_functions_ch3_rev}.}
+}
+
+\newglossaryentry{sha-3}{
+    name={SHA-3},
+    description={Secure Hash Algorithm 3; based on sponge construction, currently secure. Mentioned in Section \ref{sec:hash_functions_ch3_rev}.}
+}
+
+\newglossaryentry{compression-function}{
+    name={compression function},
+    description={Core component in Merkle-Damgård hashes, processes message blocks. Mentioned in Section \ref{sec:hash_functions_ch3_rev}.}
+}
+
+\newglossaryentry{digital-signature}{
+    name={digital signature},
+    description={Scheme for verifying authenticity, integrity, and non-repudiation using asymmetric crypto. See Section \ref{sec:digital_signatures_pki_ch3_rev}.}
+}
+
+\newglossaryentry{mitm}{
+    name={Man-in-the-Middle attack},
+    description={Attack relaying/altering communication between two parties (MitM). Mentioned in Section \ref{sec:protocol_design_ch3_rev}.}
+}
+
+\newglossaryentry{replay-attack}{
+    name={replay attack},
+    description={Network attack repeating/delaying valid data transmission. Mentioned in Section \ref{sec:protocol_design_ch3_rev}.}
+}
+
+\newglossaryentry{downgrade-attack}{
+    name={downgrade attack},
+    description={Attack forcing a system to use a less secure mode of operation. Mentioned in Section \ref{sec:protocol_design_ch3_rev}.}
+}
+
+\newglossaryentry{padding-oracle-attack}{
+    name={padding oracle attack},
+    description={Attack using padding validation errors to decrypt ciphertext. Mentioned in Section \ref{sec:protocol_design_ch3_rev}.}
+} 

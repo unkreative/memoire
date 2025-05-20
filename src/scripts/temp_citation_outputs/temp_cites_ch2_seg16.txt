@@ -1,0 +1,4 @@
+Context Snippet: [achieve fault-tolerant quantum computing.]
+Sentence: [Estimates suggest that factoring a 2048-bit RSA number, a task intractable for classical computers, might require millions of noisy physical qubits to implement Shor's algorithm reliably with QEC.]
+Key: [Gidney2021howtofactor]
+--- 

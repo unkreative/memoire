@@ -1,28 +1,24 @@
 \chapter{Introduction}\label{chap:introduction}
 
-Quantum computers are changing the world of online security. This memoire looks at two main things: how quantum computers can break current security methods, and what we can do to stay secure in the future.
+Quantum computing uses strange but powerful phenomena from \gls{quantum-mechanics}, like \gls{superposition} and \gls{entanglement}, to perform certain computations much faster than \gls{classical-computer}s ever could \parencite{Berberich2023QuantumCT, Liu2023IntroductionTQ}. While this opens the door to major breakthroughs, it also threatens one of the core pillars of modern digital life: \gls{cryptography}.
 
-Our online world relies on security systems (cryptography) that are designed to be too hard for regular computers to crack. But quantum computers are different. They are much more powerful for certain tasks and can break many of these security systems.
+Some quantum algorithms hit particularly hard. \gls{shors-algorithm} \parencite{shor1997polynomial} breaks the math behind today's most widely used \gls{public-key-cryptography} systems \gls{rsa}, \gls{ecc}, and \gls{dh}. all in \gls{polynomial-time}. \gls{grovers-algorithm} doesn't break \gls{symmetric-cipher}s outright, but it still weakens them by giving a quadratic speedup in \gls{brute-force-attack}s, effectively halving their security.
 
-\includegraphics[width=0.8\textwidth]{01_Introduction/quantum_vs_classical}
+The threat isn't theoretical anymore. The "Store Now, Decrypt Later" (\gls{sndl}) scenario is real: attackers can harvest encrypted data now and wait for quantum machines to catch up \parencite{nist_pqc_timeline_2024, Geremew2024PreparingCI, Regenscheid2024TransitionTP}. That's why we need to move towards \gls{post-quantum-cryptography} (\gls{pqc}) algorithms designed to hold up against both classical and quantum attacks. But switching over isn't as easy as it sounds. It means rethinking systems, protocols, standards, basically, rebuilding mostly from the ground up \parencite{nist_pqc_timeline_2024, Geremew2024PreparingCI, Regenscheid2024TransitionTP}.
 
-This quantum threat is a big deal because:
-\begin{itemize}
-    \item Our current online security might not work against quantum computers.
-    \item We urgently need to find new security methods that can resist quantum computers.
-    \item Quantum technology itself might also offer new ways to keep things secure.
-\end{itemize}
+This memoire looks at how quantum computing changes the game for \gls{cryptography}. It covers the weaknesses exposed by quantum algorithms, dives into emerging quantum-safe solutions, and tackles the messy reality of moving to a \gls{pqc}-secure world.
 
+\newpage
 \section{Structure of this Memoire}
 
-This paper is organized chapter by chapter:
+
+Here's how the rest of the memoire is laid out:
 \begin{itemize}
-    \item \textbf{Chapter 2: Basics of Quantum Computing} --- Explains the core ideas of quantum computing
-    \item \textbf{Chapter 3: Regular vs. Quantum Computing} --- Compares regular and quantum computers and why this matters for security
-    \item \textbf{Chapter 4: How Current Security Works} --- Reviews the security methods we use today and how they are supposed to be secure
-    \item \textbf{Chapter 5: Quantum Threats to Security} --- Explains exactly how quantum computers can break current security systems
-    \item \textbf{Chapter 6: Making the Change} --- Looks at the challenges of switching to new, quantum-resistant security systems
-    \item \textbf{Chapter 7: New Security Methods} --- Explores security solutions that should work even against quantum computers
-    \item \textbf{Chapter 8: What's Next?} --- Considers future developments and trends in this area \parencite{preskill2018quantum}
-    \item \textbf{Chapter 9: Impact on Society} --- Discusses the wider effects of these changes beyond just technology
+\item \textbf{Chapter 2:} Fundamentals of Quantum Computing; Key concepts needed to understand the cryptographic threat.
+\item \textbf{Chapter 3:} Classical Cryptography; A quick and brief recap of current systems and how they work.
+\item \textbf{Chapter 4:} Classical vs Quantum Computing; What makes quantum computers so different.
+\item \textbf{Chapter 5:} Quantum Impact on Cryptography; A closer look at how specific algorithms break classical crypto.
+\item \textbf{Chapter 6:} Quantum-Resistant Solutions; An overview of PQC algorithms and standardization efforts.
+\item \textbf{Chapter 7:} Challenges in Transitioning to PQC; Real-world issues in rolling out quantum-safe cryptography.
+\item \textbf{Chapter 8:} Conclusion
 \end{itemize}

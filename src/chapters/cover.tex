@@ -1,0 +1,20 @@
+% Cover page with a tikz-based full-page background
+\thispagestyle{empty}
+\begin{titlepage}
+% Create a black background with tikz
+\begin{tikzpicture}[remember picture, overlay]
+\node[inner sep=0pt] at (current page.center) {\includegraphics[width=\paperwidth,height=\paperheight]{coverr.png}};
+\end{tikzpicture}
+
+% Add the title and author information
+\begin{center}
+\vfill
+% {\Huge\bfseries\textcolor{white}{Quantum Computing and Its Impact on Cryptography}\par}
+\vspace{2cm}
+% {\Large\textcolor{white}{Lou Sergonne}\par}
+\vspace{1cm}
+% {\large\textcolor{white}{2024-2025}\par}
+\vfill
+\end{center}
+\end{titlepage}
+\clearpage 

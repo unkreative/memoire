@@ -1,0 +1,4 @@
+Context Snippet: [... measuring a desired state in a quantum superposition. ]
+Sentence: [As mentioned earlier, it provides a quadratic speedup for unstructured search problems.]
+Key: [ScaibuGroversGuide]
+--- 

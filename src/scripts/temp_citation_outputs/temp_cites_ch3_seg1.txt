@@ -1,0 +1,12 @@
+Context Snippet: [...denying having sent the signed message).]
+Sentence: They achieve these goals by ingeniously combining asymmetric cryptography with cryptographic hash functions.
+Key: Debnath2024IntroductionTC
+---
+Context Snippet: [...unsolvable for sufficiently large key sizes.]
+Sentence: Classical algorithms for IFP, DLP, ECDLP are super-polynomial or exponential; Shor's quantum algorithm solves them in polynomial time $O(\text{poly}(\log N))$.
+Key: Sankar2015ClassicalAQ
+---
+Context Snippet: ... deduce secret keys \parencite{boneh2020graduate}.
+Sentence: These side-channel attacks often bypass the theoretical security of the algorithm entirely.
+Key: Kuusisto2015AncientAM
+--- 

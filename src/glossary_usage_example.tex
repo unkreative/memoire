@@ -1,0 +1,39 @@
+% Example file demonstrating how to use glossary terms
+% Include this in your chapters to see how the usage works
+
+% First use of a term should use \gls{} to reference it
+A fundamental concept in quantum computing is the \gls{qubit}, which can exist in a 
+state of \gls{superposition}. Unlike classical bits that can only represent either 0 or 1, 
+qubits can represent both simultaneously.
+
+% For subsequent uses, continue using \gls{} to maintain consistent behavior
+When multiple \gls{qubit}s interact, they can become \gls{entanglement|entangled}, creating 
+quantum correlations that have no classical counterpart. However, these quantum states 
+are fragile and subject to \gls{decoherence} from environmental interactions.
+
+% For plural forms, use \glspl{}
+Quantum computers process information using \glspl{quantum-gate}, which manipulate qubits 
+to perform calculations. One of the promising physical implementations uses \gls{trapped-ions}.
+
+% To capitalize the first letter, use \Gls{} or \Glspl{} for plurals
+\Gls{rsa} encryption is widely used in modern cryptography, but is vulnerable to attacks 
+using \gls{shors-algorithm}. Similarly, \gls{ecc} provides efficient security but is also 
+threatened by quantum computing.
+
+% For acronyms that should be expanded on first use
+\Gls{qkd} can provide theoretically secure key distribution, unlike classical key exchange 
+methods that are vulnerable to quantum attacks. \Gls{bqp} represents problems that quantum 
+computers can solve efficiently.
+
+% Current efforts like the \gls{nist-pqc} aim to develop and standardize \gls{post-quantum-cryptography}, 
+including promising approaches like \gls{lattice-based-cryptography} and \gls{hash-based-cryptography}.
+
+% Note: When compiling, you need to:
+% 1. Run pdflatex on your document
+% 2. Run makeglossaries on your document
+% 3. Run pdflatex again
+% 
+% Example:
+% pdflatex main.tex
+% makeglossaries main
+% pdflatex main.tex 

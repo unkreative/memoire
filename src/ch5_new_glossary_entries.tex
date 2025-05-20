@@ -1,0 +1,72 @@
+% New glossary entries identified from Chapter 5
+
+\newglossaryentry{integer-factorization-problem}{
+    name={Integer Factorization Problem (IFP)},
+    description={The computational problem of finding the prime factors of a given composite integer. The presumed difficulty of this problem underlies the security of RSA. See Section \ref{sec:shors_impact_ch5_rev}.}
+}
+
+\newglossaryentry{discrete-logarithm-problem}{
+    name={Discrete Logarithm Problem (DLP)},
+    description={The computational problem of finding the exponent $x$ such that $g^x \equiv h \pmod{p}$ for given group elements $g, h$ and modulus $p$. The presumed difficulty underlies the security of DH, DSA, and ECC. See Section \ref{subsec:shor_impact_specific_ch5_rev}.}
+}
+
+\newglossaryentry{dsa}{
+    name={DSA},
+    description={Digital Signature Algorithm; a U.S. federal standard for digital signatures based on the discrete logarithm problem. Vulnerable to Shor's algorithm. See Section \ref{subsec:shor_impact_specific_ch5_rev}.}
+}
+
+\newglossaryentry{ecdh}{
+    name={ECDH},
+    description={Elliptic Curve Diffie-Hellman; a key agreement protocol that allows two parties, each having an elliptic-curve public-private key pair, to establish a shared secret over an insecure channel. Vulnerable to Shor's algorithm. See Section \ref{subsec:shor_impact_specific_ch5_rev}.}
+}
+
+\newglossaryentry{ecdsa}{
+    name={ECDSA},
+    description={Elliptic Curve Digital Signature Algorithm; a variant of the Digital Signature Algorithm (DSA) which uses elliptic curve cryptography. Vulnerable to Shor's algorithm. See Section \ref{subsec:shor_impact_specific_ch5_rev}.}
+}
+
+\newglossaryentry{ipsec}{
+    name={IPsec},
+    description={Internet Protocol Security; a secure network protocol suite that authenticates and encrypts packets of data sent over an Internet Protocol network. Often relies on algorithms vulnerable to Shor's algorithm. Mentioned in Section \ref{sec:shors_impact_ch5_rev}.}
+}
+
+\newglossaryentry{unstructured-search}{
+    name={unstructured search},
+    description={A search problem where there is no known structure in the search space that can be exploited to find the target element faster than checking items one by one (classically) or using Grover's algorithm (quantumly). See Section \ref{sec:grovers_impact_ch5_rev}.}
+}
+
+\newglossaryentry{amplitude-amplification}{
+    name={amplitude amplification},
+    description={The core quantum technique used in Grover's algorithm to increase the probability amplitude of the desired state(s) in a superposition, making them more likely to be measured. See Section \ref{subsec:grover_mechanism_ch5_rev}.}
+}
+
+\newglossaryentry{grover-oracle}{
+    name={Grover oracle},
+    description={A component in Grover's algorithm (denoted $U_f$) that identifies and "marks" the target state(s) within the quantum superposition, typically by applying a phase shift. See Section \ref{subsec:grover_mechanism_ch5_rev}.}
+}
+
+\newglossaryentry{grover-diffusion}{
+    name={Grover diffusion operator},
+    description={A component in Grover's algorithm (denoted $U_s$) that amplifies the amplitude of the marked state(s) and decreases the amplitude of others, effectively performing inversion about the mean. See Section \ref{subsec:grover_mechanism_ch5_rev}.}
+}
+
+\newglossaryentry{preimage-attack}{
+    name={preimage attack},
+    plural={preimage attacks},
+    description={An attack on a hash function where the adversary tries to find an input message that hashes to a specific target hash value. Grover's algorithm offers a speedup.}
+}
+
+\newglossaryentry{collision-attack}{
+    name={collision attack},
+    description={A cryptanalytic attack on hash functions that tries to find two distinct inputs that produce the same hash output. See Section \ref{subsec:grover_impact_specific_ch5_rev}.}
+}
+
+\newglossaryentry{birthday-attack}{
+    name={birthday attack},
+    description={A type of collision attack based on the mathematics of the birthday problem, allowing collisions in hash functions to be found significantly faster ($O(2^{n/2})$) than brute force ($O(2^n)$). See Section \ref{subsec:grover_impact_specific_ch5_rev}.}
+}
+
+\newglossaryentry{moscas-inequality}{
+    name={Mosca's Inequality},
+    description={An inequality ($X + Y > Z$) highlighting the urgency of PQC migration, where X is data confidentiality lifetime, Y is migration time, and Z is time until a CRQC exists. See Section \ref{subsec:sndl_ch5_rev}.}
+} 

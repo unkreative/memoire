@@ -25,7 +25,12 @@ pdflatex -synctex=1 -interaction=nonstopmode -file-line-error -output-directory=
 echo "Running biber..."
 biber --output-directory build build/main
 
-# Second and third pdflatex passes to resolve references and citations
+# Run makeglossaries to generate the glossary files - THIS IS THE NEW STEP
+echo "Running makeglossaries..."
+# Run makeglossaries relative to the build directory
+makeglossaries -d build main
+
+# Second and third pdflatex passes to resolve references, citations, and glossary entries
 echo "Running pdflatex (pass 2)..."
 pdflatex -synctex=1 -interaction=nonstopmode -file-line-error -output-directory=build main.tex
 echo "Running pdflatex (final pass)..."

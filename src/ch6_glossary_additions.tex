@@ -1,0 +1,85 @@
+% Glossary additions identified from Chapter 6 (Quantum-Resistant Cryptography)
+
+\newglossaryentry{mathematical-lattice}{
+    name={mathematical lattice},
+    description={A periodic arrangement of points in n-dimensional space, formed by integer linear combinations of a set of basis vectors. Used as the foundation for \gls{lattice-based-cryptography}. See Section \ref{subsec:lattice_ch6}.}
+}
+\glsadd{lattice} % Add 'lattice' as an alternative term if needed, handled by glossaries package
+
+\newglossaryentry{svp}{
+    name={SVP},
+    description={Shortest Vector Problem. A computationally hard problem on lattices, which involves finding the shortest non-zero vector in a given lattice. See Section \ref{subsec:lattice_ch6}.}
+}
+
+\newglossaryentry{cvp}{
+    name={CVP},
+    description={Closest Vector Problem. A computationally hard problem on lattices, which involves finding the lattice point closest to a given target point in the space. See Section \ref{subsec:lattice_ch6}.}
+}
+
+\newglossaryentry{ring-lwe}{
+    name={Ring-LWE},
+    description={Ring Learning With Errors. An efficiency variant of the \gls{lwe} problem that operates within polynomial rings, enabling smaller keys and faster computations. See Section \ref{subsec:lattice_ch6}.}
+}
+
+\newglossaryentry{ntt}{
+    name={NTT},
+    description={Number Theoretic Transform. An algorithm analogous to the Fast Fourier Transform (FFT), but operating over finite fields or rings. Used to efficiently perform polynomial multiplication in schemes like \gls{ring-lwe}. See Section \ref{subsec:lattice_ch6}.}
+}
+
+\newglossaryentry{crystals-kyber}{
+    name={CRYSTALS-Kyber},
+    description={A lattice-based Key Encapsulation Mechanism (KEM) based on \gls{module-lwe}, selected by NIST as a primary standard for post-quantum public-key encryption/key establishment. See Section \ref{subsec:lattice_ch6}.}
+}
+\glsadd{kyber}
+
+\newglossaryentry{crystals-dilithium}{
+    name={CRYSTALS-Dilithium},
+    description={A lattice-based digital signature scheme based on \gls{module-lwe}, selected by NIST as a primary standard for post-quantum digital signatures. See Section \ref{subsec:lattice_ch6}.}
+}
+\glsadd{dilithium}
+
+\newglossaryentry{falcon}{
+    name={Falcon},
+    description={A lattice-based digital signature scheme based on the NTRU problem (related to \gls{ring-lwe}), selected by NIST as a primary standard. Known for its particularly small signature sizes. See Section \ref{subsec:lattice_ch6}.}
+}
+
+\newglossaryentry{ots}{
+    name={OTS},
+    description={One-Time Signature. A type of digital signature scheme where a key pair can only be used to sign a single message securely. Used as building blocks in \gls{hash-based-cryptography}. See Section \ref{subsec:hash_ch6}.}
+}
+
+\newglossaryentry{stateful-signature}{
+    name={stateful signature},
+    description={A type of hash-based signature scheme (e.g., XMSS, LMS) that requires the signer to securely maintain state (like the index of the last used \gls{ots} key) to avoid key reuse. Generally faster and produces smaller signatures than stateless schemes. See Section \ref{subsec:hash_ch6}.}
+}
+
+\newglossaryentry{stateless-signature}{
+    name={stateless signature},
+    description={A type of hash-based signature scheme (e.g., \gls{sphincs+}) that does not require the signer to maintain state, making it more robust against key reuse vulnerabilities but typically resulting in larger signatures and slower performance. See Section \ref{subsec:hash_ch6}.}
+}
+
+\newglossaryentry{sphincs+}{
+    name={SPHINCS+},
+    description={A stateless hash-based digital signature scheme selected by NIST as a standard for post-quantum signatures. Known for its strong security based solely on hash function properties, at the cost of large signature sizes. See Section \ref{subsec:hash_ch6}.}
+}
+
+\newglossaryentry{mceliece-cryptosystem}{
+    name={McEliece cryptosystem},
+    description={A foundational \gls{code-based-cryptography} scheme proposed in 1978, whose security relies on the difficulty of decoding general linear codes (specifically, often using Goppa codes). See Section \ref{subsec:code_ch6}.}
+}
+
+\newglossaryentry{classic-mceliece}{
+    name={Classic McEliece},
+    description={A specific parameterization of the \gls{mceliece-cryptosystem} using binary Goppa codes, chosen by NIST as a post-quantum \gls{kem} candidate for standardization, valued for its long history and conservative design. See Section \ref{subsec:code_ch6}.}
+}
+
+\newglossaryentry{mq-problem}{
+    name={MQ problem},
+    description={The problem of solving systems of multivariate quadratic polynomial equations over a finite field. The presumed difficulty of this problem underlies \gls{multivariate-cryptography}. See Section \ref{subsec:multivariate_ch6}.}
+}
+
+% Alias for hybrid-cryptography mentioned in Chapter 6 context
+\newglossaryentry{hybrid-mode}{
+    name={hybrid mode},
+    description={Synonym for \gls{hybrid-cryptography}. The simultaneous use of both a classical and a post-quantum cryptographic algorithm to provide security against both classical and quantum adversaries during the transition period. See Section \ref{sec:hybrid_approaches_ch6}.} % Assumed label for Hybrid Approaches section
+} 

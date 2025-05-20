@@ -1,0 +1,764 @@
+% Glossary entries for Quantum Computing and Cryptography
+% This file contains definitions of key terms used throughout the document
+
+% Basic quantum concepts
+\newglossaryentry{qubit}{
+    name=qubit,
+    description={The fundamental unit of quantum information. See Chapter \ref{chap:fundamentals}}
+}
+
+\newglossaryentry{superposition}{
+    name=superposition,
+    description={A quantum state where a system exists in multiple states simultaneously. See Section \ref{subsec:superposition}}
+}
+
+\newglossaryentry{entanglement}{
+    name=entanglement,
+    description={A quantum phenomenon where multiple qubits become correlated. See Section \ref{subsec:entanglement}}
+}
+
+\newglossaryentry{decoherence}{
+    name=decoherence,
+    description={Loss of quantum properties due to environmental interactions. See Section \ref{sec:nisq_era}}
+}
+
+\newglossaryentry{quantum-gate}{
+    name={quantum gate},
+    description={Basic operation in quantum circuits that transforms qubit states. See Section \ref{sec:quantum_gates}}
+}
+
+\newglossaryentry{hilbert_space}{
+    name={Hilbert space},
+    description={Mathematical space describing quantum states. See Section \ref{sec:computational_models_rev}}
+}
+
+% Mathematical foundations
+\newglossaryentry{eulers-totient-function}{
+    name={Euler's totient function},
+    description={Function $\phi(n)$ counting positive integers less than or equal to $n$ that are relatively prime to $n$. Used in RSA key generation. See Section \ref{subsec:rsa_ch3}}
+}
+
+% Cryptography concepts
+\newglossaryentry{public-key-cryptography}{
+    name={public-key cryptography},
+    description={Asymmetric encryption using a public key for encryption/verification and a private key for decryption/signing. See Section \ref{sec:public_key_ch3}}
+}
+
+\newglossaryentry{rsa}{
+    name={RSA},
+    description={Public-key cryptosystem based on the difficulty of factoring large integers. See Section \ref{subsec:rsa_ch3}}
+}
+
+\newglossaryentry{ecc}{
+    name={ECC},
+    description={Elliptic Curve Cryptography; public-key cryptography using elliptic curves, offering smaller keys than RSA. See Section \ref{subsec:ecc_ch3}}
+}
+
+\newglossaryentry{shors-algorithm}{
+    name={Shor's algorithm},
+    description={Quantum algorithm that efficiently solves integer factorization and discrete logarithms. See Section \ref{sec:shors_impact_ch5_rev}}
+}
+
+\newglossaryentry{grovers-algorithm}{
+    name={Grover's algorithm},
+    description={Quantum search algorithm providing quadratic speedup for unstructured search. See Section \ref{sec:grovers_impact_ch5_rev}}
+}
+
+\newglossaryentry{bqp}{
+    name={BQP},
+    description={Bounded-error Quantum Polynomial time; the class of problems efficiently solvable by a quantum computer. See Section \ref{sec:complexity_classes_rev}}
+}
+
+\newglossaryentry{nisq}{
+    name={NISQ},
+    description={Noisy Intermediate-Scale Quantum; the current era of quantum hardware with limited qubits and no fault tolerance. See Section \ref{sec:nisq_era}}
+}
+
+\newglossaryentry{quantum-error-correction}{
+    name={QEC},
+    description={Quantum Error Correction; techniques to protect quantum information from noise. See Section \ref{sec:nisq_era}}
+}
+
+\newglossaryentry{sndl}{
+    name={SNDL},
+    description={Store Now, Decrypt Later; attack strategy involving storing encrypted data today for future decryption with quantum computers. See Section \ref{subsec:sndl_ch5_rev}}
+}
+
+\newglossaryentry{hybrid-cryptography}{
+    name={hybrid cryptography},
+    description={Combined use of classical and post-quantum algorithms during the transition period. See Section \ref{subsec:transition_ch7_rev}}
+}
+
+% Additional terms specific to Chapter 4
+\newglossaryentry{quantum-parallelism}{
+    name={quantum parallelism},
+    description={Ability of quantum computers to perform computations on multiple states simultaneously via superposition. See Section \ref{sec:computational_models_rev}}
+}
+
+\newglossaryentry{no-cloning-theorem}{
+    name={No-Cloning Theorem},
+    description={Fundamental principle stating that an arbitrary unknown quantum state cannot be perfectly copied. See Section \ref{sec:differences_rev}}
+}
+
+\newglossaryentry{quantum-circuit}{
+    name={quantum circuit},
+    description={Model representing quantum computations as sequences of quantum gates acting on qubits. See Section \ref{sec:computational_models_rev}}
+}
+
+\newglossaryentry{interference}{
+    name={interference},
+    description={Quantum phenomenon where probability amplitudes can cancel or reinforce each other, key to algorithm speedups. See Section \ref{sec:computational_models_rev}}
+}
+
+% New entries to add
+\newglossaryentry{qft}{
+    name={QFT},
+    description={Quantum Fourier Transform; a core component of Shor's algorithm. See Section \ref{subsec:qft}}
+}
+
+\newglossaryentry{qpe}{
+    name={QPE},
+    description={Quantum Phase Estimation; a quantum algorithm used within Shor's algorithm. See Section \ref{subsec:qpe}}
+}
+
+\newglossaryentry{lwe}{
+    name={LWE},
+    description={Learning With Errors; a mathematical problem believed to be hard for both classical and quantum computers, basis for lattice-based PQC. See Section \ref{subsec:lattice_ch6}}
+}
+
+\newglossaryentry{side-channel-attack}{
+    name={side-channel attack},
+    description={Attack exploiting information leaked from a cryptosystem's physical implementation (e.g., timing, power consumption). See Section \ref{sec:protocol_design_ch3}}
+}
+
+\newglossaryentry{cryptographic-agility}{
+    name={cryptographic agility},
+    description={The ability of a system to easily switch between different cryptographic algorithms. Mentioned in Section \ref{sec:technical_challenges_ch7_rev}}
+}
+
+\newglossaryentry{module-lwe}{
+    name={Module-LWE},
+    description={A variant of the LWE problem used in schemes like CRYSTALS-Kyber. See Section \ref{subsec:lattice_ch6}}
+}
+
+\newglossaryentry{merkle-damgard}{
+    name={Merkle-Damgård construction},
+    description={A method for building collision-resistant hash functions from compression functions. See Section \ref{sec:hash_functions_ch3}}
+}
+
+\newglossaryentry{multivariate-cryptography}{
+    name={multivariate cryptography},
+    description={PQC approach based on the difficulty of solving systems of multivariate polynomial equations. See Section \ref{subsec:multivariate_ch6}}
+}
+
+\newglossaryentry{code-based-cryptography}{
+    name={code-based cryptography},
+    description={PQC approach based on the difficulty of decoding general linear error-correcting codes. See Section \ref{subsec:code_ch6}}
+}
+
+\newglossaryentry{crqc}{
+    name={CRQC},
+    description={Cryptographically Relevant Quantum Computer; a quantum computer with sufficient qubits and error correction to pose a real threat to traditional cryptographic systems by running algorithms like Shor's. Mentioned in Chapter \ref{chap:quantum_impact}}
+}
+
+\newglossaryentry{nist-security-levels}{
+    name={NIST security levels},
+    description={Standardized categories (1-5) defined by NIST to compare the strength of PQC algorithms against known attacks. See Section \ref{sec:security_levels_ch5_rev}}
+}
+
+\newglossaryentry{p-complexity}{
+    name={P},
+    description={Polynomial time; the class of problems efficiently solvable by a classical deterministic computer. See Section \ref{sec:complexity_classes_rev}}
+}
+
+\newglossaryentry{np-complexity}{
+    name={NP},
+    description={Nondeterministic Polynomial time; the class of problems where proposed solutions can be efficiently verified classically. See Section \ref{sec:complexity_classes_rev}}
+}
+
+\newglossaryentry{bpp-complexity}{
+    name={BPP},
+    description={Bounded-error Probabilistic Polynomial time; the class of problems efficiently solvable by a classical probabilistic computer. See Section \ref{sec:complexity_classes_rev}}
+}
+
+\newglossaryentry{lattice-based-cryptography}{
+    name={lattice-based cryptography},
+    description={PQC approach based on computationally hard problems on mathematical lattices, such as LWE. See Section \ref{subsec:lattice_ch6}}
+}
+
+\newglossaryentry{hash-based-cryptography}{
+    name={hash-based cryptography},
+    description={PQC approach (primarily for signatures) relying only on the security of cryptographic hash functions. See Section \ref{subsec:hash_ch6}}
+}
+
+\newglossaryentry{kem}{
+    name={KEM},
+    description={Key Encapsulation Mechanism; cryptographic technique used to securely establish shared keys, often used in PQC standards.}
+}
+
+\newglossaryentry{pki}{
+    name={PKI},
+    description={Public Key Infrastructure; framework for managing public keys and digital certificates. See Section \ref{sec:digital_signatures_pki_ch3}}
+}
+
+\newglossaryentry{ca}{
+    name={CA},
+    description={Certificate Authority; a trusted entity that issues and signs digital certificates in a PKI. See Section \ref{sec:digital_signatures_pki_ch3}}
+}
+
+\newglossaryentry{aes}{
+    name={AES},
+    description={Advanced Encryption Standard; the standard symmetric block cipher widely used today. See Section \ref{sec:symmetric_key_ch3}}
+}
+
+\newglossaryentry{unitary-transformation}{
+    name={unitary transformation},
+    description={A mathematical operation preserving length and angles, representing the evolution of quantum states via quantum gates. See Section \ref{sec:quantum_gates}}
+}
+
+\newglossaryentry{computational-hardness-assumption}{
+    name={computational hardness assumption},
+    description={The belief that certain mathematical problems are too difficult to solve efficiently with current computing technology (classical or quantum). See Section \ref{sec:security_foundations_ch3}}
+}
+
+\newglossaryentry{ecdlp}{
+    name={ECDLP},
+    description={Elliptic Curve Discrete Logarithm Problem; the hard mathematical problem underlying ECC security. See Section \ref{subsec:ecc_ch3}}
+}
+
+\newglossaryentry{ifp-dlp}{
+    name={IFP/DLP},
+    description={Integer Factorization Problem / Discrete Logarithm Problem; the hard mathematical problems underlying RSA and DH security respectively. See Section \ref{sec:security_foundations_ch3}}
+}
+
+\newglossaryentry{mac}{
+    name={MAC},
+    description={Message Authentication Code; used to verify data integrity and authenticity using a shared secret key. Mentioned in Section \ref{sec:crypto_fundamentals_ch3}}
+}
+
+\newglossaryentry{gnfs}{
+    name={GNFS},
+    description={General Number Field Sieve; the most efficient known classical algorithm for factoring large integers. Mentioned in Section \ref{subsec:shor_impact_specific_ch5_rev}}
+}
+
+\newglossaryentry{post-quantum-cryptography}{
+    name={post-quantum cryptography},
+    description={Cryptographic algorithms designed to be secure against attacks by both classical and quantum computers. Often abbreviated as PQC. See Chapter \ref{chap:pqc_overview}}
+}
+
+\newglossaryentry{pqc}{name={PQC}, description={Post-Quantum Cryptography}}
+\newglossaryentry{qkd}{name={QKD}, description={Quantum Key Distribution}}
+\newglossaryentry{qec}{name={QEC}, description={Quantum Error Correction}}
+\newglossaryentry{ssh}{name={SSH}, description={Secure Shell }}
+\newglossaryentry{tls}{name={TLS}, description={Transport Layer Security }}
+
+\newglossaryentry{nist-pqc}{
+    name={NIST PQC Standardization},
+    description={The ongoing process led by the U.S. National Institute of Standards and Technology (NIST) to select and standardize post-quantum cryptographic algorithms. See Chapter \ref{chap:pqc_overview}}
+}
+
+\newglossaryentry{np-hard}{
+    name={NP-hard},
+    description={A class of computational problems that are at least as hard as the hardest problems in NP (Nondeterministic Polynomial time).}
+}
+
+% Add glossary entries here
+% Example:
+% \newglossaryentry{latex}{
+%   name={latex},
+%   description={A typesetting system suitable for scientific documents}
+% }
+
+% Add other entries below
+
+\newglossaryentry{cbc}{
+    name={CBC},
+    description={Cipher Block Chaining. A mode of operation for a block cipher where each block of plaintext is XORed with the previous ciphertext block before being encrypted.}
+}
+
+\newglossaryentry{gc}{
+    name={GC},
+    description={Galois/Counter Mode. An authenticated encryption mode that provides both confidentiality and data authenticity. Often referred to as GCM.}
+}
+
+% Main Glossary File - REMOVED as chapter files loaded directly in preamble
+% Include chapter-specific glossary additions here. - REMOVED
+
+% \input{src/ch4_glossary_additions.tex} - REMOVED
+% \input{src/ch6_glossary_additions.tex} - REMOVED
+
+% New glossary entries identified from Chapter 1
+
+\newglossaryentry{quantum-mechanics}{
+    name={quantum mechanics},
+    description={The fundamental theory in physics describing the properties of nature at the scale of atoms and subatomic particles. Relevant concepts include superposition and entanglement. Mentioned in Chapter \ref{chap:introduction}}
+}
+
+\newglossaryentry{classical-computer}{
+    name={classical computer},
+    description={A computer that operates based on classical physics, using bits (0s and 1s) as the basic unit of information. Contrasted with quantum computers. Mentioned in Chapter \ref{chap:introduction}}
+}
+
+\newglossaryentry{cryptography}{
+    name={cryptography},
+    description={The practice and study of techniques for secure communication in the presence of third parties called adversaries. Mentioned in Chapter \ref{chap:introduction}}
+}
+
+\newglossaryentry{dh}{
+    name={DH},
+    description={Diffie-Hellman key exchange; a method for securely exchanging cryptographic keys over a public channel. Vulnerable to Shor's algorithm. Mentioned in Chapter \ref{chap:introduction}}
+}
+
+\newglossaryentry{polynomial-time}{
+    name={polynomial time},
+    description={An algorithm runtime complexity where the number of steps scales polynomially with the input size. Considered efficient for classical computation. See also \gls{bqp}. Mentioned in Chapter \ref{chap:introduction}}
+}
+
+\newglossaryentry{symmetric-cipher}{
+    name={symmetric cipher},
+    description={A type of encryption algorithm that uses the same key for both encryption and decryption (e.g., \gls{aes}). Weakened by Grover's algorithm. Mentioned in Chapter \ref{chap:introduction}}
+}
+
+\newglossaryentry{brute-force-attack}{
+    name={brute-force attack},
+    description={A cryptanalytic attack that tries all possible keys or passwords until the correct one is found. Grover's algorithm provides a quadratic speedup for these attacks against symmetric ciphers. Mentioned in Chapter \ref{chap:introduction}}
+}
+
+% New glossary entries identified from Chapter 3
+
+\newglossaryentry{classical-cryptography}{
+    name={classical cryptography},
+    description={Cryptographic techniques developed before the advent of quantum computing, primarily relying on computational hardness assumptions believed to hold for classical computers. See Chapter \ref{chap:classical_crypto}.}
+}
+
+\newglossaryentry{transposition-cipher}{
+    name={transposition cipher},
+    description={A method of encryption where the positions held by units of plaintext are shifted according to a regular system. Mentioned in Section \ref{sec:crypto_fundamentals_ch3_rev}.}
+}
+
+\newglossaryentry{substitution-cipher}{
+    name={substitution cipher},
+    description={A method of encryption where units of plaintext are replaced with ciphertext according to a fixed system. Mentioned in Section \ref{sec:crypto_fundamentals_ch3_rev}.}
+}
+
+\newglossaryentry{monoalphabetic-cipher}{
+    name={monoalphabetic cipher},
+    description={A substitution cipher using a single, fixed substitution alphabet for the entire message. Mentioned in Section \ref{sec:crypto_fundamentals_ch3_rev}.}
+}
+
+\newglossaryentry{polyalphabetic-cipher}{
+    name={polyalphabetic cipher},
+    description={A substitution cipher using multiple substitution alphabets, making frequency analysis harder. Mentioned in Section \ref{sec:crypto_fundamentals_ch3_rev}.}
+}
+
+\newglossaryentry{frequency-analysis}{
+    name={frequency analysis},
+    description={The study of letter/group frequencies in ciphertext to break classical ciphers. Mentioned in Section \ref{sec:crypto_fundamentals_ch3_rev}.}
+}
+
+\newglossaryentry{digraph-cipher}{
+    name={digraph cipher},
+    description={A cipher encrypting pairs of letters (digraphs) rather than single letters. Mentioned in Section \ref{sec:crypto_fundamentals_ch3_rev}.}
+}
+
+\newglossaryentry{hill-cipher}{
+    name={Hill cipher},
+    description={A polygraphic substitution cipher based on linear algebra. Mentioned in Section \ref{sec:crypto_fundamentals_ch3_rev}.}
+}
+
+\newglossaryentry{enigma}{
+    name={Enigma machine},
+    description={Electro-mechanical rotor cipher machine used for encrypting secret messages. Mentioned in Section \ref{sec:crypto_fundamentals_ch3_rev}.}
+}
+
+\newglossaryentry{des}{
+    name={DES},
+    description={Data Encryption Standard; a symmetric-key block cipher (1977), now insecure due to small key size. Mentioned in Section \ref{sec:crypto_fundamentals_ch3_rev}.}
+}
+
+\newglossaryentry{confidentiality}{
+    name={confidentiality},
+    description={Security goal ensuring information is not disclosed to unauthorized parties. Mentioned in Section \ref{sec:crypto_fundamentals_ch3_rev}.}
+}
+
+\newglossaryentry{integrity}{
+    name={integrity},
+    description={Security goal ensuring data has not been altered unauthorizedly. Mentioned in Section \ref{sec:crypto_fundamentals_ch3_rev}.}
+}
+
+\newglossaryentry{authentication}{
+    name={authentication},
+    description={Security goal verifying the identity of a user or system. Mentioned in Section \ref{sec:crypto_fundamentals_ch3_rev}.}
+}
+
+\newglossaryentry{non-repudiation}{
+    name={non-repudiation},
+    description={Security goal preventing denial of authenticity of a signature or message origin. Mentioned in Section \ref{sec:crypto_fundamentals_ch3_rev}.}
+}
+
+\newglossaryentry{one-way-function}{
+    name={one-way function},
+    description={A function easy to compute but hard to invert. Mentioned in Section \ref{subsec:hardness_assumptions_ch3_rev}.}
+}
+
+\newglossaryentry{trapdoor-function}{
+    name={trapdoor function},
+    description={A one-way function hard to invert without secret information (the trapdoor). Mentioned in Section \ref{subsec:hardness_assumptions_ch3_rev}.}
+}
+
+\newglossaryentry{symmetric-key-cryptography}{
+    name={symmetric-key cryptography},
+    description={Encryption methods using the same key for encryption and decryption. See Section \ref{sec:symmetric_key_ch3_rev}.}
+}
+
+\newglossaryentry{block-cipher}{
+    name={block cipher},
+    description={A symmetric cipher operating on fixed-length blocks of data. See Section \ref{sec:symmetric_key_ch3_rev}.}
+}
+
+\newglossaryentry{confusion}{
+    name={confusion},
+    description={Cryptographic principle obscuring the relationship between the key and ciphertext (e.g., via substitution). Mentioned in Section \ref{sec:symmetric_key_ch3_rev}.}
+}
+
+\newglossaryentry{diffusion}{
+    name={diffusion},
+    description={Cryptographic principle spreading plaintext influence across ciphertext (e.g., via permutation). Mentioned in Section \ref{sec:symmetric_key_ch3_rev}.}
+}
+
+\newglossaryentry{key-schedule}{
+    name={key schedule},
+    description={Algorithm generating round keys from the main key in block ciphers. Mentioned in Section \ref{sec:symmetric_key_ch3_rev}.}
+}
+
+\newglossaryentry{timing-attack}{
+    name={timing attack},
+    description={Side-channel attack analyzing time taken for cryptographic operations. Mentioned in Section \ref{sec:symmetric_key_ch3_rev} and \ref{sec:protocol_design_ch3_rev}.}
+}
+
+\newglossaryentry{power-analysis}{
+    name={power analysis},
+    description={Side-channel attack studying power consumption of cryptographic hardware. Mentioned in Section \ref{sec:symmetric_key_ch3_rev} and \ref{sec:protocol_design_ch3_rev}.}
+}
+
+\newglossaryentry{mode-of-operation}{
+    name={mode of operation},
+    description={Method for using block ciphers on messages longer than one block. See Section \ref{sec:symmetric_key_ch3_rev}.}
+}
+
+\newglossaryentry{ecb}{
+    name={ECB},
+    description={Electronic Codebook; the simplest block cipher mode, encrypting blocks independently (insecure). See Section \ref{sec:symmetric_key_ch3_rev}.}
+}
+
+\newglossaryentry{oaep}{
+    name={OAEP},
+    description={Optimal Asymmetric Encryption Padding; padding scheme for RSA to prevent attacks. Mentioned in Section \ref{subsec:rsa_ch3_rev}.}
+}
+
+\newglossaryentry{diffie-hellman}{
+    name={Diffie-Hellman Key Exchange},
+    description={Method to establish a shared secret over an insecure channel (DH). See Section \ref{subsec:dh_ch3_rev}.}
+}
+
+\newglossaryentry{hash-function}{
+    name={hash function},
+    plural={hash functions},
+    description={A cryptographic function that takes an arbitrary input size and produces a fixed-size output (hash value). Key properties include determinism, preimage resistance (hard to find input for a given output), second preimage resistance (hard to find a different input with the same output), and collision resistance (hard to find two different inputs with the same output).}
+}
+
+\newglossaryentry{preimage-attack}{
+    name={preimage attack},
+    plural={preimage attacks},
+    description={A cryptographic attack where, given a hash value, the attacker tries to find any input message that hashes to that specific value. For a secure hash function, this should be computationally infeasible.}
+}
+
+\newglossaryentry{second-preimage-resistance}{
+    name={second preimage resistance},
+    description={Hash property: hard to find different input m2 for a given m1 such that H(m1)=H(m2). Mentioned in Section \ref{sec:hash_functions_ch3_rev}.}
+}
+
+\newglossaryentry{collision-resistance}{
+    name={collision resistance},
+    description={Hash property: hard to find two distinct inputs m1, m2 such that H(m1)=H(m2). Mentioned in Section \ref{sec:hash_functions_ch3_rev}.}
+}
+
+\newglossaryentry{md5}{
+    name={MD5},
+    description={Message Digest 5; 128-bit hash function, now broken (collisions found). Mentioned in Section \ref{sec:hash_functions_ch3_rev}.}
+}
+
+\newglossaryentry{sha-1}{
+    name={SHA-1},
+    description={Secure Hash Algorithm 1; 160-bit hash function, deprecated (collisions found). Mentioned in Section \ref{sec:hash_functions_ch3_rev}.}
+}
+
+\newglossaryentry{sha-2}{
+    name={SHA-2},
+    description={Secure Hash Algorithm 2; family of hash functions (e.g., SHA-256), currently secure. Mentioned in Section \ref{sec:hash_functions_ch3_rev}.}
+}
+
+\newglossaryentry{sha-3}{
+    name={SHA-3},
+    description={Secure Hash Algorithm 3; based on sponge construction, currently secure. Mentioned in Section \ref{sec:hash_functions_ch3_rev}.}
+}
+
+\newglossaryentry{compression-function}{
+    name={compression function},
+    description={Core component in Merkle-Damgård hashes, processes message blocks. Mentioned in Section \ref{sec:hash_functions_ch3_rev}.}
+}
+
+\newglossaryentry{digital-signature}{
+    name={digital signature},
+    description={Scheme for verifying authenticity, integrity, and non-repudiation using asymmetric crypto. See Section \ref{sec:digital_signatures_pki_ch3_rev}.}
+}
+
+\newglossaryentry{mitm}{
+    name={Man-in-the-Middle attack},
+    description={Attack relaying/altering communication between two parties (MitM). Mentioned in Section \ref{sec:protocol_design_ch3_rev}.}
+}
+
+\newglossaryentry{replay-attack}{
+    name={replay attack},
+    description={Network attack repeating/delaying valid data transmission. Mentioned in Section \ref{sec:protocol_design_ch3_rev}.}
+}
+
+\newglossaryentry{downgrade-attack}{
+    name={downgrade attack},
+    description={Attack forcing a system to use a less secure mode of operation. Mentioned in Section \ref{sec:protocol_design_ch3_rev}.}
+}
+
+\newglossaryentry{padding-oracle-attack}{
+    name={padding oracle attack},
+    description={Attack using padding validation errors to decrypt ciphertext. Mentioned in Section \ref{sec:protocol_design_ch3_rev}.}
+} 
+% Glossary additions identified from Chapter 2
+
+\newglossaryentry{bell-state}{
+    name={Bell state},
+    description={One of a set of four specific maximally entangled quantum states of two qubits. Example: $|\Phi^+\rangle = \frac{1}{\sqrt{2}}(|00\rangle + |11\rangle)$. See Section \ref{subsec:entanglement}}
+}
+
+\newglossaryentry{bloch-sphere}{
+    name={Bloch sphere},
+    description={A geometrical representation of the pure state space of a single qubit. See Section \ref{subsec:qubits}}
+}
+
+\newglossaryentry{amplitude-amplification}{
+    name={amplitude amplification},
+    description={A general quantum algorithm technique that increases the probability amplitude of desired states, generalizing Grover's algorithm. See Section \ref{subsec:amplitude_amp_ch2_revised}}
+}
+
+\newglossaryentry{quantum-oracle}{
+    name={quantum oracle},
+    description={A 'black box' operation in a quantum algorithm that implements a specific function, often used to mark target states (e.g., in Grover's algorithm). See Section \ref{subsec:amplitude_amp_ch2_revised}}
+}
+
+\newglossaryentry{diffusion-operator}{
+    name={diffusion operator},
+    description={An operation used in Grover's algorithm and amplitude amplification that performs an inversion about the average amplitude, amplifying the marked states. See Section \ref{subsec:amplitude_amp_ch2_revised}}
+}
+
+\newglossaryentry{logical-qubit}{
+    name={logical qubit},
+    description={A qubit encoded using multiple physical qubits and quantum error correction to protect it from noise. See Section \ref{sec:nisq_era}}
+}
+
+\newglossaryentry{fault-tolerance}{
+    name={fault tolerance},
+    description={The ability of a quantum computer to perform reliable computations even when its underlying components (qubits, gates) are imperfect or noisy, typically achieved through quantum error correction. See Section \ref{sec:nisq_era}}
+}
+
+\newglossaryentry{physical-qubit}{
+    name={physical qubit},
+    description={An actual physical system (e.g., trapped ion, superconducting circuit) used to represent a qubit in a quantum computer, susceptible to noise. Contrasted with logical qubit. See Section \ref{sec:nisq_era}}
+}
+
+% Glossary additions identified from Chapter 6 (Quantum-Resistant Cryptography)
+
+\newglossaryentry{mathematical-lattice}{
+    name={mathematical lattice},
+    description={A periodic arrangement of points in n-dimensional space, formed by integer linear combinations of a set of basis vectors. Used as the foundation for \gls{lattice-based-cryptography}. See Section \ref{subsec:lattice_ch6}.}
+}
+\glsadd{lattice} % Add 'lattice' as an alternative term if needed, handled by glossaries package
+
+\newglossaryentry{svp}{
+    name={SVP},
+    description={Shortest Vector Problem. A computationally hard problem on lattices, which involves finding the shortest non-zero vector in a given lattice. See Section \ref{subsec:lattice_ch6}.}
+}
+
+\newglossaryentry{cvp}{
+    name={CVP},
+    description={Closest Vector Problem. A computationally hard problem on lattices, which involves finding the lattice point closest to a given target point in the space. See Section \ref{subsec:lattice_ch6}.}
+}
+
+\newglossaryentry{ring-lwe}{
+    name={Ring-LWE},
+    description={Ring Learning With Errors. An efficiency variant of the \gls{lwe} problem that operates within polynomial rings, enabling smaller keys and faster computations. See Section \ref{subsec:lattice_ch6}.}
+}
+
+\newglossaryentry{ntt}{
+    name={NTT},
+    description={Number Theoretic Transform. An algorithm analogous to the Fast Fourier Transform (FFT), but operating over finite fields or rings. Used to efficiently perform polynomial multiplication in schemes like \gls{ring-lwe}. See Section \ref{subsec:lattice_ch6}.}
+}
+
+\newglossaryentry{crystals-kyber}{
+    name={CRYSTALS-Kyber},
+    description={A lattice-based Key Encapsulation Mechanism (KEM) based on \gls{module-lwe}, selected by NIST as a primary standard for post-quantum public-key encryption/key establishment. See Section \ref{subsec:lattice_ch6}.}
+}
+\glsadd{kyber}
+
+\newglossaryentry{crystals-dilithium}{
+    name={CRYSTALS-Dilithium},
+    description={A lattice-based digital signature scheme based on \gls{module-lwe}, selected by NIST as a primary standard for post-quantum digital signatures. See Section \ref{subsec:lattice_ch6}.}
+}
+\glsadd{dilithium}
+
+\newglossaryentry{falcon}{
+    name={Falcon},
+    description={A lattice-based digital signature scheme based on the NTRU problem (related to \gls{ring-lwe}), selected by NIST as a primary standard. Known for its particularly small signature sizes. See Section \ref{subsec:lattice_ch6}.}
+}
+
+\newglossaryentry{ots}{
+    name={OTS},
+    description={One-Time Signature. A type of digital signature scheme where a key pair can only be used to sign a single message securely. Used as building blocks in \gls{hash-based-cryptography}. See Section \ref{subsec:hash_ch6}.}
+}
+
+\newglossaryentry{stateful-signature}{
+    name={stateful signature},
+    description={A type of hash-based signature scheme (e.g., XMSS, LMS) that requires the signer to securely maintain state (like the index of the last used \gls{ots} key) to avoid key reuse. Generally faster and produces smaller signatures than stateless schemes. See Section \ref{subsec:hash_ch6}.}
+}
+
+\newglossaryentry{stateless-signature}{
+    name={stateless signature},
+    description={A type of hash-based signature scheme (e.g., \gls{sphincs+}) that does not require the signer to maintain state, making it more robust against key reuse vulnerabilities but typically resulting in larger signatures and slower performance. See Section \ref{subsec:hash_ch6}.}
+}
+
+\newglossaryentry{sphincs+}{
+    name={SPHINCS+},
+    description={A stateless hash-based digital signature scheme selected by NIST as a standard for post-quantum signatures. Known for its strong security based solely on hash function properties, at the cost of large signature sizes. See Section \ref{subsec:hash_ch6}.}
+}
+
+\newglossaryentry{mceliece-cryptosystem}{
+    name={McEliece cryptosystem},
+    description={A foundational \gls{code-based-cryptography} scheme proposed in 1978, whose security relies on the difficulty of decoding general linear codes (specifically, often using Goppa codes). See Section \ref{subsec:code_ch6}.}
+}
+
+\newglossaryentry{classic-mceliece}{
+    name={Classic McEliece},
+    description={A specific parameterization of the \gls{mceliece-cryptosystem} using binary Goppa codes, chosen by NIST as a post-quantum \gls{kem} candidate for standardization, valued for its long history and conservative design. See Section \ref{subsec:code_ch6}.}
+}
+
+\newglossaryentry{mq-problem}{
+    name={MQ problem},
+    description={The problem of solving systems of multivariate quadratic polynomial equations over a finite field. The presumed difficulty of this problem underlies \gls{multivariate-cryptography}. See Section \ref{subsec:multivariate_ch6}.}
+}
+
+% Alias for hybrid-cryptography mentioned in Chapter 6 context
+\newglossaryentry{hybrid-mode}{
+    name={hybrid mode},
+    description={Synonym for \gls{hybrid-cryptography}. The simultaneous use of both a classical and a post-quantum cryptographic algorithm to provide security against both classical and quantum adversaries during the transition period. See Section \ref{sec:hybrid_approaches_ch6}.} % Assumed label for Hybrid Approaches section
+} 
+
+% New glossary entries identified from Chapter 5
+
+\newglossaryentry{integer-factorization-problem}{
+    name={Integer Factorization Problem (IFP)},
+    description={The computational problem of finding the prime factors of a given composite integer. The presumed difficulty of this problem underlies the security of RSA. See Section \ref{sec:shors_impact_ch5_rev}.}
+}
+
+\newglossaryentry{discrete-logarithm-problem}{
+    name={Discrete Logarithm Problem (DLP)},
+    description={The computational problem of finding the exponent $x$ such that $g^x \equiv h \pmod{p}$ for given group elements $g, h$ and modulus $p$. The presumed difficulty underlies the security of DH, DSA, and ECC. See Section \ref{subsec:shor_impact_specific_ch5_rev}.}
+}
+
+\newglossaryentry{dsa}{
+    name={DSA},
+    description={Digital Signature Algorithm; a U.S. federal standard for digital signatures based on the discrete logarithm problem. Vulnerable to Shor's algorithm. See Section \ref{subsec:shor_impact_specific_ch5_rev}.}
+}
+
+\newglossaryentry{ecdh}{
+    name={ECDH},
+    description={Elliptic Curve Diffie-Hellman; a key agreement protocol that allows two parties, each having an elliptic-curve public-private key pair, to establish a shared secret over an insecure channel. Vulnerable to Shor's algorithm. See Section \ref{subsec:shor_impact_specific_ch5_rev}.}
+}
+
+\newglossaryentry{ecdsa}{
+    name={ECDSA},
+    description={Elliptic Curve Digital Signature Algorithm; a variant of the Digital Signature Algorithm (DSA) which uses elliptic curve cryptography. Vulnerable to Shor's algorithm. See Section \ref{subsec:shor_impact_specific_ch5_rev}.}
+}
+
+\newglossaryentry{ipsec}{
+    name={IPsec},
+    description={Internet Protocol Security; a secure network protocol suite that authenticates and encrypts packets of data sent over an Internet Protocol network. Often relies on algorithms vulnerable to Shor's algorithm. Mentioned in Section \ref{sec:shors_impact_ch5_rev}.}
+}
+
+\newglossaryentry{unstructured-search}{
+    name={unstructured search},
+    description={A search problem where there is no known structure in the search space that can be exploited to find the target element faster than checking items one by one (classically) or using Grover's algorithm (quantumly). See Section \ref{sec:grovers_impact_ch5_rev}.}
+}
+
+\newglossaryentry{grover-oracle}{
+    name={Grover oracle},
+    description={A component in Grover's algorithm (denoted $U_f$) that identifies and "marks" the target state(s) within the quantum superposition, typically by applying a phase shift. See Section \ref{subsec:grover_mechanism_ch5_rev}.}
+}
+
+\newglossaryentry{grover-diffusion}{
+    name={Grover diffusion operator},
+    description={A component in Grover's algorithm (denoted $U_s$) that amplifies the amplitude of the marked state(s) and decreases the amplitude of others, effectively performing inversion about the mean. See Section \ref{subsec:grover_mechanism_ch5_rev}.}
+}
+
+\newglossaryentry{preimage-attack}{
+    name={preimage attack},
+    plural={preimage attacks},
+    description={A cryptographic attack where, given a hash value, the attacker tries to find any input message that hashes to that specific value. For a secure hash function, this should be computationally infeasible.}
+}
+
+\newglossaryentry{collision-attack}{
+    name={collision attack},
+    description={A cryptanalytic attack on hash functions that tries to find two distinct inputs that produce the same hash output. See Section \ref{subsec:grover_impact_specific_ch5_rev}.}
+}
+
+\newglossaryentry{birthday-attack}{
+    name={birthday attack},
+    description={A type of collision attack based on the mathematics of the birthday problem, allowing collisions in hash functions to be found significantly faster ($O(2^{n/2})$) than brute force ($O(2^n)$). See Section \ref{subsec:grover_impact_specific_ch5_rev}.}
+}
+
+\newglossaryentry{moscas-inequality}{
+    name={Mosca's Inequality},
+    description={An inequality ($X + Y > Z$) highlighting the urgency of PQC migration, where X is data confidentiality lifetime, Y is migration time, and Z is time until a CRQC exists. See Section \ref{subsec:sndl_ch5_rev}.}
+} 
+% Glossary additions identified from Chapter 4 (Classical vs Quantum Computing)
+
+\newglossaryentry{bit}{
+    name={bit},
+    description={The fundamental unit of information in classical computing, representing either a 0 or a 1. Contrasted with \gls{qubit}. See Section \ref{sec:differences_rev}.}
+}
+
+\newglossaryentry{probability-amplitude}{
+    name={probability amplitude},
+    description={A complex number whose squared magnitude represents the probability of measuring a quantum system (like a \gls{qubit}) in a specific basis state. Used in the description of \gls{superposition}. See Section \ref{sec:differences_rev}.}
+}
+
+\newglossaryentry{computational-complexity-theory}{
+    name={computational complexity theory},
+    description={The branch of theoretical computer science that studies the resources (e.g., time, memory) required to solve computational problems, classifying them into complexity classes like \gls{p-complexity}, \gls{np-complexity}, \gls{bpp-complexity}, and \gls{bqp}. See Section \ref{sec:complexity_classes_rev}.}
+}
+
+\newglossaryentry{turing-machine}{
+    name={Turing machine},
+    description={A mathematical model of computation that defines an abstract machine manipulating symbols on a strip of tape according to rules. A fundamental model for classical computation. Mentioned in Section \ref{subsec:classical_rev}.}
+}
+
+\newglossaryentry{von-neumann-architecture}{
+    name={von Neumann architecture},
+    description={A computer architecture based on the concept of stored-program computers where instruction data and program data are stored in the same memory. The basis for most modern classical computers. Mentioned in Section \ref{subsec:classical_rev}.}
+}
+
+\newglossaryentry{classical-core}{
+    name={classical core},
+    description={A standard processing unit within a classical computer's central processing unit (CPU) that executes instructions sequentially or in parallel with other cores. Mentioned in Section \ref{subsec:classical_rev} in the context of parallel processing.}
+}
+\newglossaryentry{lattice}{
+    name={lattice},
+    description={A lattice}
+}

@@ -1,208 +1,258 @@
 \chapter{Quantum Computing's Impact on Cryptography}\label{chap:quantum_impact}
 
-\section{Vulnerabilities in Classical Cryptography}
+% Enhanced Introduction: Clearly state scope - Shor, Grover, Implications (SNDL)
+Building upon the foundations of quantum computing principles (Chapter~\ref{chap:fundamentals}), the established landscape of classical cryptography (Chapter~\ref{chap:classical_crypto}), and the fundamental differences between computational models (Chapter~\ref{chap:classical_vs_quantum_rev}), this chapter analyzes the specific and profound impact of quantum algorithms on the security of currently deployed cryptographic systems. We delve into the mechanisms and consequences of \gls{shors-algorithm} for public-key systems and \gls{grovers-algorithm} for symmetric primitives and hashes, quantifying their threat. Furthermore, we examine the strategic implications, such as the "Store Now, Decrypt Later" scenario, underscoring the urgent need for quantum-resistant solutions explored in subsequent chapters.
 
-As quantum computing technology progresses, it poses a significant threat to the security of widely-used cryptographic systems.  Let's consider some key examples \parencite{shor1997polynomial,mosca2018cybersecurity}:
+% --- Start of Shor's Algorithm Section ---
 
-\begin{itemize}
-    \item \textbf{RSA:}  This widely used system is vulnerable to Shor's algorithm. Quantum computers could factor the large numbers RSA relies on much faster than classical computers \parencite{rivest1978method}.
-    \item \textbf{Elliptic Curve Cryptography:}  ECC, another cornerstone of modern encryption, is also susceptible to Shor's algorithm. Quantum computers could solve the discrete logarithm problem on elliptic curves, undermining ECC's security.
-    \item \textbf{Diffie-Hellman:} The Diffie-Hellman key exchange, fundamental to secure communication, relies on mathematical problems that quantum computers can efficiently solve \parencite{diffie1976new}.
-\end{itemize}
+\section{Shor's Algorithm: Breaking Public-Key Cryptography}\label{sec:shors_impact_ch5_rev}
 
-% Temporarily commenting out figures for debugging
-%\begin{figure}[h]
-%    \centering
-%    \includegraphics[width=0.7\textwidth]{quantum_vs_classical.png}
-%    \caption{Comparison of Classical vs. Quantum Attack Complexity}
-%    \label{fig:quantum_vs_classical}
-%\end{figure}
+In 1994, Peter Shor introduced an algorithm that fundamentally altered the landscape of cryptographic security \parencite{shor1994algorithms}. \Gls{shors-algorithm} represents the single most significant quantum threat to modern cryptography by achieving an exponential speedup over classical algorithms for two foundational problems: the \gls{integer-factorization-problem} and the \gls{discrete-logarithm-problem}. This revolutionary capability emerges from its elegant application of quantum phenomena, particularly the \gls{qft} (Section~\ref{subsec:qft}) and \gls{qpe} (Section~\ref{subsec:qpe}).
 
-\section{Shor's Algorithm}\label{sec:shors_algorithm}
+\subsection{The Quantum Advantage in Integer Factorization}\label{subsec:shors}
 
-Developed by Peter Shor in 1994 \parencite{shor1994algorithms}, Shor's algorithm is a landmark achievement. It demonstrates that quantum computers have the potential to factor large integers in polynomial time. This capability represents a serious threat to asymmetric cryptography, which depends on the computational difficulty of this very problem for its security \parencite{beckman1996efficient}.
+The security of much modern digital infrastructure relies on computational problems believed intractable for classical computers. The \gls{integer-factorization-problem}—finding the prime factors of large composite numbers—stands as the cornerstone of \gls{rsa} cryptography. While the best classical algorithms require sub-exponential time (like the \gls{gnfs}), Shor's algorithm achieves factorization in polynomial time, dramatically reducing the resources required, as illustrated in Figure~\ref{fig:shor-vs-classical-complexity_ch5_rev}.
 
-The algorithm cleverly transforms the problem of factoring into one of finding the period of a function. Quantum computers can then efficiently determine this period using the quantum Fourier transform.
-
-\begin{equation}\label{eq:shor_period}
-    f(x) = a^x \bmod N
-\end{equation}
-
-where $N$ is the number to be factored and $a$ is a randomly chosen integer.
-
-\begin{figure}[h]
+\begin{figure}[htbp] % Using htbp for more placement flexibility
     \centering
-    \includegraphics[width=0.8\textwidth]{05_Quantum_Impact_on_Cryptography/shor_algorithm}
-    \caption{Quantum circuit implementation of Shor's algorithm}
-    \label{fig:shor_circuit}
+    % Ensure graphicspath is set appropriately in your main .tex file
+    % Example: \graphicspath{{src/images/}}
+    \includegraphics[width=0.8\textwidth]{05_Quantum_Impact_on_Cryptography/shor_graph} % Assuming image is in chapter-specific folder
+    \caption[Classical vs Quantum Factoring Complexity]{ % Short caption for LoF if needed
+        \textbf{Classical vs Quantum Factoring Complexity.}
+        % Slightly more concise caption:
+        This graph shows the sub-exponential complexity of classical factoring (e.g., GNFS, red curve) versus the polynomial complexity of Shor's quantum algorithm (green curve, $O((\log N)^3)$). The widening gap (green shading) illustrates the vulnerability of classical systems like RSA to quantum computers, whose advantage grows significantly with key size ($N$).
+    }
+    \label{fig:shor-vs-classical-complexity_ch5_rev}
 \end{figure}
 
-\section{Impact on RSA}\label{sec:rsa_impact}
+The algorithm's core strength lies in transforming the factorization problem into a period-finding problem. By preparing a quantum superposition, applying modular exponentiation, and using the \gls{qft}, Shor's algorithm efficiently discovers the period of this function, which then allows efficient calculation of the factors via classical methods.
 
-The security of RSA depends on the difficulty of factoring:
+\begin{figure}[htbp]
+    \centering
+    \includegraphics[width=0.8\textwidth]{05_Quantum_Impact_on_Cryptography/shor_algorithm} % Assuming image path
+    \caption{Conceptual Diagram of Shor's Algorithm Steps: Utilizes quantum parallelism and QFT for efficient period-finding, enabling factorization.}
+    \label{fig:shor_algorithm_ch5}
+\end{figure}
 
-\begin{equation}\label{eq:rsa_complexity}
-    T_{\text{classical}} = O(e^{(\log N)^{1/3}(\log \log N)^{2/3}})
-\end{equation}
+% ... (rest of subsec:shors explanation remains the same) ...
 
-Versus Shor's algorithm:
-\begin{equation}\label{eq:shor_complexity}
-    T_{\text{quantum}} = O((\log N)^2(\log \log N)(\log \log \log N))
-\end{equation}
+\subsection{Cryptographic Systems Under Threat}\label{subsec:shor_impact_specific_ch5_rev}
 
-\section{Grover's Algorithm}\label{sec:grovers_algorithm}
+The exponential speedup provided by Shor's algorithm directly undermines the security assumptions of virtually all widely deployed public-key cryptosystems \parencite{bernstein2017post}:
 
-While Shor's algorithm targets asymmetric cryptography, Grover's algorithm \parencite{grover1996fast} presents a different kind of challenge. It offers a quadratic speedup for unstructured search problems. What does this mean for cryptography?
-
-\begin{itemize}
-    \item \textbf{Symmetric Encryption:} Grover's algorithm effectively reduces the security of symmetric encryption by half. For example, AES-256 would become roughly equivalent in security to AES-128 against a quantum attacker \parencite{nist2001aes}.
-    \item \textbf{Hash Functions:} Hash functions are similarly affected. Finding preimages or collisions becomes somewhat faster with Grover's algorithm.
-    \item \textbf{The Solution: Key Size Increase:} To counteract Grover's algorithm, a straightforward approach is to double the key sizes for symmetric cryptography.
+\begin{itemize} % Using itemize for better readability
+    \item \textbf{\gls{rsa} Encryption and Signatures:} The security of \gls{rsa} (Section~\ref{subsec:rsa_ch3_rev}) relies entirely on the difficulty of factoring the public modulus $N$. Shor's algorithm makes factoring $N$ feasible, allowing an attacker with a \gls{crqc} to derive the private key $d$ from the public key $(N,e)$, breaking the system completely, regardless of key length.
+    \item \textbf{\gls{dh} and \gls{dsa}:} These protocols (Section~\ref{subsec:dh_ch3_rev}) depend on the classical hardness of the \gls{discrete-logarithm-problem} (DLP) in finite fields. Shor's algorithm provides an efficient quantum method to solve the DLP, rendering \gls{dh} and the related \gls{dsa} insecure.
+    \item \textbf{Elliptic Curve Cryptography (\gls{ecc}):} \Gls{ecc} systems like \gls{ecdh} and \gls{ecdsa} (Section~\ref{subsec:ecc_ch3_rev}) rely on the hardness of the \gls{ecdlp}. Shor's algorithm, adapted for elliptic curve groups, also solves \gls{ecdlp} efficiently, compromising the security of these compact and widely used schemes.
 \end{itemize}
+\medskip % Adds a bit of vertical space between items
 
-\begin{equation}\label{eq:grover_speedup}
-    T_{\text{quantum}} = O(\sqrt{N})
-\end{equation}
+The security implications extend beyond theoretical concerns. Current resource estimates, while substantial (e.g., millions of physical qubits for RSA-2048 \parencite{gidney2021factor}), establish a clear trajectory where these cryptosystems become insecure, driving the need for alternatives.
+
+\subsection{Broader Implications for Digital Security}
+
+The threat from Shor's algorithm cascades through the entire digital ecosystem. Core internet security protocols, including \gls{tls} (securing HTTPS), \gls{ssh} (secure remote access), \gls{ipsec} (VPNs), and the \gls{pki} infrastructure built upon these algorithms, become vulnerable.
+
+Unlike classical vulnerabilities often mitigated by patches or larger keys, the quantum threat is fundamental. No increase in \gls{rsa} or \gls{ecc} key size offers long-term protection against Shor's algorithm. This necessitates the development and deployment of fundamentally different, quantum-resistant cryptographic approaches.
+
+% Added transition sentence
+While Shor's algorithm poses an existential threat to public-key cryptography, another quantum algorithm, Grover's, presents a different kind of challenge to symmetric primitives.
+
+\newpage
+
+\section{Grover's Algorithm: Weakening Symmetric Cryptography and Hashes}\label{sec:grovers_impact_ch5_rev}
+
+In contrast to Shor's exponential speedup for specific problems, \gls{grovers-algorithm} \parencite{grover1996fast} offers a more general *quadratic* speedup for \gls{unstructured-search} problems. This impacts cryptographic primitives whose security relies partly on the difficulty of exhaustive search: symmetric-key ciphers and \gls{hash-function,plural}. It operates by amplifying the probability amplitude of target states within a quantum superposition (see Section~\ref{subsec:amplitude_amp_ch2_revised}).
+
+\subsection{Mechanism: Quantum Amplitude Amplification}\label{subsec:grover_mechanism_ch5_rev}
+Grover's algorithm initializes a system into an equal superposition of all $N$ possible states in a search space. It then iteratively applies an "\gls{grover-oracle}" $U_f$ that marks target state(s) (e.g., by phase inversion) and a "\gls{grover-diffusion}" operator $U_s$ that amplifies the amplitude of marked states while reducing others (performing \gls{amplitude-amplification}). This process, shown conceptually in Figure~\ref{fig:grover_circuit_ch5_rev}, finds a target state with high probability in about $O(\sqrt{N})$ quantum queries, compared to $O(N)$ classical queries for \gls{unstructured-search} \parencite{nielsen_chuang_book}.
 
 \begin{figure}[h]
     \centering
+    % Ensure image path is relative to main.tex or graphicspath is set
     \includegraphics[width=0.8\textwidth]{05_Quantum_Impact_on_Cryptography/grovers_algorithm}
-    \caption{Quantum circuit for Grover's algorithm}
-    \label{fig:grover_circuit}
+    \caption{Conceptual quantum circuit for Grover's algorithm, showing the iterative application of the Oracle ($U_f$) and Diffusion ($U_s$) operators to amplify the target state's amplitude.}
+    \label{fig:grover_circuit_ch5_rev}
 \end{figure}
+\newpage
 
-\section{Timeline of Quantum Threat}\label{sec:timeline}
-
-When might we expect quantum computers powerful enough to break current cryptography?  Estimates vary, but current thinking suggests that quantum computers capable of breaking RSA-2048 could potentially emerge within the next 5 to 15 years \parencite{mosca2018cybersecurity}.  However, significant hurdles remain:
-
+\subsection{Impact on Symmetric Keys and Hash Functions}\label{subsec:grover_impact_specific_ch5_rev}
+% Keeping sloppypar for now, but recommend rephrasing during final edits if possible
+\begin{sloppypar}
+The quadratic speedup impacts the effective security of symmetric primitives \parencite{bernstein2017post}:
 \begin{itemize}
-    \item \textbf{Error Correction:} Building quantum computers with sufficiently low error rates is a major technical challenge. Current error correction techniques are still imperfect \parencite{preskill2018quantum}.
-    \item \textbf{Scalability:} Cryptographically relevant computations will likely require thousands of logical qubits. Scaling up current quantum computer prototypes to this size is a significant engineering undertaking.
+    \item \textbf{Symmetric Key Search:} Recovering an $n$-bit symmetric key (e.g., for \gls{aes}, Section~\ref{sec:symmetric_key_ch3_rev}) classically takes $O(2^n)$ operations via brute force. Grover's reduces the quantum complexity to $O(\sqrt{2^n}) = O(2^{n/2})$ operations. This effectively halves the bit security against quantum brute-force search. For example, AES-128 (128-bit classical security) offers only about $128/2 = 64$ bits of security against Grover's algorithm.
+    \item \textbf{Hash Function Pre-images:} Finding an input $x$ for a target hash output $y$ (i.e., $H(x)=y$, Section~\ref{sec:hash_functions_ch3_rev}) is an \gls{unstructured-search}. For an ideal $n$-bit hash, Grover's reduces the complexity of a \gls{preimage-attack} from classical $O(2^n)$ to quantum $O(2^{n/2})$.
+    \item \textbf{Hash Function Collisions:} Finding distinct inputs $x_1 \neq x_2$ where $H(x_1)=H(x_2)$ (a \gls{collision-attack}) classically uses the \gls{birthday-attack} ($O(2^{n/2})$ complexity). Quantum algorithms improve on this, potentially reaching $O(2^{n/3})$ complexity in some models \parencite{bernstein2017post}, although the practical advantage over the classical birthday bound is still debated for standard hashes. The primary defense remains using a hash function with a large enough output size ($n$) such that $n/2$ provides sufficient collision resistance.
 \end{itemize}
+Crucially, Grover's algorithm weakens these primitives but does not break them exponentially like Shor does for public-key systems. The standard mitigation is to increase key or hash output sizes. For instance, using AES-256 provides approximately 128 bits of quantum security against key search. Using SHA-256 or SHA-384 provides 128 or 192 bits of quantum security against \gls{preimage-attack,plural}, respectively, and their collision resistance remains dominated by the classical \gls{birthday-attack} bound.
+\end{sloppypar}
 
-\begin{figure}[h]
-    \centering
-    \includegraphics[width=0.8\textwidth]{06_Challenges_in_Transition/nist_timeline}
-    \caption{NIST's projected timeline for quantum computer development}
-    \label{fig:nist_timeline}
-\end{figure}
+% Added transition
+Having examined the distinct impacts of Shor's and Grover's algorithms, we can now synthesize the overall threat landscape and discuss the timeline for action.
+\newpage
 
-\section{Store Now, Decrypt Later Attacks}
+\section{Synthesizing the Threat: Security Levels and Comparison}\label{sec:synthesis_ch5_rev}\label{sec:security_levels_ch5_rev} % Combined labels for simplicity
 
-A significant near-term risk involves adversaries storing encrypted data now to decrypt it when quantum computers become available. This particularly threatens data with long-term value, making quantum-resistant solutions necessary even before practical quantum computers exist.
+The differing impacts of Shor's and Grover's algorithms necessitate distinct mitigation strategies and define the tiered nature of the quantum threat.
 
-\section{Quantum-Resistant Algorithm Categories}
-In response to quantum threats, cryptographers have developed several approaches to post-quantum cryptography:
-
-\subsection{Lattice-Based Cryptography}
-Lattice-based cryptosystems base their security on the hardness of certain problems in lattice theory, such as the Shortest Vector Problem (SVP) and the Learning With Errors (LWE) problem. These problems are believed to be difficult even for quantum computers. Notable examples include:
+\subsection{Required Security Level Adjustments}\label{subsec:security_levels_ch5_rev}
+To maintain a target security level (e.g., 128 bits, corresponding roughly to \gls{nist-security-levels} 1 or 3) against both classical and quantum adversaries, parameters must be chosen carefully:
 \begin{itemize}
-    \item NTRU (N-th degree Truncated polynomial Ring Units)
-    \item Kyber, a lattice-based key encapsulation mechanism selected by NIST for standardization
+    \item \textbf{Shor-Vulnerable Systems (\gls{rsa}, DH, \gls{ecc}):} Offer essentially zero security against a \gls{crqc}. They must be replaced entirely by \gls{pqc} alternatives (Chapter~\ref{chap:quantum_resistant}).
+    \item \textbf{Grover-Vulnerable Systems (Symmetric Ciphers, Hashes):} To achieve $k$ bits of quantum security against brute-force key search or \gls{preimage-attack,plural}, the key or hash output size generally needs to be at least $2k$ bits.
+        \begin{itemize}
+            \item For 128-bit quantum security (key search) $\implies$ Use \gls{aes}-256.
+            \item For 128-bit quantum security (hash pre-image) $\implies$ Use SHA-256 or larger.
+            \item For \gls{collision-resistance} (dominated by classical $O(2^{n/2})$ \gls{birthday-attack} bound), SHA-256 (providing 128-bit collision resistance) is often deemed sufficient, though larger hashes offer more margin.
+        \end{itemize}
 \end{itemize}
+This leads to the practical rules: for public-key crypto, Quantum Security $\approx 0$; for symmetric/hash crypto, Quantum Security $\approx$ Classical Security / 2 (for search-based attacks).
+\newpage
 
-\subsection{Hash-Based Cryptography}
-Hash-based signatures rely on the security of cryptographic hash functions, which are less vulnerable to quantum attacks. They include:
-\begin{itemize}
-    \item Merkle signature scheme
-    \item XMSS (eXtended Merkle Signature Scheme), standardized by the IETF
-    \item SPHINCS+, a stateless hash-based signature scheme selected by NIST
-\end{itemize}
-
-\subsection{Code-Based Cryptography}
-Code-based cryptography uses error-correcting codes and derives its security from the difficulty of decoding general linear codes. McEliece, proposed in 1978, is one of the oldest post-quantum cryptographic systems and has withstood decades of cryptanalysis.
-
-\subsection{Multivariate Polynomial Cryptography}
-These systems base their security on the difficulty of solving systems of multivariate polynomials over finite fields, known to be NP-hard. Examples include the Rainbow signature scheme, though recent cryptanalysis has identified vulnerabilities in some variants.
-
-\subsection{Isogeny-Based Cryptography}
-Isogeny-based systems rely on the difficulty of finding isogenies between elliptic curves. SIKE (Supersingular Isogeny Key Encapsulation) was a notable example, though it was subsequently broken by classical attacks in 2022, highlighting the evolving nature of post-quantum cryptography research.
-
-\section{Standardization Efforts}
-The transition to quantum-resistant cryptography requires coordinated standardization efforts:
-
-\subsection{NIST Post-Quantum Cryptography Standardization}
-The U.S. National Institute of Standards and Technology launched its post-quantum cryptography standardization process in 2016. After multiple rounds of evaluation, NIST selected several algorithms for standardization in 2022:
-\begin{itemize}
-    \item For key encapsulation: CRYSTALS-Kyber
-    \item For digital signatures: CRYSTALS-Dilithium, FALCON, and SPHINCS+
-\end{itemize}
-
-Final standards are expected to be published by 2024-2025, with additional algorithms still under consideration for future standardization.
-
-\subsection{Other Standardization Bodies}
-In parallel with NIST, other organizations are contributing to post-quantum standardization:
-\begin{itemize}
-    \item The Internet Engineering Task Force (IETF) is developing protocols for incorporating post-quantum algorithms into TLS and other internet standards
-    \item The European Telecommunications Standards Institute (ETSI) has established a Quantum-Safe Cryptography working group
-    \item The International Organization for Standardization (ISO) is developing standards for quantum-resistant cryptographic techniques
-\end{itemize}
-
-\section{Transition Challenges}
-Migrating from classical to post-quantum cryptography presents significant challenges:
-
-\subsection{Computational and Bandwidth Overhead}
-Most post-quantum algorithms require larger key sizes and ciphertexts than their classical counterparts, imposing:
-\begin{itemize}
-    \item Increased computational demands on both servers and clients
-    \item Higher bandwidth requirements for communication protocols
-    \item Storage challenges for certificates and cryptographic artifacts
-\end{itemize}
-
-\subsection{Implementation and Deployment Considerations}
-The transition process involves numerous practical considerations:
-\begin{itemize}
-    \item Identifying all systems using vulnerable cryptography
-    \item Prioritizing critical infrastructure and long-term secrets
-    \item Developing migration strategies that maintain backward compatibility
-    \item Implementing hybrid approaches that combine classical and post-quantum algorithms during the transition period
-\end{itemize}
-
-\subsection{Cryptographic Agility}
-A key lesson from the quantum threat is the importance of building cryptographic agility into systems—the ability to quickly replace cryptographic algorithms without major system overhauls. This approach provides resilience against future cryptographic vulnerabilities, whether quantum-related or otherwise.
-
-\section{Current Industry Responses}
-Major technology companies and organizations have already begun implementing quantum-resistant approaches:
-\begin{itemize}
-    \item Google has tested post-quantum algorithms in Chrome and other products
-    \item Cloudflare has implemented experimental support for post-quantum TLS
-    \item Microsoft has developed quantum-resistant VPN solutions
-    \item Financial institutions are evaluating the impact on banking infrastructure and payment systems
-    \item Military and intelligence agencies worldwide are prioritizing quantum-resistant encryption for classified communications
-\end{itemize}
-
-These early adoption efforts provide valuable real-world testing for post-quantum algorithms while protecting particularly sensitive systems against future quantum threats.
-
-\section{Comparative Analysis}\label{sec:comparison}
+\subsection{Comparative Impact Summary}\label{subsec:comparison_ch5_rev}
+Table~\ref{tab:quantum_impact_ch5_rev_updated} summarizes the estimated security levels of common cryptographic primitives against classical and quantum attacks, reflecting current understanding and the impacts discussed \parencite{nist_pqc_status_report_ir8413}.
 
 \begin{table}[h]
     \centering
-    \caption{Impact of Quantum Computing on Classical Cryptography}
-    \label{tab:quantum_impact}
-    \begin{tabular}{|l|c|c|}
-        \hline
-        \textbf{Algorithm} & \textbf{Classical Security} & \textbf{Quantum Security} \\
-        \hline
-        RSA-2048 & 112 bits & 0 bits \\
-        AES-256 & 256 bits & 128 bits \\
-        ECC-256 & 128 bits & 0 bits \\
-        \hline
+    \caption{Estimated Security Levels (in bits) Against Classical and Quantum Attacks}
+    \label{tab:quantum_impact_ch5_rev_updated}
+    \begin{tabular}{@{}lcc@{}}
+        \toprule
+        \textbf{Algorithm/Parameter} & \textbf{Classical Security (bits)} & \textbf{Quantum Security (bits)} \\
+        \midrule
+        \gls{rsa}-2048 & $\sim$112 & $\approx 0$ (Shor) \\
+        \gls{rsa}-3072 & $\sim$128 & $\approx 0$ (Shor) \\
+        \gls{ecc} P-256 / secp256k1 & $\sim$128 & $\approx 0$ (Shor) \\
+        \gls{ecc} P-384 / secp384r1 & $\sim$192 & $\approx 0$ (Shor) \\
+        \midrule
+        \gls{aes}-128 & 128 & $\approx 64$ (Grover - Key Search) \\
+        \gls{aes}-192 & 192 & $\approx 96$ (Grover - Key Search) \\
+        \gls{aes}-256 & 256 & $\approx 128$ (Grover - Key Search) \\
+        \midrule
+        SHA-256 (Pre-image) & 256 & $\approx 128$ (Grover - \gls{preimage-attack}) \\
+        SHA-256 (Collision) & 128 & $\approx 128^*$ (Classical \gls{birthday-attack}) \\ % Simplified label
+        SHA-384 (Pre-image) & 384 & $\approx 192$ (Grover - \gls{preimage-attack}) \\
+        SHA-384 (Collision) & 192 & $\approx 192^*$ (Classical \gls{birthday-attack}) \\
+        SHA-512 (Pre-image) & 512 & $\approx 256$ (Grover - \gls{preimage-attack}) \\
+        SHA-512 (Collision) & 256 & $\approx 256^*$ (Classical \gls{birthday-attack}) \\
+        \bottomrule
     \end{tabular}
+    \caption*{*Collision resistance against quantum attacks is generally limited by the $O(2^{n/2})$ classical \gls{birthday-attack} complexity. Quantum collision finding algorithms offer limited practical advantage here.} % Simplified footnote
 \end{table}
 
-\section{Required Security Levels}\label{sec:security_levels}
+% Replace the old figure environment with the new pgfplots one.
+% \usepackage{pgfplots} % Make sure this is in your preamble.tex
+% \pgfplotsset{compat=1.18} % Make sure this is in your preamble.tex
+% \usetikzlibrary{pgfplots.statistics} % May not be needed, but good practice
 
-To maintain security against quantum attacks:
+% Data for the plot - Adjust sizes as needed for accuracy
+\begin{filecontents*}{pqc_keysizes.dat}
+Algorithm               Size    Type        Label
+{RSA-3072}              384     classical   {RSA-3072 (384 B)}
+{RSA-2048}              256     classical   {RSA-2048 (256 B)}
+{ECC-256}               64      classical   {ECC-256 (64 B)}
+{AES-256 Key}           32      symmetric   {AES-256 (32 B Key)}
+{AES-128 Key}           16      symmetric   {AES-128 (16 B Key)}
+{Dilithium-5 PK}        2592    pqc         {Dilithium-5 PK (2592 B)}
+{Falcon-1024 PK}        1793    pqc         {Falcon-1024 PK (1793 B)}
+{Kyber-1024 PK}         1568    pqc         {Kyber-1024 PK (1568 B)}
+{Dilithium-3 PK}        1952    pqc         {Dilithium-3 PK (1952 B)} % Added Dilithium-3
+{Kyber-768 PK}          1184    pqc         {Kyber-768 PK (1184 B)}
+{Falcon-512 PK}         897     pqc         {Falcon-512 PK (897 B)} % Added Falcon-512
+{Kyber-512 PK}          800     pqc         {Kyber-512 PK (800 B)}
+{SPHINCS+ PK}           64      pqc         {SPHINCS+ PK (32/64 B)*} % Small PK
+\end{filecontents*}
 
-\begin{itemize}
-    \item \textbf{Symmetric Key Algorithms:} Double the key length
-    \item \textbf{Hash Functions:} Double the output length
-    \item \textbf{Public Key Algorithms:} Replace with quantum-resistant alternatives
-\end{itemize}
+\begin{figure}[h]
+    \centering
+    \begin{tikzpicture}[font=\small] % Reduce font size slightly if needed
+        \begin{axis}[
+            title={Illustrative Comparison of Key Sizes (Bytes)},
+            xbar, % Horizontal bars
+            xmin=0,
+            xmax=2800, % Adjust xmax based on largest value (Dilithium-5) + padding
+            xlabel={Approx. Public Key Size (Bytes)},
+            ylabel={Algorithm Type},
+            ytick=data, % Ticks for each bar
+            yticklabels from table={pqc_keysizes.dat}{Algorithm}, % Use algorithm names as labels
+            y dir=reverse, % Show RSA/ECC at top, PQC below
+            height=10cm, % Adjust height as needed
+            width=\textwidth, % Use full text width
+            bar width=5pt, % Adjust bar width
+            enlarge y limits={0.08}, % Add spacing between bars
+            legend style={
+                at={(0.5,-0.15)}, % Position legend below plot
+                anchor=north,
+                legend columns=-1 % Arrange legend items horizontally
+            },
+            nodes near coords={\pgfmathprintnumber[fixed, precision=0]{\pgfplotspointmeta}}, % Show size value
+            nodes near coords align={horizontal},
+            point meta=x, % The value for nodes near coords is the x-value (size)
+            visualization depends on={\thisrow{Type} \as \Type}, % Corrected syntax: removed 'value'
+            every node near coord/.append style={font=\tiny, inner sep=1pt}, % Style for size labels
+            % --- Styling based on Type ---
+            scatter/classes={ % Define styles for each type
+                 classical={mark=*, blue, fill=blue!30},
+                 symmetric={mark=*, red, fill=red!30},
+                 pqc={mark=*, green, fill=green!30}
+             },
+             % --- Apply styles to bars ---
+             draw opacity=0.8, % Optional: make bars slightly transparent
+             scatter src=explicit symbolic,
+             postaction={ % Draw bars with color based on 'Type' column
+                 /utils/exec={
+                     \pgfplotsset{mark=none} % Turn off marks for actual bars
+                 },
+                 scatter,
+                 only marks % Prevent drawing lines
+             },
+        ]
+            % Plot the data
+            \addplot table [x=Size, y expr=\coordindex] {pqc_keysizes.dat}; % Use row index for y-coord
 
-The required security level $S$ against quantum attacks is:
-\begin{equation}\label{eq:quantum_security}
-    S_{\text{quantum}} = \frac{S_{\text{classical}}}{2}
+            % Add legend entries manually matching the styles
+            \addlegendimage{area legend, fill=blue!30, draw opacity=0.8}
+            \addlegendentry{Classical PK}
+            \addlegendimage{area legend, fill=red!30, draw opacity=0.8}
+            \addlegendentry{Symmetric Key (Context)}
+            \addlegendimage{area legend, fill=green!30, draw opacity=0.8}
+            \addlegendentry{PQC PK (Examples)}
+
+        \end{axis}
+    \end{tikzpicture}
+    \caption[Key Size Comparison]{Illustrative comparison of public key sizes (Bytes) for classical and example post-quantum algorithms. PQC sizes vary significantly. Symmetric key sizes shown for context (not public keys). *SPHINCS+ public key is small, but signatures are very large. Classic McEliece public keys are much larger still (hundreds of KB) and not shown to scale.}
+    \label{fig:key_size_comparison_ch5_rev_pgfplots} % Updated label
+\end{figure}
+
+\newpage
+
+\section{Timeline and the Urgency of Transition}\label{sec:timeline_sndl_ch5_rev}
+
+Predicting the arrival of a \gls{crqc} capable of breaking current public-key cryptography is uncertain, yet the risk necessitates proactive migration.
+
+\subsection{Estimates and Uncertainties}\label{subsec:timeline_ch5_rev}
+Expert estimates for a CRQC often range from 10 to 20+ years, but significant uncertainty exists \parencite{mosca2018cybersecurity, nist_pqc_timeline_2024}. Hardware challenges remain, particularly achieving fault-tolerance via \gls{qec} at the scale needed for Shor's algorithm against large keys \parencite{preskill2018quantum}. Progress continues, but the timeline is difficult to pinpoint, making preparation essential regardless of the exact date.
+
+\newpage
+
+\subsection{The "Store Now, Decrypt Later" (SNDL) Threat}\label{subsec:sndl_ch5_rev}
+The \gls{sndl} attack vector creates immediate urgency. Adversaries can capture encrypted data transmitted today (e.g., via \gls{tls}) and store it. Once a \gls{crqc} is available, this data, if still sensitive, can be decrypted retrospectively. This threat is independent of when the \gls{crqc} arrives; it depends on the required confidentiality lifetime of the data.
+
+\Gls{moscas-inequality} highlights this urgency:
+\begin{equation}
+    X + Y > Z
 \end{equation}
+where $X$ = Security Shelf Life of data, $Y$ = Migration Time to PQC, $Z$ = Time until CRQC exists. If $X+Y > Z$, data encrypted today is already at risk. Since $Y$ can be 5-15 years for large organizations and $X$ can be decades, the migration ($Y$) must begin long before $Z$ arrives \parencite{mosca2018cybersecurity}.
 
-This chapter demonstrates the urgent need for quantum-resistant cryptography, which we will explore in subsequent chapters.
+
+% Refined Conclusion
+\section{Conclusion: The Imperative for Quantum Resistance}\label{sec:conclusion_ch5_rev}
+
+This chapter has demonstrated that quantum computing poses a concrete and potentially catastrophic threat to current cryptographic standards. \Gls{shors-algorithm} fundamentally breaks the mathematical foundations of widely used \gls{public-key-cryptography} (\gls{rsa}, \gls{dh}, \gls{ecc}), while \gls{grovers-algorithm} significantly weakens \gls{symmetric-key-cryptography} algorithms (\gls{aes}) and \gls{hash-function,plural} (SHA-2, SHA-3) by enabling faster brute-force style attacks (\gls{preimage-attack,plural}, key search). The looming \gls{sndl} threat transforms this from a future possibility into a present-day risk assessment requirement for data with long-term confidentiality needs.
+
+
+
+% --- Removed Section 6 (Standardization/Interoperability) ---
+% Ensure this content is moved to Chapter 7

@@ -1,0 +1,16 @@
+Source: Computing Before Electronics - Creating the Course
+Key: Frost2025ComputingBE
+Relevant Location(s): Section 'Historical Development of Cryptography' (approx lines 34-45), regarding the influence of cryptographic needs on early computing.
+
+Source: Digital Scholarship as Handwork and Brainwork: An Early Modern History of Cryptography
+Key: Ellison2013DigitalSA
+Relevant Location(s): Section 'Historical Development of Cryptography' (approx lines 22-45), for context on 17th-century cryptography and its relation to early computation/scholarship.
+
+Source: The History of Cryptography and Codes
+Key: Quaglia2019TheHO
+Relevant Location(s): Section 'Historical Development of Cryptography' (approx lines 22-45).
+
+Source: Origins of modern cryptography and cryptanalysis
+Key: Bonavoglia2023OriginsOM
+Relevant Location(s): Section 'Historical Development of Cryptography' (approx lines 22-45), context on diplomatic drivers in late Middle Ages/Renaissance.
+--- 

@@ -1,0 +1,8 @@
+Context Snippet: [...birthday attack" takes roughly $O(2^{n/2})$ steps,]
+Sentence: while certain quantum algorithms might find collisions in roughly $O(2^{n/3})$ steps.
+Key: Biasse2022QuantumAF
+---
+Context Snippet: [...collisions in roughly $O(2^{n/3})$ steps.]
+Sentence: More generally, applying Grover's search for collisions effectively takes $O(2^{n/2})$ quantum steps.
+Key: Biasse2022QuantumAF
+--- 

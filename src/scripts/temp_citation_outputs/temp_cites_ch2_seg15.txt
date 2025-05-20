@@ -1,0 +1,12 @@
+Context Snippet: [\section{NISQ Era and Future Outlook}\label{sec:nisq_outlook}\n\n]
+Sentence: [The current era of quantum hardware development is often referred to as the 'Noisy Intermediate-Scale Quantum' (NISQ) era, a term coined by John Preskill.]
+Key: [Preskill2018quantumcomputingin]
+---
+Context Snippet: [John Preskill.]
+Sentence: [NISQ devices are characterized by having a moderate number of qubits (typically 50-1000), significant noise levels, and limited coherence times.]
+Key: [Preskill2018quantumcomputingin]
+---
+Context Snippet: [limited coherence times.]
+Sentence: [They are generally incapable of running complex algorithms like Shor's for large numbers due to the lack of fault tolerance.]
+Key: [Preskill2018quantumcomputingin]
+--- 

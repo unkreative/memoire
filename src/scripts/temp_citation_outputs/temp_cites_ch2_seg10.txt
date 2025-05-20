@@ -1,0 +1,9 @@
+Context Snippet: [\subsection{Quantum Phase Estimation (QPE)}\label{subsec:qpe}\n]
+Sentence: [\Gls{qpe} is a fundamental quantum algorithm used to determine the eigenvalue (specifically, the phase) of an eigenvector of a unitary operator.]
+Key: [WikipediaQPE]
+---
+
+Context Snippet: [\subsection{Amplitude Amplification and Grover's Algorithm}\label{subsec:amplitude_amp_ch2_revised}\n]
+Sentence: [Amplitude Amplification is a quantum technique that generalizes \gls{grovers-algorithm}, enhancing the probability of measuring a desired state in a quantum superposition.]
+Key: [WikipediaAmplitudeAmp]
+--- 

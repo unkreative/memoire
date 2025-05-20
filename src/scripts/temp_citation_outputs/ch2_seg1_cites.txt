@@ -1,0 +1,7 @@
+Context Sentence: In quantum mechanics, a system can exist in multiple states simultaneously until measured. || Suggested Citation: \parencite{nielsen00}
+Context Sentence: The squares of their absolute values represent the probabilities ... satisfying |α|² + |β|² = 1. || Suggested Citation: \parencite{nielsen00}
+Context Sentence: This ability to exist in a combination of states allows quantum computers to explore many possibilities concurrently. || Suggested Citation: \parencite{nielsen00}
+Context Sentence: \Gls{entanglement} is a unique quantum correlation ... described by a single, combined quantum state, not independent individual states. || Suggested Citation: \parencite{Horodecki_2009}
+Context Sentence: This correlation, famously dubbed "spooky action at a distance" by Einstein, cannot be explained by classical physics (e.g., hidden variables) and is experimentally verified. || Suggested Citation: (e.g., \parencite{Born1971}; \parencite{Brunner2014})
+Context Sentence: Measuring a property (like spin) of one entangled particle instantaneously influences the corresponding property of the other, regardless of the spatial separation between them. || Suggested Citation: \parencite{Brunner2014}
+Context Sentence: This non-local connection forms the basis for many quantum information processing tasks. || Suggested Citation: \parencite{nielsen00}

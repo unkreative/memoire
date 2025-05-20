@@ -1,0 +1,9 @@
+[
+  {
+    "name": "Compile LaTeX Thesis",
+    "description": "Run the full LaTeX compilation process with biber for references",
+    "command": "bash /Users/sergonnelou/memoire/src/scripts/compile-thesis.sh",
+    "priority": "high",
+    "tags": ["latex", "compile"]
+  }
+] 

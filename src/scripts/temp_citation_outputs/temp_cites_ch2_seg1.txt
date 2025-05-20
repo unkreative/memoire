@@ -1,0 +1,9 @@
+Context Snippet: [\n\subsection{Superposition}\label{subsec:superposition}\n]
+Sentence: [In quantum mechanics, a system can exist in multiple states simultaneously until measured.]
+Key: [Thomson2025LiveScienceSuperposition]
+---
+
+Context Snippet: [satisfying $|\alpha|^2 + |\beta|^2 = 1$. ]
+Sentence: [This ability to exist in a combination of states allows quantum computers to explore many possibilities concurrently.]
+Key: [KyrlynnD2024SuperpositionHow]
+--- 

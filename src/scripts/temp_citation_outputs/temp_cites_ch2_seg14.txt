@@ -1,0 +1,4 @@
+Context Snippet: [...practical impact is debated due to resource requirements.]
+Sentence: [Similarly, Grover's algorithm could theoretically reduce the effective key strength of symmetric algorithms like AES, although the practical impact is debated due to resource requirements.]
+Key: [GrasslEtAl2016ApplyingGroverAES]
+--- 

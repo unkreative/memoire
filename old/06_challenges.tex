@@ -1,0 +1,173 @@
+\chapter{Challenges in Transitioning to Post-Quantum Cryptography}\label{chap:challenges}
+
+\section{Technical Challenges}\label{sec:technical_challenges}
+
+\subsection{Performance Overhead}\label{subsec:performance}
+A primary technical hurdle is that many PQC algorithms, particularly the NIST standards like CRYSTALS-Kyber and CRYSTALS-Dilithium, exhibit different performance characteristics compared to their classical counterparts \parencite{bernstein2017post}.
+
+Key performance metrics often show trade-offs:
+\begin{itemize}
+    \item \textbf{Key Sizes:} Public keys for lattice-based schemes like Kyber and Dilithium are often larger than ECC keys but smaller than RSA keys. Private keys also vary. Hash-based signatures (SPHINCS+) have very small private/public keys but large signatures. Code-based schemes (McEliece) typically have very large public keys.
+    \item \textbf{Signature Sizes:} Lattice-based signatures (Dilithium, Falcon) are significantly larger than ECDSA signatures. Hash-based signatures (SPHINCS+) are even larger (tens of kilobytes).
+    \item \textbf{Computation Time:} Lattice-based algorithms are generally very fast, often outperforming RSA and sometimes even ECC for certain operations (key generation, encapsulation/decapsulation). Hash-based signature verification is fast, but signing and key generation can be slower. Multivariate schemes can have fast signing/verification but slow key generation.
+\end{itemize}
+
+Concrete benchmark data is essential for evaluating real-world impact. For instance, benchmarks using libraries like liboqs integrated into OpenSSL, or results from projects like SUPERCOP \parencite{nist_pqc_benchmarks_supercop}, show that on common platforms (e.g., x64):
+\begin{itemize}
+    \item \textbf{Kyber (KEM):} Often demonstrates faster key generation and encapsulation/decapsulation compared to RSA-3072 or even ECC P-256.
+    \item \textbf{Dilithium (Signature):} Signing and verification speeds are typically competitive with or faster than RSA-3072, though often slower than ECDSA P-256.
+\end{itemize}
+
+\begin{table}[h]
+    \centering
+    \caption{Illustrative Performance Comparison (NIST Level 1, ~128-bit security) - *Values are approximate and vary significantly by implementation, platform, and parameter set.*}
+    \label{tab:performance_comparison_ch6}
+    \begin{tabular}{@{}lcccc@{}}
+        \toprule
+        \textbf{System} & \textbf{Public Key Size} & \textbf{Ciphertext/Sig. Size} & \textbf{Relative Speed (Enc/Sign)} & \textbf{Relative Speed (Dec/Verify)} \\
+        \midrule
+        RSA-3072 & 384 Bytes & 384 B (Sig) & Baseline (Slow) & Baseline (Fast) \\
+        ECDSA P-256 & 64 Bytes & ~70 B (Sig) & Baseline (Fast) & Baseline (Slow) \\
+        \midrule
+        Kyber-512 (KEM) & 800 Bytes & 768 B (CT) & Fast & Fast \\
+        Dilithium-2 (Sig) & 1312 Bytes & 2420 B (Sig) & Medium-Fast & Medium-Fast \\
+        SPHINCS+-SHA256-128f (Sig) & 32 Bytes & ~7856 B (Sig) & Slow & Fast \\
+        Classic McEliece 348864 (KEM) & 261 KBytes & 128 B (CT) & Very Fast & Slow \\
+        \bottomrule
+    \end{tabular}
+    \caption*{CT=Ciphertext, Sig=Signature. Speed relative to classical counterparts; actual performance depends heavily on implementation details.}
+\end{table}
+
+\includegraphics[width=0.8\textwidth]{06_Challenges_in_Transition/lattice_cryptography}
+
+\section{Implementation Challenges}\label{sec:implementation}
+
+\subsection{System Integration}\label{subsec:integration}
+Integrating PQC into the vast landscape of existing digital systems presents enormous challenges:
+
+\begin{itemize}
+    \item \textbf{Legacy Systems:} Many critical systems rely on older hardware or software that may not be easily upgradable.
+    \begin{itemize}
+        \item \textit{Protocol Compatibility:} Modifying established protocols like TLS, SSH, IPsec, DNSSEC requires careful standardization (e.g., \parencite{pqc_tls_integration_rfc}) and updates across clients, servers, and intermediate devices. Issues like increased handshake latency due to larger keys/signatures must be addressed.
+        \item \textit{Hardware Limitations:} Resource-constrained environments like IoT devices, smart cards, or embedded systems may lack the CPU power or memory to handle larger PQC keys/operations efficiently \parencite{nistir8240_iot_pqc}. Lightweight PQC variants are needed but may offer different security/performance trade-offs.
+        \item \textit{Software Constraints:} Updating cryptographic libraries (e.g., OpenSSL, BoringSSL, Libgcrypt \parencite{openssl_pqc_integration}), operating systems, and applications across diverse platforms requires significant development and testing effort. Dependencies between software components can complicate upgrades.
+    \end{itemize}
+    \item \textbf{Infrastructure Updates:} Core infrastructure supporting cryptography needs modification.
+    \begin{itemize}
+        \item \textit{Network Protocols:} As mentioned, protocols need updating to accommodate larger cryptographic payloads without breaking compatibility or performance expectations.
+        \item \textit{Key Management Systems (KMS):} Systems for generating, distributing, storing, and rotating keys must be adapted for new PQC algorithms, key formats, and potentially hybrid key management strategies.
+        \item \textit{Certificate Authorities (CAs) and PKI:} Public Key Infrastructure must issue and manage certificates containing PQC public keys. This involves defining new object identifiers (OIDs), handling potentially much larger certificate sizes (affecting storage and transmission), and updating certificate validation logic \parencite{pqc_pki_challenges}. Certificate Revocation mechanisms (CRL, OCSP) also need assessment.
+    \end{itemize}
+\end{itemize}
+
+\includegraphics[width=0.8\textwidth]{06_Challenges_in_Transition/nist_timeline}
+
+\section{Migration Challenges}\label{sec:migration}
+
+\subsection{Transition Period Management}\label{subsec:transition}
+The extended period during which both classical and PQC algorithms coexist requires careful management:
+
+\begin{itemize}
+    \item \textbf{Hybrid Approaches:} Deploying systems that use both classical (e.g., ECDH, ECDSA) and PQC (e.g., Kyber, Dilithium) algorithms simultaneously is a common interim strategy \parencite{hybrid_pqc_tls_impl}.
+        \begin{itemize}
+            \item \textit{Implementation:} For Key Exchange (KEMs), this often involves deriving a shared secret by combining secrets from both classical and PQC KEMs (e.g., $K = \text{KDF}(\text{ClassicalSecret} || \text{PQCSecret})$). For signatures, it might involve sending both classical and PQC signatures.
+            \item \textit{Complexity:} Managing dual algorithm systems increases protocol complexity, code size, and potential attack surface.
+            \item \textit{Performance Impact:} Hybrid modes inherently incur the performance cost (latency, bandwidth) of both algorithms, potentially impacting user experience or system throughput.
+        \end{itemize}
+    \item \textbf{Backwards Compatibility and Interoperability:} Ensuring new PQC-enabled systems can still communicate with older, non-upgraded systems is critical.
+        \begin{itemize}
+            \item \textit{Protocol Versioning/Negotiation:} Protocols need mechanisms to negotiate mutually supported algorithms.
+            \item \textit{Fallback Risks:} Allowing fallbacks to classical-only modes if PQC negotiation fails can be exploited by attackers (downgrade attacks) if not implemented securely.
+            \item \textit{Interoperability Testing:} Ensuring different PQC implementations from various vendors correctly interoperate is a major challenge requiring extensive testing.
+        \end{itemize}
+    \item \textbf{Inventory and Prioritization:} Organizations must first identify *all* systems using cryptography (often challenging in complex enterprises) and then prioritize upgrades based on data sensitivity, system lifespan, and exposure to the SNDL threat.
+\end{itemize}
+
+\section{Resource Constraints}\label{sec:resources}
+
+\subsection{Hardware and Software Requirements}\label{subsec:hw_sw_reqs_ch6}
+PQC algorithms can place greater demands on system resources:
+
+\begin{itemize}
+    \item \textbf{Memory Usage:}
+    \begin{itemize}
+        \item \textit{Key Storage:} Larger public/private keys require more persistent storage.
+        \item \textit{Runtime Memory:} Some PQC operations (especially in code-based or lattice-based crypto) may require significant RAM during execution for intermediate values (e.g., large matrices).
+        \item \textit{Cache Effects:} Larger memory footprints can lead to increased cache misses, impacting performance on CPU-bound tasks.
+    </end{itemize}
+    \item \textbf{Processing Power:}
+    \begin{itemize}
+        \item \textit{Computational Complexity:} While often asymptotically fast, the concrete operations (e.g., polynomial multiplication, matrix operations, hash computations) can be demanding.
+        \item \textit{Multiple Algorithm Support:} Handling hybrid modes requires supporting computations for both classical and PQC primitives.
+        \item \textit{Real-time Performance:} Systems with strict real-time constraints (e.g., industrial control, high-frequency trading) may struggle with increased cryptographic latency. Hardware acceleration for PQC might become necessary in some cases.
+    \end{itemize}
+\end{itemize}
+
+\includegraphics[width=0.8\textwidth]{06_Challenges_in_Transition/quantum_key_distribution}
+
+\section{Security Considerations}\label{sec:security}
+
+\subsection{Risk Assessment}\label{subsec:risk}
+Security challenges during transition:
+
+\begin{equation}\label{eq:risk}
+    \text{Risk}_{\text{total}} = \text{Risk}_{\text{classical}} + \text{Risk}_{\text{quantum}} + \text{Risk}_{\text{hybrid}}
+\end{equation}
+
+Key considerations:
+\begin{itemize}
+    \item \textbf{Attack Vectors:}
+    \begin{itemize}
+        \item Implementation vulnerabilities
+        \item Side-channel attacks
+        \item Quantum-specific threats
+    \end{itemize}
+    \item \textbf{Security Proofs:}
+    \begin{itemize}
+        \item Mathematical foundations
+        \item Quantum resistance
+        \item Long-term security
+    \end{itemize}
+\end{itemize}
+
+\section{Standardization Challenges}\label{sec:standardization}
+
+\subsection{Protocol Development}\label{subsec:protocols}
+Standardization process complications:
+
+\begin{itemize}
+    \item \textbf{Algorithm Selection:}
+    \begin{itemize}
+        \item Performance criteria
+        \item Security requirements
+        \item Implementation considerations
+    \end{itemize}
+    \item \textbf{Timeline Pressures:}
+    \begin{itemize}
+        \item Development cycles
+        \item Testing requirements
+        \item Implementation deadlines
+    \end{itemize}
+\end{itemize}
+
+\section{Cost Implications}\label{sec:costs}
+
+\subsection{Financial Impact}\label{subsec:financial}
+Major cost categories:
+
+\begin{itemize}
+    \item \textbf{Direct Costs:}
+    \begin{itemize}
+        \item Hardware upgrades
+        \item Software development
+        \item System integration
+    \end{itemize}
+    \item \textbf{Indirect Costs:}
+    \begin{itemize}
+        \item Training programs
+        \item Documentation updates
+        \item Operational changes
+    \end{itemize}
+\end{itemize}
+
+These challenges highlight the complexity of transitioning to post-quantum cryptography and the need for careful planning and resource allocation.

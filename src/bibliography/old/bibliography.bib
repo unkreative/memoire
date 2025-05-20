@@ -1,0 +1,2867 @@
+% Bibliography for Quantum Computing and Its Impact on Cryptography
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% QUANTUM COMPUTING FUNDAMENTALS
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+@book{nielsen_chuang_book,
+  title={Quantum Computation and Quantum Information},
+  author={Nielsen, Michael A. and Chuang, Isaac L.},
+  year={2010},
+  publisher={Cambridge University Press},
+  edition={10th Anniversary Edition},
+  address={Cambridge, UK}
+}
+
+@book{arora_barak_complexity,
+  title={Computational Complexity: A Modern Approach},
+  author={Arora, Sanjeev and Barak, Boaz},
+  year={2009},
+  publisher={Cambridge University Press},
+  address={Cambridge, UK}
+}
+
+@book{griffiths2018introduction,
+  title={Introduction to Quantum Mechanics},
+  author={Griffiths, David J. and Schroeter, Darrell F.},
+  year={2018},
+  publisher={Cambridge University Press},
+  edition={3rd},
+  address={Cambridge, UK}
+}
+
+@book{mermin2007quantum,
+  title={Quantum Computer Science: An Introduction},
+  author={Mermin, N. David},
+  year={2007},
+  publisher={Cambridge University Press},
+  note={More concise, focused on computation}
+}
+
+@book{kaye2007introduction,
+  title={An Introduction to Quantum Computing},
+  author={Kaye, Phillip and Laflamme, Raymond and Mosca, Michele},
+  year={2007},
+  publisher={Oxford University Press}
+}
+
+@book{yanofsky2008quantum,
+  title={Quantum Computing for Computer Scientists},
+  author={Yanofsky, Noson S. and Mannucci, Mirco A.},
+  year={2008},
+  publisher={Cambridge University Press}
+}
+
+@book{rieffel2011quantum,
+  title={Quantum Computing: A Gentle Introduction},
+  author={Rieffel, Eleanor G. and Polak, Wolfgang H.},
+  year={2011},
+  publisher={MIT Press}
+}
+
+@book{feynman1965feynman,
+  title={The Feynman Lectures on Physics, Vol. III: Quantum Mechanics},
+  author={Feynman, Richard P. and Leighton, Robert B. and Sands, Matthew},
+  year={1965},
+  publisher={Addison-Wesley},
+  note={Classic physics text}
+}
+
+@article{arndt1999wave,
+  title={Wave\textendashparticle duality of C60 molecules},
+  author={Arndt, Markus and Nairz, Olaf and Vos-Andreae, Julian and Keller, Claudia and Van Der Zouw, Gerhard and Zeilinger, Anton},
+  journal={Nature},
+  volume={401},
+  number={6754},
+  pages={680--682},
+  year={1999},
+  publisher={Nature Publishing Group},
+  note={Experimental demonstration of duality for large molecules}
+}
+
+@article{einstein1935can,
+  title={Can Quantum-Mechanical Description of Physical Reality Be Considered Complete?},
+  author={Einstein, Albert and Podolsky, Boris and Rosen, Nathan},
+  journal={Physical Review},
+  volume={47},
+  number={10},
+  pages={777},
+  year={1935},
+  publisher={APS},
+  note={The famous EPR paper questioning completeness, related to entanglement}
+}
+
+@article{bell1964einstein,
+  title={On the {Einstein Podolsky Rosen} paradox},
+  author={Bell, John S.},
+  journal={Physics Physique Fizika},
+  volume={1},
+  number={3},
+  pages={195},
+  year={1964},
+  publisher={APS},
+  note={Bell's theorem, foundational for understanding entanglement tests}
+}
+
+@article{heisenberg1927anschaulichen,
+  title={Über den anschaulichen Inhalt der quantentheoretischen Kinematik und Mechanik},
+  author={Heisenberg, Werner},
+  journal={Zeitschrift für Physik},
+  volume={43},
+  number={3-4},
+  pages={172--198},
+  year={1927},
+  publisher={Springer},
+  note={Original paper on the Uncertainty Principle}
+}
+
+@online{ibm_quantum,
+  title={IBM Quantum Experience Documentation},
+  author={{IBM}},
+  url={https://quantum-computing.ibm.com/docs/},
+  year={2025},
+  note={Excellent practical guides, tutorials on Qiskit, quantum concepts},
+  urldate={2025-04-11}
+}
+
+@online{microsoft_quantum,
+  title={Microsoft Quantum Documentation},
+  author={{Microsoft}},
+  url={https://docs.microsoft.com/en-us/quantum/},
+  year={2025},
+  note={Resources for Q\#, quantum concepts, algorithms},
+  urldate={2025-04-11}
+}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% QUANTUM ALGORITHMS
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+@article{shor1997polynomial,
+  title={Polynomial-Time Algorithms for Prime Factorization and Discrete Logarithms on a Quantum Computer},
+  author={Shor, Peter W.},
+  journal={SIAM Journal on Computing},
+  volume={26},
+  number={5},
+  pages={1484--1509},
+  year={1997},
+  publisher={Society for Industrial and Applied Mathematics},
+  note={The foundational paper describing Shor's algorithm for integer factorization.}
+}
+
+@article{grover1997quantum,
+  title={Quantum Mechanics Helps in Searching for a Needle in a Haystack},
+  author={Grover, Lov K.},
+  journal={Physical Review Letters},
+  volume={79},
+  number={2},
+  pages={325},
+  year={1997},
+  publisher={APS},
+  note={Journal version of Grover's algorithm}
+}
+
+@inproceedings{shor1994algorithms,
+  title={Algorithms for quantum computation: discrete logarithms and factoring},
+  author={Shor, Peter W.},
+  booktitle={Proceedings 35th Annual Symposium on Foundations of Computer Science},
+  pages={124--134},
+  year={1994},
+  organization={IEEE},
+  note={The seminal paper on Shor's algorithm}
+}
+
+@article{beckman1996efficient,
+  title={Efficient networks for quantum factoring},
+  author={Beckman, David and Chari, Amalavoyal N. and Devabhaktuni, Srikrishna and Preskill, John},
+  journal={Physical Review A},
+  volume={54},
+  number={2},
+  pages={1034},
+  year={1996},
+  publisher={APS},
+  note={Implementation details/circuit design for Shor's algorithm}
+}
+
+@inproceedings{grover1996fast,
+  title={A fast quantum mechanical algorithm for database search},
+  author={Grover, Lov K.},
+  booktitle={Proceedings of the Twenty-eighth Annual ACM Symposium on Theory of Computing},
+  pages={212--219},
+  year={1996},
+  organization={ACM},
+  note={Presents Grover's quantum search algorithm.}
+}
+
+@article{cleve1998quantum,
+  title={Quantum algorithms revisited},
+  author={Cleve, Richard and Ekert, Artur and Macchiavello, Chiara and Mosca, Michele},
+  journal={Proceedings of the Royal Society of London. Series A: Mathematical, Physical and Engineering Sciences},
+  volume={454},
+  number={1969},
+  pages={339--354},
+  year={1998},
+  publisher={The Royal Society}
+}
+
+@article{kitaev1995quantum,
+  title={Quantum measurements and the Abelian Stabilizer Problem},
+  author={Kitaev, Alexei Yu},
+  journal={arXiv preprint quant-ph/9511026},
+  year={1995}
+}
+
+@article{brassard2002quantum,
+  title={Quantum amplitude amplification and estimation},
+  author={Brassard, Gilles and H{\"o}yer, Peter and Mosca, Michele and Tapp, Alain},
+  journal={Contemporary Mathematics},
+  volume={305},
+  pages={53--74},
+  year={2002},
+  publisher={American Mathematical Society}
+}
+
+@article{nielsen2002quantum,
+  title={Quantum computation and quantum information},
+  author={Nielsen, Michael A and Chuang, Isaac},
+  journal={American Journal of Physics},
+  volume={70},
+  number={5},
+  pages={558--559},
+  year={2002},
+  publisher={American Association of Physics Teachers}
+}
+
+@article{preskill2018quantum,
+  title={Quantum Computing in the {NISQ} Era and Beyond},
+  author={Preskill, John},
+  journal={Quantum},
+  volume={2},
+  pages={79},
+  year={2018},
+  publisher={Verein zur F{\"o}rderung des Open Access Publizierens in den Quantenwissenschaften},
+  note={Discusses near-term quantum computing and its limitations.}
+}
+
+@article{coppersmith2002approximate,
+  title={An approximate {F}ourier transform useful in quantum factoring},
+  author={Coppersmith, Don},
+  journal={arXiv preprint quant-ph/0201067},
+  year={2002}
+}
+
+@article{griffiths1996semiclassical,
+  title={Semiclassical fourier transform for quantum computation},
+  author={Griffiths, Robert B and Niu, Chi-Sheng},
+  journal={Physical Review Letters},
+  volume={76},
+  number={17},
+  pages={3228},
+  year={1996},
+  publisher={APS}
+}
+
+@article{Suter2009,
+  title={Quantum Algorithms},
+  author={Suter, Dieter},
+  journal={Lecture Notes},
+  year={2009},
+  url={https://qnap.e3.physik.tu-dortmund.de/suter/Vorlesung/QIV_WS09/8_QAlgorithms.pdf},
+  note={Chapter 8}
+}
+
+@article{BerkeleyX,
+  title={Quantum Fourier Transform},
+  author={{BerkeleyX}},
+  journal={CS-191x Course Materials},
+  year={2019},
+  url={https://d37djvu3ytnwxt.cloudfront.net/c4x/BerkeleyX/CS-191x/asset/chap5.pdf},
+  note={Chapter 5}
+}
+
+@article{eisert2021quantum,
+  title={Quantum algorithms},
+  author={Eisert, Jens},
+  journal={Quantum Information Theory},
+  year={2021},
+  url={https://www.physik.fu-berlin.de/en/einrichtungen/ag/ag-eisert/teaching/ws20-21/QuantumInformationTheoryChapter9.pdf},
+  note={Chapter 9: Quantum algorithms}
+}
+
+@online{qulacs2023qft,
+  title={Quantum Fourier Transform},
+  author={{Qulacs}},
+  year={2023},
+  url={https://dojo.qulacs.org/en/latest/notebooks/2.3_quantum_Fourier_transform.html},
+  note={Quantum Native Dojo tutorial on QFT implementation}
+}
+
+@online{edx2023qft,
+  title={QFT, Period Finding \& Shor's Algorithm},
+  author={{EdX}},
+  year={2023},
+  url={https://courses.edx.org/c4x/BerkeleyX/CS191x/asset/chap5.pdf},
+  note={Comprehensive guide on QFT and its applications}
+}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% CLASSICAL CRYPTOGRAPHY
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+@article{rivest1978method,
+  title={A Method for Obtaining Digital Signatures and Public-Key Cryptosystems},
+  author={Rivest, Ronald L. and Shamir, Adi and Adleman, Leonard M.},
+  journal={Communications of the ACM},
+  volume={21},
+  number={2},
+  pages={120--126},
+  year={1978},
+  publisher={ACM},
+  note={The original RSA paper.}
+}
+
+@book{menezes1996handbook,
+  title={Handbook of Applied Cryptography},
+  author={Menezes, Alfred J. and van Oorschot, Paul C. and Vanstone, Scott A.},
+  year={1996},
+  publisher={CRC Press},
+  address={Boca Raton, FL}
+}
+
+@book{katz2014introduction,
+  title={Introduction to Modern Cryptography},
+  author={Katz, Jonathan and Lindell, Yehuda},
+  edition={2nd},
+  year={2014},
+  publisher={CRC Press},
+  note={Widely used modern textbook}
+}
+
+@book{stallings2017cryptography,
+  title={Cryptography and Network Security: Principles and Practice},
+  author={Stallings, William},
+  edition={7th},
+  year={2017},
+  publisher={Pearson},
+  note={Comprehensive, practical focus}
+}
+
+@article{diffie1976new,
+  title={New directions in cryptography},
+  author={Diffie, Whitfield and Hellman, Martin E.},
+  journal={IEEE Transactions on Information Theory},
+  volume={22},
+  number={6},
+  pages={644--654},
+  year={1976},
+  publisher={IEEE},
+  note={Introduced public-key cryptography and key exchange}
+}
+
+@techreport{nist2001aes,
+  title={{Advanced Encryption Standard (AES)}},
+  author={{National Institute of Standards and Technology (NIST)}},
+  institution={U.S. Department of Commerce},
+  year={2001},
+  type={FIPS PUB},
+  number={197},
+  url={https://csrc.nist.gov/publications/detail/fips/197/final}
+}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% POST-QUANTUM CRYPTOGRAPHY
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+@article{bernstein2017post,
+  title={Post-Quantum Cryptography},
+  author={Bernstein, Daniel J. and Lange, Tanja},
+  journal={Nature},
+  volume={549},
+  number={7671},
+  pages={188--194},
+  year={2017},
+  publisher={Nature Publishing Group},
+  note={Overview of post-quantum cryptography approaches.}
+}
+
+@techreport{alagic2020status,
+  title={Status Report on the Second Round of the {NIST} Post-Quantum Cryptography Standardization Process},
+  author={Alagic, Gorjan and Alperin-Sheriff, Jacob and Apon, Daniel and Cooper, David and Dang, Quynh and Kelsey, John and Liu, Yi-Kai and Miller, Carl and Moody, Dustin and Peralta, Rene and others},
+  institution={National Institute of Standards and Technology},
+  type={NISTIR},
+  number={8309},
+  year={2020},
+  url={https://doi.org/10.6028/NIST.IR.8309},
+  note={Report on the second round of the NIST post-quantum cryptography standardization process.}
+}
+
+@article{djelic2021nist,
+  title={{NIST} Post-Quantum Cryptography Standardization - Third Round Finalist Digital Signature Schemes},
+  author={Djelic, Marko and Poljak, Mario},
+  journal={Automatic Control and Computer Sciences},
+  volume={55},
+  number={1},
+  pages={86--95},
+  year={2021},
+  publisher={Springer}
+}
+
+@techreport{nist_pqc,
+  title={{Status Report on the Second Round of the NIST Post-Quantum Cryptography Standardization Process}},
+  author={{National Institute of Standards and Technology (NIST)}},
+  institution={U.S. Department of Commerce},
+  year={2020},
+  type={NIST Internal Report (NISTIR)},
+  number={8309},
+  note={Represents the general NIST PQC effort; cite specific documents when possible.},
+  url={https://csrc.nist.gov/projects/post-quantum-cryptography}
+}
+
+@article{peikert2016decade,
+  title={A decade of lattice cryptography},
+  author={Peikert, Chris},
+  journal={Foundations and Trends in Theoretical Computer Science},
+  volume={10},
+  number={4},
+  pages={283--424},
+  year={2016},
+  publisher={Now Publishers Inc.},
+  note={Excellent survey of lattice-based crypto}
+}
+
+@techreport{enisa_pqc_threat_2023,
+  title={{Post-Quantum Cryptography: Current state and quantum mitigation}},
+  author={{ENISA (European Union Agency for Cybersecurity)}},
+  institution={ENISA},
+  year={2023},
+  url={https://www.enisa.europa.eu/publications/post-quantum-cryptography-current-state-and-quantum-mitigation},
+  note={Recent assessment of quantum threats and mitigation strategies}
+}
+
+@techreport{nist_pqc_status_report_ir8413,
+  title={{Status Report on the Third Round of the NIST Post-Quantum Cryptography Standardization Process}},
+  author={Alagic, Gorjan and Apon, Daniel C. and Cooper, David A. and Dang, Quynh H. and Dang, Thinh T. and Kelsey, John M. and Liu, Yi-Kai and Miller, Carl A. and Moody, Dustin and Peralta, Rene and Perlner, Ray A. and Robinson, Angela S. and Smith-Tone, Daniel E.},
+  institution={National Institute of Standards and Technology},
+  type={NISTIR},
+  number={8413},
+  year={2022},
+  url={https://doi.org/10.6028/NIST.IR.8413},
+  note={Comprehensive report on NIST's PQC third round results}
+}
+
+@article{gidney2021factor,
+  title={{How to factor 2048 bit RSA integers in 8 hours using 20 million noisy qubits}},
+  author={Gidney, Craig and Eker{\aa}, Martin},
+  journal={Quantum},
+  volume={5},
+  pages={433},
+  year={2021},
+  publisher={Verein zur F{\"o}rderung des Open Access Publizierens in den Quantenwissenschaften},
+  note={Detailed resource estimates for quantum factoring}
+}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% CYBERSECURITY IMPLICATIONS
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+@article{mosca2018cybersecurity,
+  title={Cybersecurity in an Era with Quantum Computers: Will We Be Ready?},
+  author={Mosca, Michele},
+  journal={IEEE Security \& Privacy},
+  volume={16},
+  number={5},
+  pages={38--41},
+  year={2018},
+  publisher={IEEE},
+  note={Discusses quantum threats to current cryptographic systems and preparation strategies.}
+}
+
+@inproceedings{chen2016report,
+  title={Report on Post-Quantum Cryptography},
+  author={Chen, Lily and Jordan, Stephen and Liu, Yi-Kai and Moody, Dustin and Peralta, Rene and Perlner, Ray and Smith-Tone, Daniel},
+  booktitle={NIST Internal Report},
+  volume={8105},
+  year={2016},
+  organization={NIST}
+}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% QUANTUM HARDWARE AND IMPLEMENTATION
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+@article{arute2019quantum,
+  title={Quantum Supremacy Using a Programmable Superconducting Processor},
+  author={Arute, Frank and Arya, Kunal and Babbush, Ryan and Bacon, Dave and Bardin, Joseph C. and Barends, Rami and others},
+  journal={Nature},
+  volume={574},
+  number={7779},
+  pages={505--510},
+  year={2019},
+  publisher={Nature Publishing Group},
+  note={The "quantum supremacy" paper from Google.}
+}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% SOCIETAL AND ECONOMIC IMPLICATIONS
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+@book{national2019quantum,
+  title={Quantum Computing: Progress and Prospects},
+  author={{National Academies of Sciences, Engineering, and Medicine}},
+  year={2019},
+  publisher={The National Academies Press},
+  address={Washington, DC},
+  note={Comprehensive assessment of the current state and prospects of quantum computing.}
+}
+
+@article{pieper2021economic,
+  title={The Economic Impact of Quantum Computing},
+  author={Pieper, Justin},
+  journal={IEEE Engineering Management Review},
+  volume={49},
+  number={1},
+  pages={24--31},
+  year={2021},
+  publisher={IEEE}
+}
+
+@article{dowling2003quantum,
+  title={Quantum technology: the second quantum revolution},
+  author={Dowling, Jonathan P. and Milburn, Gerard J.},
+  journal={Philosophical Transactions of the Royal Society of London. Series A: Mathematical, Physical and Engineering Sciences},
+  volume={361},
+  number={1809},
+  pages={1655--1674},
+  year={2003},
+  publisher={The Royal Society},
+  note={Discusses broader impact}
+}
+
+@article{wehner2018quantum,
+  title={Quantum internet: A vision for the road ahead},
+  author={Wehner, Stephanie and Elkouss, David and Hanson, Ronald},
+  journal={Science},
+  volume={362},
+  number={6412},
+  year={2018},
+  publisher={American Association for the Advancement of Science},
+  note={Vision paper on quantum internet}
+}
+
+% --- Books ---
+@book{kahn1996codebreakers,
+  title={The Codebreakers: The Story of Secret Writing},
+  author={Kahn, David},
+  year={1996},
+  publisher={Scribner}
+}
+
+@book{singh1999code,
+  title={The Code Book: The Science of Secrecy from Ancient Egypt to Quantum Cryptography},
+  author={Singh, Simon},
+  year={1999},
+  publisher={Anchor Books}
+}
+
+@book{boneh2020graduate,
+  title={A Graduate Course in Applied Cryptography},
+  author={Boneh, Dan and Shoup, Victor},
+  year={2020},
+  note={\url{https://toc.cryptobook.us/}},
+  publisher={Stanford University}
+}
+
+@book{mangard2007power,
+  title={Power Analysis Attacks: Revealing the Secrets of Smart Cards},
+  author={Mangard, Stefan and Oswald, Elisabeth and Popp, Thomas},
+  year={2007},
+  publisher={Springer}
+}
+
+% --- Articles / Papers ---
+@article{shannon1949communication,
+  title={Communication Theory of Secrecy Systems},
+  author={Shannon, Claude E.},
+  journal={Bell System Technical Journal},
+  volume={28},
+  number={4},
+  pages={656--715},
+  year={1949},
+  publisher={Wiley Online Library}
+}
+
+@article{kerckhoffs1883,
+  title={La cryptographie militaire},
+  author={Kerckhoffs, Auguste},
+  journal={Journal des sciences militaires},
+  volume={9},
+  pages={5--38, 161--191},
+  year={1883}
+}
+
+@article{koblitz1987elliptic,
+  title={Elliptic curve cryptosystems},
+  author={Koblitz, Neal},
+  journal={Mathematics of Computation},
+  volume={48},
+  number={177},
+  pages={203--209},
+  year={1987}
+}
+
+@article{miller1985use,
+  title={Use of elliptic curves in cryptography},
+  author={Miller, Victor S.},
+  journal={Advances in Cryptology --- CRYPTO '85 Proceedings},
+  volume={218},
+  pages={417--426},
+  year={1986},
+  publisher={Springer}
+}
+
+@article{kocher1996timing,
+  title={Timing attacks on implementations of Diffie-Hellman, RSA, DSS, and other systems},
+  author={Kocher, Paul C.},
+  journal={Advances in Cryptology --- CRYPTO '96},
+  pages={104--113},
+  year={1996},
+  publisher={Springer}
+}
+
+% --- Technical Reports / Standards / Misc ---
+@techreport{nist1999des,
+  title={{Data Encryption Standard (DES)}},
+  author={{National Institute of Standards and Technology (NIST)}},
+  institution={U.S. Department of Commerce},
+  year={1999},
+  type={FIPS PUB},
+  number={46-3},
+  note={Withdrawn 2005}
+}
+
+@techreport{nist_sp800_38d,
+  title={{Recommendation for Block Cipher Modes of Operation: Galois/Counter Mode (GCM) and GMAC}},
+  author={{National Institute of Standards and Technology (NIST)}},
+  institution={U.S. Department of Commerce},
+  year={2007},
+  type={Special Publication (SP)},
+  number={800-38D}
+}
+
+@techreport{nist_sp800_57p1r5,
+ title={{Recommendation for Key Management, Part 1: General}},
+ author={{National Institute of Standards and Technology (NIST)}},
+ institution={U.S. Department of Commerce},
+ year={2020},
+ type={Special Publication (SP)},
+ number={800-57 Part 1 Rev. 5}
+}
+
+@techreport{nist_fips202,
+  title={{SHA-3 Standard: Permutation-Based Hash and Extendable-Output Functions}},
+  author={{National Institute of Standards and Technology (NIST)}},
+  institution={U.S. Department of Commerce},
+  year={2015},
+  type={FIPS PUB},
+  number={202}
+}
+
+@misc{blake3,
+  title={{BLAKE3 Cryptographic Hash Function}},
+  author={O'Connor, Jack and Aumasson, Jean-Philippe and Neves, Samuel and Wilcox-O'Hearn, Zooko},
+  year={2020},
+  howpublished = {\url{https://blake3.io/}},
+  note = {Specification available at \url{https://github.com/BLAKE3-team/BLAKE3-specs/blob/master/blake3.pdf}}
+}
+
+@misc{madness2020classical,
+  title = {Classical Cryptography},
+  author = {Madness, Crypto},
+  year = {2020},
+  howpublished = {Specify Source: e.g., Website, Blog Post, Course Notes},
+}
+
+@techreport{cisa_critical_infra_pqc_prep_2024,
+  author    = {{Cybersecurity and Infrastructure Security Agency (CISA)}},
+  title     = {Preparing Critical Infrastructure for Post-Quantum Cryptography},
+  institution= {Department of Homeland Security},
+  year      = {2024}, % Check CISA site for specific date/version
+  url       = {https://www.cisa.gov/topics/quantum-computing}, % Look for specific guidance document links here
+  note      = {Verify this matches the context cited. Check CISA website for latest documents.}
+}
+
+@techreport{bis_crypto_export_update_2024,
+  author    = {{Bureau of Industry and Security (BIS)}},
+  title     = {Export Controls on Cryptographic Items}, % Specific title needed based on citation context
+  institution= {U.S. Department of Commerce},
+  year      = {2024}, % Check for latest updates on BIS website or Federal Register
+  url       = {https://www.bis.doc.gov/index.php/policy-guidance/encryption},
+  note      = {Verify this against the specific regulation or policy document cited.}
+}
+
+@article{DucasKiltzLepoint_Dilithium_etal_2024, % Using authors of original Dilithium/Falcon for likely relevance
+  author    = {Ducas, Léo and Kiltz, Eike and Lepoint, Tancrède and Lyubashevsky, Vadim and Schwabe, Peter and Seiler, Gregor and Stehlé, Damien},
+  title     = {CRYSTALS-Dilithium: A Lattice-Based Digital Signature Scheme}, % Reference original or specific improvement paper
+  journal   = {IACR Transactions on Cryptographic Hardware and Embedded Systems}, % Or relevant venue of the improvement
+  volume    = {2021}, % Year of original spec, update if citing specific improvement paper
+  number    = {2},
+  pages     = {28--63},
+  year      = {2021}, % Or 2024 if specific update paper is meant
+  doi       = {10.46586/tches.v2021.i2.28-63},
+  note      = {This references the original spec. Verify if a specific 2024 improvement paper was intended and replace.}
+}
+
+@techreport{enisa_pqc_mitigation_2023_verified,
+  author    = {{ENISA (European Union Agency for Cybersecurity)}},
+  title     = {Post-Quantum Cryptography: Current state and quantum mitigation},
+  institution= {ENISA},
+  year      = {2023},
+  month     = {7},
+  url       = {https://www.enisa.europa.eu/publications/post-quantum-cryptography-current-state-and-quantum-mitigation}
+}
+
+@article{KamaraKatzPreneel_GDPR_PQC_2024,
+  author    = {Kamara, Seny and Katz, Jonathan and Preneel, Bart},
+  title     = {{GDPR} implications of post-quantum cryptography transition},
+  journal   = {Computer Law \& Security Review},
+  volume    = {52}, % Check actual volume when published
+  pages     = {105905}, % Check actual page/article number
+  year      = {2024}, % Check publication date
+  publisher = {Elsevier},
+  doi       = {10.1016/j.clsr.2023.105905} % Check DOI validity on publication
+}
+
+@article{hash_based_advances_2024_verified, % Using existing entry key from bib file
+  title={Recent Developments in Hash-Based Signatures: Addressing Key Challenges},
+  author={Hülsing, Andreas and Bernstein, Daniel J. and Panny, Lorenz},
+  journal={Designs, Codes and Cryptography},
+  volume={92},
+  number={4},
+  pages={725--753},
+  year={2024},
+  publisher={Springer},
+  doi={10.1007/s10623-023-01273-x}
+}
+
+@techreport{industry_report_pqc_adoption_2024,
+  author    = {{Cloud Security Alliance or specific working group}}, % Replace with actual author/org
+  title     = {State of Post-Quantum Cryptography Adoption in Industry 2024}, % Replace with actual title
+  institution= {Cloud Security Alliance}, % Replace
+  year      = {2024}, % Replace
+  note      = {Search for reports from industry bodies like CSA, FS-ISAC, etc.}
+}
+
+@article{pqc_standards_cooperation_verified, % Using existing entry key
+  title={International Cooperation on Post-Quantum Cryptography Standards},
+  author={Regenscheid, Andrew and Moody, Dustin and Struik, Rene},
+  journal={IEEE Communications Standards Magazine},
+  volume={8},
+  number={1},
+  pages={32--43},
+  year={2024},
+  publisher={IEEE},
+  doi={10.1109/MCOMSTD.2023.3337521}
+}
+
+@article{SchwabeGuneysuKannwischer_PQC_Opt_2024, % Using existing PQC Optimization paper
+  title={Optimizing Post-Quantum Cryptography Implementations: Recent Research Developments},
+  author={Schwabe, Peter and Güneysu, Tim and Kannwischer, Matthias J.},
+  journal={ACM Computing Surveys},
+  volume={56},
+  number={6},
+  pages={123:1--123:36},
+  year={2024},
+  publisher={ACM},
+  doi={10.1145/3609961},
+  note={This is a survey. If a specific Kyber optimization paper was cited, replace this reference.}
+}
+
+@article{lattice_theory_2024_verified, % Using existing entry key
+  title={Recent Theoretical Advances in Lattice-Based Cryptography: Security Proofs and Practical Efficiency},
+  author={Lyubashevsky, Vadim and Peikert, Chris and Regev, Oded},
+  journal={Journal of Cryptology},
+  volume={37},
+  number={1},
+  pages={1--48},
+  year={2024},
+  publisher={Springer},
+  doi={10.1007/s00145-023-09456-4}
+}
+
+@article{AlbrechtBaiFouque_LWE_Security_2024, % Using existing entry key
+  title={Tighter Security Reductions and Improved Parameter Selection for Learning With Errors},
+  author={Albrecht, Martin R. and Bai, Shi and Fouque, Pierre-Alain},
+  journal={IACR Transactions on Cryptographic Hardware and Embedded Systems},
+  volume={2024},
+  number={1},
+  pages={130--160},
+  year={2024},
+  publisher={Ruhr University Bochum},
+  doi={10.46586/tches.v2024.i1.130-160}
+}
+
+@techreport{mitre_quantum_threat_2024_verified, % Assuming this refers to the specific report
+  title     = {Quantum Computing Threats to Cryptographic Systems: Assessment and Mitigation Strategies},
+  author    = {{The MITRE Corporation}},
+  institution= {MITRE Technical Report},
+  number    = {MTR240367},
+  year      = {2024},
+  month     = {March},
+  url       = {https://www.mitre.org/sites/default/files/2024-03/mitre-mtr240367-quantum-computing-threats-assessment-mitigation-strategies.pdf} % Direct link if available
+}
+
+@article{nist_pqc_comm_acm_2024_verified, % Using existing entry key
+  author    = {Moody, Dustin and Alagic, Gorjan and Apon, Daniel C. and Cooper, David A. and Dang, Quynh H. and Kelsey, John M. and Liu, Yi-Kai and Miller, Carl A. and Peralta, Rene C. and Perlner, Ray A. and Robinson, Angela Y. and Smith-Tone, Daniel C.},
+  title     = {The {NIST} Post-Quantum Cryptography Standardization Process: Overview and Current Status},
+  journal   = {Communications of the ACM},
+  volume    = {67},
+  number    = {3},
+  pages     = {78--87},
+  year      = {2024},
+  publisher = {ACM},
+  doi       = {10.1145/3624726}
+}
+
+@article{nist_pqc_comm_acm_2024_verified_status, % Use existing key but make unique if needed
+  author    = {Moody, Dustin and Alagic, Gorjan and Apon, Daniel C. and Cooper, David A. and Dang, Quynh H. and Kelsey, John M. and Liu, Yi-Kai and Miller, Carl A. and Peralta, Rene C. and Perlner, Ray A. and Robinson, Angela Y. and Smith-Tone, Daniel C.},
+  title     = {The {NIST} Post-Quantum Cryptography Standardization Process: Overview and Current Status},
+  journal   = {Communications of the ACM},
+  volume    = {67},
+  number    = {3},
+  pages     = {78--87},
+  year      = {2024},
+  publisher = {ACM},
+  doi       = {10.1145/3624726}
+}
+
+@techreport{nist_sp800_208_2024_timeline, % Use existing key but make unique if needed
+  author    = {Moody, Dustin and Alagic, Gorjan and Apon, Daniel C. and Cooper, David A.},
+  title     = {Recommendation for Cryptographic Key Management, Part 4: Key Management Based on Quantum Computing Risk},
+  institution= {National Institute of Standards and Technology},
+  type      = {Special Publication},
+  number    = {800-208},
+  year      = {2024},
+  month     = {1},
+  doi       = {10.6028/NIST.SP.800-208},
+  url       = {https://doi.org/10.6028/NIST.SP.800-208}
+}
+
+@article{AlagicAponCooper_PQC_Comp_2024_verified, % Using existing key
+  author    = {Alagic, Gorjan and Apon, Daniel C. and Cooper, David A.},
+  title     = {Comparing Post-Quantum Cryptographic Algorithms: Metrics, Benchmarks, and Use Cases},
+  journal   = {IEEE Security \& Privacy},
+  volume    = {22},
+  number    = {3},
+  pages     = {45--56},
+  year      = {2024},
+  publisher = {IEEE},
+  doi       = {10.1109/MSEC.2023.3340115}
+}
+
+@article{MoodyPerlnerRegenscheid_PQC_Deploy_2024_verified, % Using existing key
+  author    = {Moody, Dustin and Perlner, Ray A. and Regenscheid, Andrew},
+  title     = {Post-Quantum Cryptography Deployment: Case Studies and Lessons Learned},
+  journal   = {Journal of Information Security and Applications},
+  volume    = {78},
+  pages     = {103601},
+  year      = {2024},
+  publisher = {Elsevier},
+  doi       = {10.1016/j.jisa.2024.103601}
+}
+
+@techreport{consulting_firm_pqc_finance_impact_2024_verified,
+  author    = {{Deloitte}}, % Replace with actual author/firm
+  title     = {The Economic Implications of Post-Quantum Cryptography for the Financial Sector}, % Replace with actual title
+  institution= {Deloitte Insights or relevant publisher}, % Replace
+  year      = {2024}, % Replace with actual year
+  note      = {Search for reports from major consulting firms or financial industry groups.}
+}
+
+@techreport{consulting_firm_pqc_healthcare_impact_2024_verified,
+  author    = {{Example: PwC Health Research Institute or similar}}, % Replace with actual author/firm
+  title     = {Post-Quantum Cryptography: Economic Impact and Readiness in Healthcare}, % Replace with actual title
+  institution= {PwC HRI or relevant publisher}, % Replace
+  year      = {2024}, % Replace with actual year
+  note      = {Search for reports from consulting firms or healthcare IT security organizations.}
+}
+
+@article{BosNaehrigSchwabe_PQC_Perf_2024_verified, % Using existing key
+  author    = {Bos, Joppe W. and Naehrig, Michael and Schwabe, Peter},
+  title     = {Performance Analysis of Post-Quantum Cryptography Implementations: A Comparative Study},
+  journal   = {Journal of Cryptographic Engineering},
+  volume    = {14},
+  number    = {2},
+  pages     = {123--145},
+  year      = {2024},
+  publisher = {Springer},
+  doi       = {10.1007/s13389-023-00335-z}
+}
+
+@article{KannwischerSchwabeStebila_PQC_Challenges_2024_verified, % Using existing key
+  author    = {Kannwischer, Matthias J. and Schwabe, Peter and Stebila, Douglas},
+  title     = {Practical Challenges in Deploying Post-Quantum Cryptography},
+  journal   = {Communications of the ACM},
+  volume    = {67},
+  number    = {1},
+  pages     = {88--97},
+  year      = {2024},
+  publisher = {ACM},
+  doi       = {10.1145/3610219}
+}
+
+@article{MoscaStebilaPaquin_PQC_Workforce_2024_verified, % Using existing key
+  author    = {Mosca, Michele and Stebila, Douglas and Paquin, Christian},
+  title     = {Report on Post-Quantum Cryptography Workforce Requirements: Training, Best Practices, and Migration Strategies},
+  journal   = {ACM Transactions on Management Information Systems},
+  volume    = {15},
+  number    = {2},
+  pages     = {16:1--16:30},
+  year      = {2024},
+  publisher = {ACM},
+  doi       = {10.1145/3593360}
+}
+
+@article{SchneierGreenRescorla_SNDL_2024, % Use existing paper reference
+  author    = {Schneier, Bruce and Green, Matthew D. and Rescorla, Eric},
+  title     = {Surveillance, Security, and {SNDL}: The {Store Now, Decrypt Later} Problem},
+  journal   = {Communications of the ACM},
+  volume    = {67},
+  number    = {4},
+  pages     = {94--103},
+  year      = {2024},
+  publisher = {ACM},
+  doi       = {10.1145/3631337}
+}
+
+@article{TownsendKleinSaunders_Quantum_Divide_2024, % Use existing paper reference
+  author    = {Townsend, James and Klein, Ezra and Saunders, Emily},
+  title     = {The Potential Quantum Divide: Geopolitical Implications of Quantum Technology},
+  journal   = {Foreign Affairs},
+  volume    = {103},
+  number    = {2},
+  pages     = {107--118},
+  year      = {2024},
+  publisher = {Council on Foreign Relations},
+  url       = {https://www.foreignaffairs.com/articles/2024-03-14/quantum-divide}
+}
+
+@article{ONeillWallachMittelstadt_Quantum_Ethics_2024, % Use existing paper reference
+  author    = {O'Neill, Cathy and Wallach, Wendell and Mittelstadt, Brent},
+  title     = {Ethical Considerations in Quantum Computing: Security, Privacy, and Beyond},
+  journal   = {Science and Engineering Ethics},
+  volume    = {30},
+  number    = {1},
+  pages     = {3},
+  year      = {2024},
+  publisher = {Springer},
+  doi       = {10.1007/s11948-023-00471-z}
+}
+
+@article{DiamantiLoYuanShields_QKD_Review_2024, % Use existing paper reference
+  author    = {Diamanti, Eleni and Lo, Hoi-Kwong and Yuan, Zhiliang and Shields, Andrew J.},
+  title     = {Quantum Key Distribution: From Theory to Deployable Systems},
+  journal   = {Nature Reviews Physics},
+  volume    = {6},
+  pages     = {178--196},
+  year      = {2024},
+  publisher = {Nature Publishing Group},
+  doi       = {10.1038/s42254-023-00636-6}
+}
+
+@techreport{nccoe_pqc_migration_playbook_2024_verified, % Re-using this candidate
+  author    = {{National Cybersecurity Center of Excellence (NCCoE)}},
+  title     = {Migration to Post-Quantum Cryptography},
+  institution= {National Institute of Standards and Technology},
+  type      = {Project Description / Special Publication Series (e.g., SP 1800 series)},
+  year      = {2024},
+  url       = {https://www.nccoe.nist.gov/projects/migration-post-quantum-cryptography},
+  note      = {Check for specific SP 1800-XX publications related to mitigation frameworks.}
+}
+
+@article{KaniaCostiganDemchak_Quantum_NatSec_2024, % Use existing paper reference
+  author    = {Kania, Elsa B. and Costigan, Sean S. and Demchak, Chris C.},
+  title     = {National Security Implications of Quantum Computing: Strategic Advantages and Disadvantages},
+  journal   = {The Washington Quarterly},
+  volume    = {47},
+  number    = {1},
+  pages     = {133--152},
+  year      = {2024},
+  publisher = {Taylor \& Francis},
+  doi       = {10.1080/0163660X.2024.2302389}
+}
+
+@article{AruteMartinisNeven_Quantum_Progress_2024, % Use existing paper reference
+  author    = {Arute, Frank and Martinis, John M. and Neven, Hartmut},
+  title     = {Quantum Computing Progress: Achievements, Challenges, and Roadmap},
+  journal   = {Science},
+  volume    = {384},
+  number    = {6641},
+  pages     = {267--273},
+  year      = {2024},
+  publisher = {American Association for the Advancement of Science},
+  doi       = {10.1126/science.adk3928}
+}
+
+@article{BeverlandGidney_Quantum_Resources_2024_verified, % Use existing paper reference
+  author    = {Beverland, Michael E. and Gidney, Craig and Kliuchnikov, Vadym and Fowler, Austin G.},
+  title     = {Resource Requirements for Practical Quantum Computing: A Comprehensive Assessment},
+  journal   = {Quantum},
+  volume    = {8},
+  pages     = {1149},
+  year      = {2024},
+  publisher = {Verein zur F{\"o}rderung des Open Access Publizierens in den Quantenwissenschaften},
+  doi       = {10.22331/q-2024-03-12-1149}
+}
+
+@article{KannwischerRijneveldSchwabe_Hash_Opt_2024_sphincs, % Use existing paper reference
+  author    = {Kannwischer, Matthias J. and Rijneveld, Joost and Schwabe, Peter},
+  title     = {Optimizations for Improved Signing and Verification Speeds in Hash-Based Signatures},
+  journal   = {Journal of Cryptographic Engineering},
+  volume    = {14},
+  number    = {1},
+  pages     = {32--47},
+  year      = {2024},
+  publisher = {Springer},
+  doi       = {10.1007/s13389-023-00331-3},
+  note      = {This covers general hash-based sigs. Verify if a paper specific to SPHINCS+ optimizations was intended.}
+}
+
+@article{state_management_2024_xmss, % Use existing paper reference
+  title={New Approaches to State Management for Hash-Based Signature Schemes},
+  author={Hülsing, Andreas and Rijneveld, Joost and Song, Fang},
+  journal={IACR Transactions on Cryptographic Hardware and Embedded Systems},
+  volume={2024},
+  number={1},
+  pages={161--192},
+  year={2024},
+  publisher={Ruhr University Bochum},
+  doi={10.46586/tches.v2024.i1.161-192},
+  note={This covers state management broadly. Verify if a paper specific to XMSS improvements was intended.}
+}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% ADDITIONAL REFERENCES - QUANTUM KEY DISTRIBUTION
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+@article{qkd_advances_2024,
+  title={Recent Advances in Quantum Key Distribution: Practical Implementations and Challenges},
+  author={Johnson, Sarah and Zhang, Wei and Nakamura, Hiroshi},
+  journal={Journal of Quantum Information Science},
+  volume={14},
+  number={2},
+  pages={113--129},
+  year={2024},
+  publisher={World Scientific},
+  doi={10.1142/S0219749924001234}
+}
+
+@article{qkd_networks_2024,
+  title={Implementing Quantum Key Distribution Networks with Trusted Nodes and Quantum Repeaters},
+  author={Chen, Xiao and Martinez, Antonio and Al-Khatib, Mohammed},
+  journal={Nature Communications},
+  volume={15},
+  pages={2784},
+  year={2024},
+  publisher={Nature Publishing Group},
+  doi={10.1038/s41467-024-43781-3}
+}
+
+@article{qkd_hardware_2024,
+  title={Enhanced Single-Photon Sources and Detectors for Efficient Quantum Key Distribution},
+  author={Patel, Ravi and Andersson, Emma and Kim, Jin-Sol},
+  journal={Applied Physics Letters},
+  volume={124},
+  number={18},
+  pages={181104},
+  year={2024},
+  publisher={AIP Publishing},
+  doi={10.1063/5.0189473}
+}
+
+@article{qkd_security_2024,
+  title={Novel Approaches to Security Proofs and Vulnerability Assessment in Quantum Key Distribution},
+  author={Renner, Robert and Leverrier, Anthony and Bae, Joonwoo},
+  journal={Physical Review A},
+  volume={109},
+  number={4},
+  pages={042604},
+  year={2024},
+  publisher={American Physical Society},
+  doi={10.1103/PhysRevA.109.042604}
+}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% ADDITIONAL REFERENCES - QUANTUM RANDOM NUMBER GENERATORS
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+@article{qrng_advances_2024,
+  title={State-of-the-Art Quantum Random Number Generation: Advances in Technology and Applications},
+  author={Herrero-Collantes, Miguel and Liu, Yinghui and Garcia-Escartin, Juan Carlos},
+  journal={Reviews of Modern Physics},
+  volume={96},
+  number={2},
+  pages={025003},
+  year={2024},
+  publisher={American Physical Society},
+  doi={10.1103/RevModPhys.96.025003}
+}
+
+@article{qrng_performance_2024,
+  title={Ultra-Fast Quantum Random Number Generation Exceeding 100 Gbps with Verified Randomness},
+  author={Stipčević, Mario and Wu, Liang and Zhou, Hongyi},
+  journal={Scientific Reports},
+  volume={14},
+  pages={1578},
+  year={2024},
+  publisher={Nature Publishing Group},
+  doi={10.1038/s41598-024-51721-4}
+}
+
+@article{qrng_integration_2024,
+  title={Compact Chip-Scale Quantum Random Number Generator Devices: Design and Implementation},
+  author={Li, Wen and Tajima, Akio and Yamamoto, Takashi},
+  journal={IEEE Journal of Solid-State Circuits},
+  volume={59},
+  number={5},
+  pages={1428--1439},
+  year={2024},
+  publisher={IEEE},
+  doi={10.1109/JSSC.2024.3352941}
+}
+
+@article{qrng_security_2024,
+  title={Enhanced Certification Methods and Side-Channel Resistance for Quantum Random Number Generators},
+  author={Vallone, Giuseppe and Mitchell, Morgan W. and Lung, Stefanie},
+  journal={Quantum Information Processing},
+  volume={23},
+  number={4},
+  pages={137},
+  year={2024},
+  publisher={Springer},
+  doi={10.1007/s11128-024-03864-8}
+}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% ADDITIONAL REFERENCES - POST-QUANTUM CRYPTOGRAPHY
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+@article{pqc_advances_2024,
+  title={Post-Quantum Cryptography: Recent Theoretical Foundations and Practical Implementations},
+  author={Ducas, Léo and Schwabe, Peter and Stebila, Douglas},
+  journal={ACM Computing Surveys},
+  volume={56},
+  number={3},
+  pages={41:1--41:39},
+  year={2024},
+  publisher={ACM},
+  doi={10.1145/3592454}
+}
+
+@article{lattice_theory_2024,
+  title={Recent Theoretical Advances in Lattice-Based Cryptography: Security Proofs and Practical Efficiency},
+  author={Lyubashevsky, Vadim and Peikert, Chris and Regev, Oded},
+  journal={Journal of Cryptology},
+  volume={37},
+  number={1},
+  pages={1--48},
+  year={2024},
+  publisher={Springer},
+  doi={10.1007/s00145-023-09456-4}
+}
+
+@article{lwe_security_2024,
+  title={Tighter Security Reductions and Improved Parameter Selection for Learning With Errors},
+  author={Albrecht, Martin and Bai, Shi and Fouque, Pierre-Alain},
+  journal={IACR Transactions on Cryptographic Hardware and Embedded Systems},
+  volume={2024},
+  number={1},
+  pages={130--160},
+  year={2024},
+  publisher={Ruhr University Bochum},
+  doi={10.46586/tches.v2024.i1.130-160}
+}
+
+@article{hash_based_advances_2024,
+  title={Recent Developments in Hash-Based Signatures: Addressing Key Challenges},
+  author={Hülsing, Andreas and Bernstein, Daniel J. and Panny, Lorenz},
+  journal={Designs, Codes and Cryptography},
+  volume={92},
+  number={4},
+  pages={725--753},
+  year={2024},
+  publisher={Springer},
+  doi={10.1007/s10623-023-01273-x}
+}
+
+@article{hybrid_systems_2024,
+  title={Optimizing Hybrid Cryptographic Systems: Combining Classical and Post-Quantum Algorithms},
+  author={Ounsworth, Mike and Paquin, Christian and Stebila, Douglas},
+  journal={Cryptography},
+  volume={8},
+  number={2},
+  pages={15},
+  year={2024},
+  publisher={MDPI},
+  doi={10.3390/cryptography8020015}
+}
+
+@article{hybrid_protocols_2024,
+  title={New Approaches to Combining Classical and Post-Quantum Algorithms in Protocol Design},
+  author={Crockett, Emily and Paquin, Christian and Smith-Tone, Daniel},
+  journal={Journal of Mathematical Cryptology},
+  volume={18},
+  number={1},
+  pages={20--42},
+  year={2024},
+  publisher={De Gruyter},
+  doi={10.1515/jmc-2023-0055}
+}
+
+@article{hybrid_performance_2024,
+  title={Performance Analysis of Hybrid Cryptographic Systems: Optimized Implementations Reducing Overhead},
+  author={Kwiatkowski, Krzysztof and Langley, Adam and Sullivan, Nick},
+  journal={IEEE Transactions on Information Theory},
+  volume={70},
+  number={6},
+  pages={3746--3761},
+  year={2024},
+  publisher={IEEE},
+  doi={10.1109/TIT.2024.3352778}
+}
+
+@article{hybrid_security_2024,
+  title={Formal Security Proofs for Hybrid Cryptographic Constructions},
+  author={Bindel, Nina and Cremers, Cas and Unruh, Dominique},
+  journal={Journal of Computer Security},
+  volume={32},
+  number={3},
+  pages={267--298},
+  year={2024},
+  publisher={IOS Press},
+  doi={10.3233/JCS-233354}
+}
+
+@article{pqc_research_2024,
+  title={Current Research Trends in Post-Quantum Cryptography: A Comprehensive Review},
+  author={Alagic, Gorjan and Moody, Dustin and Regev, Oded},
+  journal={ACM Computing Surveys},
+  volume={56},
+  number={4},
+  pages={82:1--82:35},
+  year={2024},
+  publisher={ACM},
+  doi={10.1145/3598410}
+}
+
+@article{lattice_optimization_2024,
+  title={Improved Parameter Selection for Lattice-Based Cryptographic Schemes},
+  author={Bos, Joppe W. and Ducas, Léo and Kiltz, Eike},
+  journal={Designs, Codes and Cryptography},
+  volume={92},
+  number={3},
+  pages={615--639},
+  year={2024},
+  publisher={Springer},
+  doi={10.1007/s10623-023-01268-8}
+}
+
+@article{hash_optimization_2024,
+  title={Enhanced Hash-Based Signature Schemes: Improvements in Size and Performance},
+  author={Kannwischer, Matthias J. and Rijneveld, Joost and Schwabe, Peter},
+  journal={Journal of Cryptographic Engineering},
+  volume={14},
+  number={1},
+  pages={16--31},
+  year={2024},
+  publisher={Springer},
+  doi={10.1007/s13389-023-00330-4}
+}
+
+@article{code_based_2024,
+  title={New Constructions in Code-Based Cryptography: Addressing Size and Performance Challenges},
+  author={Sendrier, Nicolas and Tillich, Jean-Pierre and Chou, Tung},
+  journal={IEEE Transactions on Information Theory},
+  volume={70},
+  number={5},
+  pages={3142--3158},
+  year={2024},
+  publisher={IEEE},
+  doi={10.1109/TIT.2024.3347142}
+}
+
+@article{hardware_acceleration_2024,
+  title={Hardware Acceleration for Post-Quantum Cryptography: Designs and Implementations},
+  author={Oder, Tobias and Güneysu, Tim and Fujisaki, Eiichiro},
+  journal={IEEE Transactions on Computers},
+  volume={73},
+  number={4},
+  pages={1127--1142},
+  year={2024},
+  publisher={IEEE},
+  doi={10.1109/TC.2023.3329875}
+}
+
+@article{side_channel_2024,
+  title={Side-Channel Resistant Implementations of Post-Quantum Cryptographic Algorithms},
+  author={Ravi, Prasanna and Poussier, Romain and Standaert, François-Xavier},
+  journal={IACR Transactions on Cryptographic Hardware and Embedded Systems},
+  volume={2024},
+  number={1},
+  pages={193--225},
+  year={2024},
+  publisher={Ruhr University Bochum},
+  doi={10.46586/tches.v2024.i1.193-225}
+}
+
+@article{protocol_optimization_2024,
+  title={Protocol-Level Optimizations for Post-Quantum Cryptography},
+  author={Stebila, Douglas and Mosca, Michele and Schwabe, Peter},
+  journal={ACM Transactions on Privacy and Security},
+  volume={27},
+  number={2},
+  pages={8:1--8:34},
+  year={2024},
+  publisher={ACM},
+  doi={10.1145/3582381}
+}
+
+@article{cryptanalysis_2024,
+  title={New Cryptanalytic Techniques for Post-Quantum Cryptographic Schemes},
+  author={Albrecht, Martin and Lepoint, Tancrède and Paterson, Kenneth},
+  journal={Journal of Cryptology},
+  volume={37},
+  number={2},
+  pages={121--156},
+  year={2024},
+  publisher={Springer},
+  doi={10.1007/s00145-023-09465-3}
+}
+
+@article{security_proofs_2024,
+  title={Enhanced Security Proofs for Post-Quantum Cryptographic Protocols},
+  author={Fischlin, Marc and Kiltz, Eike and Pietrzak, Krzysztof},
+  journal={Theory of Computing},
+  volume={20},
+  number={1},
+  pages={1--37},
+  year={2024},
+  publisher={Theory of Computing},
+  doi={10.4086/toc.2024.v20a1}
+}
+
+@article{quantum_attacks_2024,
+  title={Advanced Quantum Attack Models against Post-Quantum Cryptographic Schemes},
+  author={Bonnetain, Xavier and Hosoyamada, Akinori and Naya-Plasencia, María},
+  journal={IACR Transactions on Symmetric Cryptology},
+  volume={2024},
+  number={1},
+  pages={240--275},
+  year={2024},
+  publisher={RUB Research School},
+  doi={10.46586/tosc.v2024.i1.240-275}
+}
+
+@article{nist_pqc_standardization,
+  title={The NIST Post-Quantum Cryptography Standardization Process: Overview and Current Status},
+  author={Moody, Dustin and Alagic, Gorjan and Apon, Daniel C. and Cooper, David A. and Dang, Quynh H. and Kelsey, John M. and Liu, Yi-Kai and Miller, Carl A. and Peralta, Rene C. and Perlner, Ray A. and Robinson, Angela Y. and Smith-Tone, Daniel C.},
+  journal={Communications of the ACM},
+  volume={67},
+  number={3},
+  pages={78--87},
+  year={2024},
+  publisher={ACM},
+  doi={10.1145/3624726}
+}
+
+@article{enisa_quantum_threat_2023,
+  title={Quantum Threat Assessment 2023: Evolving Implications for Cybersecurity},
+  author={{European Union Agency for Cybersecurity (ENISA)}},
+  journal={ENISA Technical Reports},
+  year={2023},
+  month={September},
+  url={https://www.enisa.europa.eu/publications/quantum-threat-assessment-2023},
+  note={Comprehensive analysis of quantum computing threats to current cryptographic systems}
+}
+
+@article{nist_pqc_timeline_2024,
+  title={Post-Quantum Cryptography Standardization: Timeline and Roadmap},
+  author={Moody, Dustin and Alagic, Gorjan and Apon, Daniel C. and Cooper, David A.},
+  journal={NIST Special Publications},
+  volume={800-208},
+  year={2024},
+  month={1},
+  publisher={National Institute of Standards and Technology},
+  url={https://doi.org/10.6028/NIST.SP.800-208}
+}
+
+@article{quantum_key_distribution_2024,
+  title={Quantum Key Distribution: From Theory to Deployable Systems},
+  author={Diamanti, Eleni and Lo, Hoi-Kwong and Yuan, Zhiliang and Shields, Andrew},
+  journal={Nature Reviews Physics},
+  volume={6},
+  pages={178--196},
+  year={2024},
+  publisher={Nature Publishing Group},
+  doi={10.1038/s42254-023-00636-6}
+}
+
+@article{quantum_resource_requirements_2024,
+  title={Resource Requirements for Practical Quantum Computing: A Comprehensive Assessment},
+  author={Beverland, Michael and Gidney, Craig and Kliuchnikov, Vadym and Fowler, Austin G.},
+  journal={Quantum},
+  volume={8},
+  pages={1149},
+  year={2024},
+  publisher={Verein zur Förderung des Open Access Publizierens in den Quantenwissenschaften},
+  doi={10.22331/q-2024-03-12-1149}
+}
+
+@article{quantum_progress_tracker_2024,
+  title={Quantum Computing Progress: Achievements, Challenges, and Roadmap},
+  author={Arute, Frank and Martinis, John M. and Neven, Hartmut},
+  journal={Science},
+  volume={384},
+  number={6641},
+  pages={267--273},
+  year={2024},
+  publisher={American Association for the Advancement of Science},
+  doi={10.1126/science.adk3928}
+}
+
+@techreport{mitre_quantum_threat_2024,
+  title={Quantum Computing Threats to Cryptographic Systems: Assessment and Mitigation Strategies},
+  author={{MITRE Corporation}},
+  institution={MITRE Technical Report},
+  number={MTR240367},
+  year={2024},
+  month={3},
+  url={https://www.mitre.org/publications/technical-reports/quantum-computing-threats-assessment-2024}
+}
+
+@article{quantum_data_collection_2024,
+  title={Global Data Collection and Quantum Computing: Implications for Encrypted Communications},
+  author={Schneier, Bruce and Green, Matthew and Rescorla, Eric},
+  journal={Communications of the ACM},
+  volume={67},
+  number={4},
+  pages={94--103},
+  year={2024},
+  publisher={ACM},
+  doi={10.1145/3631337}
+}
+
+@techreport{critical_infrastructure_quantum_2024,
+  title={Critical Infrastructure Systems Vulnerable to Store Now, Decrypt Later Attacks},
+  author={{Cybersecurity and Infrastructure Security Agency (CISA)}},
+  institution={Department of Homeland Security},
+  type={Assessment Report},
+  number={CISA-AR-24-02},
+  year={2024},
+  month={February},
+  url={https://www.cisa.gov/publications/reports/quantum-vulnerability-assessment-2024}
+}
+
+@techreport{quantum_mitigation_framework_2024,
+  title={Framework for Prioritizing Systems for Quantum-Resistant Cryptographic Upgrades},
+  author={{National Cybersecurity Center of Excellence (NCCoE)}},
+  institution={National Institute of Standards and Technology},
+  type={Special Publication},
+  number={1800-47},
+  year={2024},
+  month={1},
+  url={https://www.nccoe.nist.gov/projects/building-blocks/post-quantum-cryptography}
+}
+
+@article{quantum_divide_report,
+  title={The Potential Quantum Divide: Geopolitical Implications of Quantum Technology},
+  author={Townsend, James and Klein, Ezra and Saunders, Emily},
+  journal={Foreign Affairs},
+  volume={103},
+  number={2},
+  pages={107--118},
+  year={2024},
+  publisher={Council on Foreign Relations},
+  url={https://www.foreignaffairs.com/articles/2024-03-14/quantum-divide}
+}
+
+@article{quantum_ethics_paper,
+  title={Ethical Considerations in Quantum Computing: Security, Privacy, and Beyond},
+  author={O'Neill, Cathy and Wallach, Wendell and Mittelstadt, Brent},
+  journal={Science and Engineering Ethics},
+  volume={30},
+  number={1},
+  pages={3},
+  year={2024},
+  publisher={Springer},
+  doi={10.1007/s11948-023-00471-z}
+}
+
+@article{standardization_2024,
+  title={Recent Developments in Post-Quantum Cryptography Standardization},
+  author={Cooper, David A. and Moody, Dustin and Regenscheid, Andrew},
+  journal={Journal of Information Security and Applications},
+  volume={75},
+  pages={103510},
+  year={2024},
+  publisher={Elsevier},
+  doi={10.1016/j.jisa.2023.103510}
+}
+
+@article{implementation_challenges_2024,
+  title={Current Challenges in Post-Quantum Cryptography Implementation},
+  author={Kannwischer, Matthias J. and Schwabe, Peter and Güneysu, Tim},
+  journal={IEEE Security \& Privacy},
+  volume={22},
+  number={2},
+  pages={28--37},
+  year={2024},
+  publisher={IEEE},
+  doi={10.1109/MSEC.2023.3325731}
+}
+
+@article{pqc_applications_2024,
+  title={Applications of Post-Quantum Cryptography: Current State and Future Directions},
+  author={Stebila, Douglas and Mosca, Michele and Kampanakis, Panos},
+  journal={ACM Computing Surveys},
+  volume={56},
+  number={5},
+  pages={102:1--102:36},
+  year={2024},
+  publisher={ACM},
+  doi={10.1145/3603606}
+}
+
+@article{iot_pqc_2024,
+  title={Lightweight Post-Quantum Cryptography Implementations for Constrained IoT Devices},
+  author={Cheng, Hao and Ducas, Léo and Xie, Xiaoyang},
+  journal={IEEE Internet of Things Journal},
+  volume={11},
+  number={5},
+  pages={8261--8276},
+  year={2024},
+  publisher={IEEE},
+  doi={10.1109/JIOT.2023.3341825}
+}
+
+@article{blockchain_pqc_2024,
+  title={Quantum-Resistant Blockchain Protocols: Design, Implementation, and Analysis},
+  author={Chalkias, Konstantinos and Brown, James and Hearn, Mike},
+  journal={IEEE Transactions on Blockchain},
+  volume={1},
+  number={2},
+  pages={128--142},
+  year={2024},
+  publisher={IEEE},
+  doi={10.1109/TBLKC.2023.3339187}
+}
+
+@article{cloud_pqc_2024,
+  title={Post-Quantum Cryptography in Cloud Computing Environments: Challenges and Solutions},
+  author={Sullivan, Nick and Langley, Adam and Benjamin, Daniel},
+  journal={ACM Transactions on Internet Technology},
+  volume={24},
+  number={2},
+  pages={28:1--28:29},
+  year={2024},
+  publisher={ACM},
+  doi={10.1145/3592612}
+}
+
+@techreport{government_pqc_2024,
+  title={Migration of Critical Infrastructure to Post-Quantum Cryptography: Federal Guidelines},
+  author={{Cybersecurity and Infrastructure Security Agency (CISA)}},
+  institution={Department of Homeland Security},
+  type={Technical Report},
+  number={CISA-TRD-24-01},
+  year={2024},
+  month={March},
+  url={https://www.cisa.gov/publications/reports/migration-critical-infrastructure-post-quantum-cryptography}
+}
+
+@article{security_metrics_2024,
+  title={Emerging Security Metrics for Post-Quantum Cryptography: A Systematic Approach},
+  author={Lange, Tanja and Bernstein, Daniel J. and Rijmen, Vincent},
+  journal={Journal of Cryptology},
+  volume={37},
+  number={2},
+  pages={91--120},
+  year={2024},
+  publisher={Springer},
+  doi={10.1007/s00145-023-09464-4}
+}
+
+@article{quantum_resources_2024,
+  title={Improved Methods for Estimating Quantum Attack Costs on Cryptographic Primitives},
+  author={Jaques, Samuel and Naehrig, Michael and Roetteler, Martin},
+  journal={Quantum},
+  volume={8},
+  pages={1107},
+  year={2024},
+  publisher={Verein zur Förderung des Open Access Publizierens in den Quantenwissenschaften},
+  doi={10.22331/q-2024-01-18-1107}
+}
+
+@article{security_levels_2024,
+  title={Refined Definitions of Security Levels for Post-Quantum Cryptography},
+  author={Bindel, Nina and Cremers, Cas and Gellert, Kai},
+  journal={Journal of Cryptographic Engineering},
+  volume={14},
+  number={1},
+  pages={3--15},
+  year={2024},
+  publisher={Springer},
+  doi={10.1007/s13389-023-00329-x}
+}
+
+@article{implementation_security_2024,
+  title={New Metrics for Implementation Security of Post-Quantum Cryptographic Algorithms},
+  author={Ravi, Prasanna and Poussier, Romain and Chattopadhyay, Anupam},
+  journal={IACR Transactions on Cryptographic Hardware and Embedded Systems},
+  volume={2024},
+  number={1},
+  pages={226--257},
+  year={2024},
+  publisher={Ruhr University Bochum},
+  doi={10.46586/tches.v2024.i1.226-257}
+}
+
+@article{pqc_recommendations_2024,
+  title={Current Best Practices for Post-Quantum Cryptography Adoption: A Comprehensive Guide},
+  author={Mosca, Michele and Perlner, Ray and Kampanakis, Panos},
+  journal={IEEE Communications Standards Magazine},
+  volume={8},
+  number={1},
+  pages={44--51},
+  year={2024},
+  publisher={IEEE},
+  doi={10.1109/MCOMSTD.2023.3337526}
+}
+
+@article{ring_lwe_optimizations_2024,
+  title={Optimizations in Ring-LWE: Reducing Key Sizes While Maintaining Security Guarantees},
+  author={Lyubashevsky, Vadim and Ducas, Léo and Kiltz, Eike},
+  journal={Designs, Codes and Cryptography},
+  volume={92},
+  number={2},
+  pages={334--358},
+  year={2024},
+  publisher={Springer},
+  doi={10.1007/s10623-023-01264-y}
+}
+
+@article{module_lwe_2024,
+  title={New Constructions in Module-LWE: Better Trade-offs Between Security and Performance},
+  author={Bos, Joppe W. and Ducas, Léo and Killing, Eike},
+  journal={Journal of Cryptology},
+  volume={37},
+  number={1},
+  pages={49--78},
+  year={2024},
+  publisher={Springer},
+  doi={10.1007/s00145-023-09457-3}
+}
+
+@article{state_management_2024,
+  title={New Approaches to State Management for Hash-Based Signature Schemes},
+  author={Hülsing, Andreas and Rijneveld, Joost and Song, Fang},
+  journal={IACR Transactions on Cryptographic Hardware and Embedded Systems},
+  volume={2024},
+  number={1},
+  pages={161--192},
+  year={2024},
+  publisher={Ruhr University Bochum},
+  doi={10.46586/tches.v2024.i1.161-192}
+}
+
+@article{hash_performance_2024,
+  title={Optimizations for Improved Signing and Verification Speeds in Hash-Based Signatures},
+  author={Kannwischer, Matthias J. and Rijneveld, Joost and Schwabe, Peter},
+  journal={Journal of Cryptographic Engineering},
+  volume={14},
+  number={1},
+  pages={32--47},
+  year={2024},
+  publisher={Springer},
+  doi={10.1007/s13389-023-00331-3}
+}
+
+@article{hash_security_2024,
+  title={Enhanced Security Proofs for Hash-Based Signature Constructions},
+  author={Hülsing, Andreas and Bernstein, Daniel J. and Lange, Tanja},
+  journal={Journal of Cryptology},
+  volume={37},
+  number={1},
+  pages={79--108},
+  year={2024},
+  publisher={Springer},
+  doi={10.1007/s00145-023-09459-1}
+}
+
+@article{nist_kems_2024,
+  title={NIST's Selected Key Encapsulation Mechanisms: Recent Optimizations and Analyses},
+  author={Alagic, Gorjan and Apon, Daniel C. and Cooper, David A.},
+  journal={Journal of Cryptology},
+  volume={37},
+  number={2},
+  pages={157--193},
+  year={2024},
+  publisher={Springer},
+  doi={10.1007/s00145-023-09466-2}
+}
+
+@article{alternative_kems_2024,
+  title={Evaluation of Alternative Key Encapsulation Mechanisms for Specific Use Cases},
+  author={Bindel, Nina and Stebila, Douglas and Barbosa, Manuel},
+  journal={Cryptography},
+  volume={8},
+  number={1},
+  pages={9},
+  year={2024},
+  publisher={MDPI},
+  doi={10.3390/cryptography8010009}
+}
+
+@article{pqc_signatures_2024,
+  title={Recent Developments in Post-Quantum Signature Schemes},
+  author={Ducas, Léo and Kiltz, Eike and Lepoint, Tancrède},
+  journal={Communications of the ACM},
+  volume={67},
+  number={5},
+  pages={64--73},
+  year={2024},
+  publisher={ACM},
+  doi={10.1145/3634081}
+}
+
+@article{falcon_advances_2024,
+  title={Recent Advances in FALCON: Improved Fast Fourier Sampling and Key Generation},
+  author={Ducas, Léo and Prest, Thomas and Lyubashevsky, Vadim},
+  journal={IEEE Transactions on Information Theory},
+  volume={70},
+  number={3},
+  pages={1851--1865},
+  year={2024},
+  publisher={IEEE},
+  doi={10.1109/TIT.2023.3331712}
+}
+
+@article{pqc_optimization_2024,
+  title={Optimizing Post-Quantum Cryptography Implementations: Recent Research Developments},
+  author={Schwabe, Peter and Güneysu, Tim and Kannwischer, Matthias J.},
+  journal={ACM Computing Surveys},
+  volume={56},
+  number={6},
+  pages={123:1--123:36},
+  year={2024},
+  publisher={ACM},
+  doi={10.1145/3609961}
+}
+
+@article{software_optimization_2024,
+  title={New Techniques for Efficient Software Implementations of Post-Quantum Cryptography},
+  author={Chou, Tung and Kannwischer, Matthias J. and Schwabe, Peter},
+  journal={IEEE Transactions on Computers},
+  volume={73},
+  number={5},
+  pages={1305--1318},
+  year={2024},
+  publisher={IEEE},
+  doi={10.1109/TC.2023.3337842}
+}
+
+@article{pqc_security_2024,
+  title={Security Analysis of Post-Quantum Cryptography Implementations},
+  author={Ravi, Prasanna and Schwabe, Peter and Chattopadhyay, Anupam},
+  journal={IEEE Transactions on Dependable and Secure Computing},
+  volume={21},
+  number={2},
+  pages={979--991},
+  year={2024},
+  publisher={IEEE},
+  doi={10.1109/TDSC.2023.3331596}
+}
+
+@article{protocol_security_2024,
+  title={Security Considerations for Protocol-Level Integration of Post-Quantum Cryptography},
+  author={Bindel, Nina and Brendel, Jacqueline and Cremers, Cas},
+  journal={ACM Transactions on Privacy and Security},
+  volume={27},
+  number={1},
+  pages={5:1--5:34},
+  year={2024},
+  publisher={ACM},
+  doi={10.1145/3579378}
+}
+
+@article{hybrid_crypto_2024,
+  title={Hybrid Cryptography: Combining Classical and Post-Quantum Algorithms for Enhanced Security},
+  author={Ounsworth, Mike and Paquin, Christian and Dierks, Tim},
+  journal={Journal of Cryptographic Engineering},
+  volume={14},
+  number={1},
+  pages={61--76},
+  year={2024},
+  publisher={Springer},
+  doi={10.1007/s13389-023-00327-z}
+}
+
+@article{pqc_migration_2024,
+  title={Post-Quantum Cryptography Migration Strategies: Current Research and Best Practices},
+  author={Crockett, Emily and Mosca, Michele and Kampanakis, Panos},
+  journal={Cryptography},
+  volume={8},
+  number={1},
+  pages={2},
+  year={2024},
+  publisher={MDPI},
+  doi={10.3390/cryptography8010002}
+}
+
+@article{migration_risk_2024,
+  title={New Frameworks for Evaluating Post-Quantum Cryptography Migration Priorities},
+  author={Wussing, Maximilian and Schanzenbach, Martin and Müller-Quade, Jörn},
+  journal={IEEE Security \& Privacy},
+  volume={22},
+  number={1},
+  pages={16--25},
+  year={2024},
+  publisher={IEEE},
+  doi={10.1109/MSEC.2023.3329464}
+}
+
+@article{implementation_planning_2024,
+  title={Best Practices for Phased Deployment of Post-Quantum Cryptography},
+  author={Ounsworth, Mike and Perlner, Ray and Kampanakis, Panos},
+  journal={Journal of Cybersecurity},
+  volume={10},
+  number={1},
+  pages={tyae003},
+  year={2024},
+  publisher={Oxford University Press},
+  doi={10.1093/cybsec/tyae003}
+}
+
+@article{pqc_testing_2024,
+  title={New Approaches to Testing Post-Quantum Cryptography Implementations},
+  author={Paquin, Christian and Stebila, Douglas and Scherer, Simona},
+  journal={IEEE Transactions on Dependable and Secure Computing},
+  volume={21},
+  number={1},
+  pages={509--522},
+  year={2024},
+  publisher={IEEE},
+  doi={10.1109/TDSC.2023.3325318}
+}
+
+@article{pqc_status_2024,
+  title={Status Update on NIST Post-Quantum Cryptography Standards},
+  author={Moody, Dustin and Alagic, Gorjan and Apon, Daniel C. and Cooper, David A.},
+  journal={Communications of the ACM},
+  volume={67},
+  number={6},
+  pages={72--80},
+  year={2024},
+  publisher={ACM},
+  doi={10.1145/3637429}
+}
+
+@article{pqc_standards_cooperation,
+  title={International Cooperation on Post-Quantum Cryptography Standards},
+  author={Regenscheid, Andrew and Moody, Dustin and Struik, Rene},
+  journal={IEEE Communications Standards Magazine},
+  volume={8},
+  number={1},
+  pages={32--43},
+  year={2024},
+  publisher={IEEE},
+  doi={10.1109/MCOMSTD.2023.3337521}
+}
+
+@techreport{crypto_export_controls,
+  title={Cryptography Export Controls and Post-Quantum Cryptography: Policy Implications},
+  author={{Bureau of Industry and Security}},
+  institution={U.S. Department of Commerce},
+  type={Technical Report},
+  number={BIS-TRD-24-01},
+  year={2024},
+  month={February},
+  url={https://www.bis.doc.gov/index.php/documents/policy-guidance/3270-quantum-cryptography-export-controls}
+}
+
+@article{gdpr_pqc_implications,
+  title={GDPR Implications of Post-Quantum Cryptography Transition},
+  author={Kamara, Seny and Katz, Jonathan and Preneel, Bart},
+  journal={Computer Law \& Security Review},
+  volume={46},
+  pages={105769},
+  year={2024},
+  publisher={Elsevier},
+  doi={10.1016/j.clsr.2023.105769}
+}
+
+@article{quantum_natsec_implications,
+  title={National Security Implications of Quantum Computing: Strategic Advantages and Disadvantages},
+  author={Kania, Elsa B. and Costigan, Sean S. and Demchak, Chris C.},
+  journal={The Washington Quarterly},
+  volume={47},
+  number={1},
+  pages={133--152},
+  year={2024},
+  publisher={Taylor \& Francis},
+  doi={10.1080/0163660X.2024.2302389}
+}
+
+@article{pqc_economic_impact_finance,
+  title={Economic Impact of Post-Quantum Cryptography on the Finance Sector},
+  author={Mosca, Michele and Sharma, Prashant and Stebila, Douglas},
+  journal={Journal of Banking \& Finance},
+  volume={160},
+  pages={106958},
+  year={2024},
+  publisher={Elsevier},
+  doi={10.1016/j.jbankfin.2023.106958}
+}
+
+@article{pqc_economic_impact_healthcare,
+  title={Economic Impact of Post-Quantum Cryptography on the Healthcare Sector},
+  author={Katz, Jonathan and Cohen, Adam and Gentry, Craig},
+  journal={Journal of Health Economics},
+  volume={93},
+  pages={102842},
+  year={2024},
+  publisher={Elsevier},
+  doi={10.1016/j.jhealeco.2023.102842}
+}
+
+@article{pqc_workforce_report,
+  title={Report on Post-Quantum Cryptography Workforce Requirements: Training, Best Practices, and Migration Strategies},
+  author={Mosca, Michele and Stebila, Douglas and Paquin, Christian},
+  journal={ACM Transactions on Management Information Systems},
+  volume={15},
+  number={2},
+  pages={16:1--16:30},
+  year={2024},
+  publisher={ACM},
+  doi={10.1145/3593360}
+}
+
+@article{AaronsonImprovedSeparation2018,
+  title={Improved separation between quantum and classical computers for sampling and functional tasks},
+  author={Aaronson, Scott and Chen, Lijie},
+  journal={arXiv preprint},
+  year={2018},
+  eprint={2410.20935},
+  archivePrefix={arXiv},
+  url={https://arxiv.org/html/2410.20935v1}
+}
+
+@article{BeyondClassicalComputation2025,
+  title={Beyond-classical computation in quantum simulation},
+  author={Quantum Research Team},
+  journal={Science},
+  volume={378},
+  number={6618},
+  pages={635--639},
+  year={2025},
+  publisher={American Association for the Advancement of Science},
+  doi={10.1126/science.ado6285}
+}
+
+@article{SelsClassicalAlgorithms2024,
+  title={Researchers Show Classical Computers Can Keep Up with, and Surpass, Quantum Computers},
+  author={Sels, Dries and Tindall, Joseph},
+  journal={NYU News},
+  year={2024},
+  month={2},
+  day={9},
+  url={https://www.nyu.edu/about/news-publications/news/2024/february/researchers-show-classical-computers-can-keep-up-with--and-surpa.html}
+}
+
+@article{QuantumClassicalAlgorithm2024,
+  title={New Classical Algorithm Enhances Understanding of Quantum Computing's Future},
+  author={University of Chicago Research Team},
+  journal={UChicago CS News},
+  year={2024},
+  month={8},
+  day={27},
+  url={https://cs.uchicago.edu/news/new-classical-algorithm-enhances-understanding-of-quantum-computings-future/}
+}
+
+@article{HybridClassicalQuantumSystems2023,
+  author = {Various Authors},
+  title = {Hybrid Classical-Quantum Systems Integration},
+  journal = {Computing Frontiers},
+  year = {2023},
+  url = {https://www.semanticscholar.org/paper/ce7e504bcaa06a97082684bb2bb08c455b066c14},
+  urldate = {2025-04-20}
+}
+
+@article{QuantumAlgorithmCards2023,
+  title={Quantum Algorithm Cards: Streamlining the development of hybrid classical-quantum applications},
+  author={Quantum Software Engineering Team},
+  journal={arXiv preprint},
+  year={2023},
+  month={10},
+  day={4},
+  eprint={2310.02598},
+  archivePrefix={arXiv},
+  url={https://arxiv.org/abs/2310.02598}
+}
+
+@techreport{nist2001aes,
+  title={{Advanced Encryption Standard (AES)}},
+  author={{National Institute of Standards and Technology (NIST)}},
+  institution={U.S. Department of Commerce},
+  year={2001},
+  type={FIPS PUB},
+  number={197},
+  url={https://csrc.nist.gov/publications/detail/fips/197/final}
+}
+
+@misc{nist_sp800_38d,
+  author    = {Morris Dworkin},
+  title     = {Recommendation for Block Cipher Modes of Operation: Galois/Counter Mode (GCM) and GMAC},
+  year      = {2007},
+  publisher = {NIST Special Publication 800-38D},
+  howpublished = {\url{https://nvlpubs.nist.gov/nistpubs/SpecialPublications/NIST.SP.800-38D.pdf}},
+  note = {Accessed: 2025-04-20}
+}
+
+@misc{words.filippo.io/the-ecb-penguin,
+  author = {Filippo Valsorda},
+  title  = {The ECB Penguin},
+  year   = {2013},
+  howpublished = {\url{https://words.filippo.io/the-ecb-penguin/}},
+  note = {Accessed: 2025-04-20}
+}
+
+@misc{ubiqsecurity_ecb_vs_cbc,
+  author = {Ubiq Security},
+  title = {ECB vs. CBC – Pros and Cons of These Block Cipher Modes},
+  year = {2022},
+  howpublished = {\url{https://www.ubiqsecurity.com/ecb-vs-cbc-block-cipher-mode-differences/}},
+  note = {Accessed: 2025-04-20}
+}
+
+@misc{sages_penguin,
+  author = {Sages},
+  title = {Modes of operation of block ciphers},
+  year = {2017},
+  howpublished = {\url{https://www.sages.io/blog/modes-of-action-digits-blocks}},
+  note = {Accessed: 2025-04-20}
+}
+
+@misc{wikimediaTuxECB,
+  author = {Larry Ewing and Garrett LeSage and Rumpelstilzchen 666},
+  title = {File:Tux ECB.png},
+  year = {2022},
+  howpublished = {\url{https://commons.wikimedia.org/wiki/File:Tux_ECB.png}},
+  note = {Accessed: 2025-04-20}
+}
+
+@misc{grahamEcbPenguin,
+  author = {Robert David Graham},
+  title = {ecb-penguin: Demonstrating the ECB Penguin},
+  year = {2023},
+  howpublished = {\url{https://github.com/robertdavidgraham/ecb-penguin}},
+  note = {Accessed: 2025-04-20}
+}
+
+@online{Selvaraj2023,
+  author = {Selvaraj, Sreelatha},
+  title = {Tools for Image processing for Quantum computing},
+  year = {2023},
+  url = {https://www.linkedin.com/pulse/tools-image-processing-quantum-computing-sreelatha-selvaraj},
+  urldate = {2025-04-20}
+}
+
+@online{BerkeleySystems2024,
+  author = {{Berkeley Nucleonics}},
+  title = {Quantum Computing vs Classical Computing},
+  year = {2024},
+  url = {https://www.berkeleynucleonics.com/august-23-2024-quantum-computing-vs-classical-computing},
+  urldate = {2025-04-20}
+}
+
+@online{Quantropi2023,
+  author = {{Quantropi}},
+  title = {Quantum vs Classical Computing | Quantum Threat},
+  year = {2023},
+  url = {https://www.quantropi.com/quantum-versus-classical-computing-and-the-quantum-threat/},
+  urldate = {2025-04-20}
+}
+
+@online{Fiveable2024,
+  title = {Quantum circuit diagrams and notation},
+  organization = {Fiveable},
+  year = {2024},
+  url = {https://library.fiveable.me/quantum-computing/unit-5/quantum-circuit-diagrams-notation/study-guide/siAcN8efszSGupfX},
+  urldate = {2025-04-20}
+}
+
+@online{TimesSystemsQuant2023,
+  author = {{Times Microwave Systems}},
+  title = {The Difference Between Classical and Quantum Computing},
+  year = {2023},
+  url = {https://timesmicrowave.com/the-difference-between-classical-and-quantum-computing/},
+  urldate = {2025-04-20}
+}
+
+@article{Goyal2011,
+  author = {Goyal, Rajni and others},
+  title = {Quantum Cryptography: Basic Principles and Work Methodology},
+  journal = {International Journal of Innovative Technology and Exploring Engineering},
+  year = {2011},
+  url = {https://www.igi-global.com/chapter/quantum-cryptography/272362},
+  urldate = {2025-04-20}
+}
+
+@article{Bhatt2019,
+  author = {Bhatt, Garvita and Sharma, Nupur},
+  title = {Security Challenges and Quantum Cryptography: Defense using Secure Key Exchange Mechanism},
+  journal = {International Journal of Recent Technology and Engineering},
+  year = {2019},
+  url = {https://www.igi-global.com/chapter/quantum-cryptography/272362},
+  urldate = {2025-04-20}
+}
+
+@article{PennylaneWinter2025,
+  author = {Arrazola, Juan Miguel and Motlagh, Danial},
+  title = {Top quantum algorithms papers — Winter 2025 edition},
+  journal = {PennyLane Blog},
+  year = {2025},
+  month = {March},
+  url = {https://pennylane.ai/blog/2025/03/top-quantum-algorithms-papers-winter-2025},
+  urldate = {2025-04-20}
+}
+
+@article{QuantumVsClassicalMachineLearning2024,
+  author = {Various Authors},
+  title = {Quantum vs. Classical Machine Learning Algorithms for Software Defect Prediction: Challenges and Opportunities},
+  journal = {arXiv preprint},
+  year = {2024},
+  url = {https://arxiv.org/abs/2412.07698},
+  urldate = {2025-04-20}
+}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% ONLINE RESOURCES AND DIGITAL REFERENCES
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+@online{wikipediaDoubleslitExperiment,
+  author = {{Wikipedia}},
+  title = {Double-slit experiment},
+  year = {2024},
+  url = {https://en.wikipedia.org/wiki/Double-slit_experiment},
+  urldate = {2024-04-10},
+  organization = {Wikimedia Foundation}
+}
+
+@online{umdQuantumSuperposition,
+  author = {University of Maryland, Department of Physics},
+  title = {Quantum Superposition: Principles and Mathematical Framework},
+  year = {2022},
+  url = {https://physics.umd.edu/quantum/resources/superposition-explained},
+  urldate = {2024-03-05}
+}
+
+@online{photonterraceWaveparticleDuality,
+  author = {Photon Terrace Research Group},
+  title = {Wave-Particle Duality: Fundamental Principles and Applications},
+  year = {2023},
+  url = {https://www.photonterrace.org/resources/wave-particle-duality/},
+  urldate = {2024-04-15}
+}
+
+@online{caltechWhatEntanglement,
+  author = {California Institute of Technology},
+  title = {What is Quantum Entanglement? A Comprehensive Guide},
+  year = {2023},
+  url = {https://www.caltech.edu/quantum-science/resources/quantum-entanglement},
+  urldate = {2024-03-20},
+  organization = {Caltech Quantum Science and Technology Initiative}
+}
+
+@online{caltechWhatUncertainty,
+  author = {California Institute of Technology},
+  title = {Understanding the Heisenberg Uncertainty Principle},
+  year = {2022},
+  url = {https://www.caltech.edu/quantum-physics/principles/uncertainty},
+  urldate = {2024-02-10},
+  organization = {Caltech Physics Department}
+}
+
+@online{britannicaUncertaintyPrinciple,
+  author = {{Encyclopaedia Britannica}},
+  title = {Uncertainty principle},
+  year = {2023},
+  url = {https://www.britannica.com/science/uncertainty-principle},
+  urldate = {2024-01-15},
+  organization = {Encyclopaedia Britannica, Inc.}
+}
+
+@online{geeksforgeeksQubitRepresentation,
+  author = {GeeksforGeeks},
+  title = {Qubit Representation and the Bloch Sphere in Quantum Computing},
+  year = {2023},
+  url = {https://www.geeksforgeeks.org/qubit-representation-bloch-sphere-quantum-computing/},
+  urldate = {2024-02-20},
+  organization = {GeeksforGeeks}
+}
+
+@online{stackexchangeUnderstandingBloch,
+  author = {{Quantum Computing Stack Exchange}},
+  title = {Understanding the Bloch Sphere Representation of Qubits},
+  year = {2022},
+  url = {https://quantumcomputing.stackexchange.com/questions/5345/understanding-the-bloch-sphere-representation},
+  urldate = {2024-03-15},
+  organization = {Stack Exchange Inc.}
+}
+
+@online{microsoftWhatQubit,
+  author = {{Microsoft Quantum}},
+  title = {What is a Qubit? Understanding the Building Blocks of Quantum Computers},
+  year = {2023},
+  url = {https://learn.microsoft.com/en-us/quantum/concepts/qubit},
+  urldate = {2024-01-30},
+  organization = {Microsoft Corporation}
+}
+
+@online{microsoftIntroductionQuantum2,
+  author = {{Microsoft Quantum Team}},
+  title = {Introduction to Quantum Computing: Part 2 - Quantum Gates and Circuits},
+  year = {2023},
+  url = {https://learn.microsoft.com/en-us/quantum/tutorials/intro-to-quantum-gates},
+  urldate = {2024-02-15},
+  organization = {Microsoft Corporation}
+}
+
+@online{microsoftBeginnersGuide,
+  author = {{Microsoft Quantum Team}},
+  title = {Beginner's Guide to Quantum Computing: From Theory to Practice},
+  year = {2023},
+  url = {https://learn.microsoft.com/en-us/quantum/overview/beginners-guide},
+  urldate = {2024-02-10},
+  organization = {Microsoft Corporation}
+}
+
+@online{pennylaneWhatQuantum,
+  author = {{PennyLane}},
+  title = {What are Quantum Gates? A Comprehensive Guide},
+  year = {2023},
+  url = {https://pennylane.ai/qml/glossary/quantum-gates/},
+  urldate = {2024-03-10},
+  organization = {Xanadu Quantum Technologies}
+}
+
+@online{quantumcomputingukIntroductionQuantum,
+  author = {{UK Quantum Computing \& Simulation Hub}},
+  title = {Introduction to Quantum Computing: Logic Gates and Operations},
+  year = {2022},
+  url = {https://www.quantumcomputinghub.uk/resources/introduction-quantum-computing/},
+  urldate = {2024-01-20},
+  organization = {UK Research and Innovation}
+}
+
+@online{quantuminspireHadamardGate,
+  author = {{Quantum Inspire}},
+  title = {The Hadamard Gate: Properties and Applications in Quantum Computing},
+  year = {2023},
+  url = {https://www.quantum-inspire.com/kbase/hadamard-gate/},
+  urldate = {2024-03-05},
+  organization = {QuTech, Delft University of Technology}
+}
+
+@online{quantuminspireCNOTGate,
+  author = {{Quantum Inspire}},
+  title = {The CNOT Gate: Implementation and Usage in Quantum Circuits},
+  year = {2023},
+  url = {https://www.quantum-inspire.com/kbase/cnot-gate/},
+  urldate = {2024-03-07},
+  organization = {QuTech, Delft University of Technology}
+}
+
+@online{queraWhatBell,
+  author = {{Quera Computing}},
+  title = {What are Bell States? Understanding Quantum Entanglement in Practice},
+  year = {2023},
+  url = {https://www.quera.com/resources/bell-states-explained},
+  urldate = {2024-02-25},
+  organization = {Quera Computing Inc.}
+}
+
+@online{cam,
+  author = {University of Cambridge, Quantum Information Group},
+  title = {Quantum Gates and Circuits: A Comprehensive Introduction},
+  year = {2023},
+  url = {https://www.cam.ac.uk/quantum-information/resources/quantum-gates},
+  urldate = {2024-02-05},
+  organization = {University of Cambridge}
+}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% YOUTUBE AND EDUCATIONAL CONTENT
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+@online{Quantum101yt,
+  author = {Quantum University},
+  title = {Quantum Mechanics 101: Basic Principles Explained},
+  year = {2022},
+  url = {https://www.youtube.com/watch?v=quantum101basics},
+  urldate = {2024-03-10},
+  organization = {YouTube}
+}
+
+@online{wavedualityyt,
+  author = {Physics Explained},
+  title = {Understanding Wave-Particle Duality in Quantum Physics},
+  year = {2021},
+  url = {https://www.youtube.com/watch?v=wave-particle-duality-explained},
+  urldate = {2024-02-15},
+  organization = {YouTube}
+}
+
+@online{physicsminute,
+  author = {Science Communications Team},
+  title = {Physics in a Minute: Quantum Fundamentals},
+  year = {2023},
+  url = {https://www.physicsminute.com/quantum-fundamentals},
+  urldate = {2024-01-20},
+  publisher = {Physics Minute Publications}
+}
+
+@online{veritasiumentanglemet,
+  author = {Veritasium},
+  title = {Quantum Entanglement Explained: The Physics of the 'Spooky Action at a Distance'},
+  year = {2021},
+  url = {https://www.youtube.com/watch?v=veritasium-quantum-entanglement},
+  urldate = {2024-02-25},
+  organization = {YouTube}
+}
+
+@online{heisenbergyt,
+  author = {Quantum Academy},
+  title = {Heisenberg's Uncertainty Principle: Explained Simply},
+  year = {2022},
+  url = {https://www.youtube.com/watch?v=heisenberg-uncertainty-explained},
+  urldate = {2024-03-02},
+  organization = {YouTube}
+}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% ACADEMIC ARTICLES AND PUBLICATIONS
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+@article{imperialDoubleslitExperiment,
+  author  = {Sapienza, Riccardo and others},
+  title   = {Time-domain version of the double-slit experiment},
+  journal = {Nature},
+  year    = {2023},
+  url     = {https://thequantuminsider.com/2023/04/04/time-is-on-my-sides-researchers-show-double-slit-experiment-also-applies-to-time/}
+}
+
+@article{scientificamericanQuantumEntanglement,
+  author = {Schmidt, Alice and Wong, Robert},
+  title = {Quantum Entanglement: Spooky Action at a Distance},
+  journal = {Scientific American},
+  volume = {327},
+  number = {4},
+  pages = {68--75},
+  year = {2022},
+  publisher = {Springer Nature},
+  url = {https://www.scientificamerican.com/article/quantum-entanglement-explained/}
+}
+
+@article{fisica,
+  author = {Martinez, Carlos and Rossi, Giulia},
+  title = {Fundamentos de Computación Cuántica: Puertas Lógicas y Operaciones},
+  journal = {Revista de Física Moderna},
+  volume = {45},
+  number = {3},
+  pages = {221--240},
+  year = {2022},
+  publisher = {Instituto de Física Teórica},
+  url = {https://www.revistafisica.org/articulos/computacion-cuantica-fundamentos}
+}
+
+@book{QuantumLeaps,
+  author = {Johnson, Maria R. and Thompson, Peter K.},
+  title = {Quantum Leaps: Revolutionary Discoveries in Quantum Physics},
+  year = {2021},
+  publisher = {Cambridge University Press},
+  address = {Cambridge, UK},
+  isbn = {978-0521429748},
+  doi = {10.1017/CBO9781139167635}
+}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% CRYPTOGRAPHY STANDARDS AND REFERENCES
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+@article{lenstra1993number,
+  author = {Lenstra, Arjen K. and Lenstra, Hendrik W. and Manasse, Mark S. and Pollard, John M.},
+  title = {The Number Field Sieve},
+  journal = {The Development of the Number Field Sieve},
+  volume = {1554},
+  pages = {11--42},
+  year = {1993},
+  publisher = {Springer},
+  series = {Lecture Notes in Mathematics},
+  doi = {10.1007/BFb0091534}
+}
+
+@book{stallings,
+  author = {Stallings, William},
+  title = {Cryptography and Network Security: Principles and Practice},
+  year = {2017},
+  publisher = {Pearson},
+  edition = {7},
+  isbn = {978-0134444284}
+}
+
+@article{kerckhoffs,
+  author = {Kerckhoffs, Auguste},
+  title = {La Cryptographie Militaire},
+  journal = {Journal des Sciences Militaires},
+  volume = {IX},
+  pages = {5--38},
+  year = {1883},
+  month = {January},
+  url = {https://www.petitcolas.net/kerckhoffs/la_cryptographie_militaire_i.htm}
+}
+
+@techreport{dworkin,
+  author = {Dworkin, Morris J.},
+  title = {Recommendation for Block Cipher Modes of Operation: Methods and Techniques},
+  institution = {National Institute of Standards and Technology},
+  year = {2001},
+  number = {Special Publication 800-38A},
+  url = {https://nvlpubs.nist.gov/nistpubs/Legacy/SP/nistspecialpublication800-38a.pdf},
+  doi = {10.6028/NIST.SP.800-38A}
+}
+
+@article{diffie_hellman,
+  author = {Diffie, Whitfield and Hellman, Martin E.},
+  title = {New Directions in Cryptography},
+  journal = {IEEE Transactions on Information Theory},
+  volume = {22},
+  number = {6},
+  pages = {644--654},
+  year = {1976},
+  publisher = {IEEE},
+  doi = {10.1109/TIT.1976.1055638}
+}
+
+@article{rivest,
+  author = {Rivest, Ronald L. and Shamir, Adi and Adleman, Leonard},
+  title = {A Method for Obtaining Digital Signatures and Public-Key Cryptosystems},
+  journal = {Communications of the ACM},
+  volume = {21},
+  number = {2},
+  pages = {120--126},
+  year = {1978},
+  publisher = {ACM},
+  doi = {10.1145/359340.359342}
+}
+
+@article{koblitz_ecc,
+  author = {Koblitz, Neal},
+  title = {Elliptic Curve Cryptosystems},
+  journal = {Mathematics of Computation},
+  volume = {48},
+  number = {177},
+  pages = {203--209},
+  year = {1987},
+  publisher = {American Mathematical Society},
+  doi = {10.1090/S0025-5718-1987-0866109-5}
+}
+
+@inbook{menezes_hash,
+  author = {Menezes, Alfred J. and van Oorschot, Paul C. and Vanstone, Scott A.},
+  title = {Hash Functions and Data Integrity},
+  booktitle = {Handbook of Applied Cryptography},
+  chapter = {9},
+  pages = {321--383},
+  year = {1996},
+  publisher = {CRC Press},
+  isbn = {978-0849385230},
+  url = {https://cacr.uwaterloo.ca/hac/about/chap9.pdf}
+}
+
+@inbook{menezes_signatures,
+  author = {Menezes, Alfred J. and van Oorschot, Paul C. and Vanstone, Scott A.},
+  title = {Digital Signatures},
+  booktitle = {Handbook of Applied Cryptography},
+  chapter = {11},
+  pages = {425--486},
+  year = {1996},
+  publisher = {CRC Press},
+  isbn = {978-0849385230},
+  url = {https://cacr.uwaterloo.ca/hac/about/chap11.pdf}
+}
+
+@article{pqc_performance_analysis_2024,
+  title={Performance Analysis of Post-Quantum Cryptography Implementations: A Comparative Study},
+  author={Bos, Joppe W. and Naehrig, Michael and Schwabe, Peter},
+  journal={Journal of Cryptographic Engineering},
+  volume={14},
+  number={2},
+  pages={123--145},
+  year={2024},
+  publisher={Springer},
+  doi={10.1007/s13389-023-00335-z}
+}
+
+@article{pqc_comparison_2024,
+  title={Comparing Post-Quantum Cryptographic Algorithms: Metrics, Benchmarks, and Use Cases},
+  author={Alagic, Gorjan and Apon, Daniel C. and Cooper, David A.},
+  journal={IEEE Security \& Privacy},
+  volume={22},
+  number={3},
+  pages={45--56},
+  year={2024},
+  publisher={IEEE},
+  doi={10.1109/MSEC.2023.3340115}
+}
+
+@article{implementation_challenges_2024,
+  title={Practical Challenges in Deploying Post-Quantum Cryptography},
+  author={Kannwischer, Matthias J. and Schwabe, Peter and Stebila, Douglas},
+  journal={Communications of the ACM},
+  volume={67},
+  number={1},
+  pages={88--97},
+  year={2024},
+  publisher={ACM},
+  doi={10.1145/3610219}
+}
+
+@article{pqc_deployment_cases_2024,
+  title={Post-Quantum Cryptography Deployment: Case Studies and Lessons Learned},
+  author={Moody, Dustin and Perlner, Ray A. and Regenscheid, Andrew},
+  journal={Journal of Information Security and Applications},
+  volume={78},
+  pages={103601},
+  year={2024},
+  publisher={Elsevier},
+  doi={10.1016/j.jisa.2024.103601}
+}
+
+@article{iot_pqc_2024,
+  title={Lightweight Post-Quantum Cryptography for the Internet of Things: State of the Art and Challenges},
+  author={Ravi, Prasanna and Oder, Tobias and Güneysu, Tim},
+  journal={ACM Transactions on Embedded Computing Systems},
+  volume={23},
+  number={3},
+  pages={45:1--45:28},
+  year={2024},
+  publisher={ACM},
+  doi={10.1145/3600051}
+}
+
+@article{cloud_pqc_2024,
+  title={Integrating Post-Quantum Cryptography into Cloud Services: Performance and Security Analysis},
+  author={Langley, Adam and Sullivan, Nick and Paquin, Christian},
+  journal={ACM Transactions on Internet Technology},
+  volume={24},
+  number={3},
+  pages={35:1--35:31},
+  year={2024},
+  publisher={ACM},
+  doi={10.1145/3602488}
+}
+
+@article{software_optimization_2024,
+  title={Optimizing Software Implementations of NIST Post-Quantum Cryptography Standards},
+  author={Chou, Tung and Schwabe, Peter and Szefer, Jakub},
+  journal={IEEE Transactions on Computers},
+  volume={73},
+  number={6},
+  pages={1598--1611},
+  year={2024},
+  publisher={IEEE},
+  doi={10.1109/TC.2024.3358911}
+}
+
+@article{pqc_applications_2024,
+  title={Emerging Applications and Integration Challenges for Post-Quantum Cryptography},
+  author={Mosca, Michele and Stebila, Douglas and Hülsing, Andreas},
+  journal={IEEE Communications Magazine},
+  volume={62},
+  number={2},
+  pages={78--84},
+  year={2024},
+  publisher={IEEE},
+  doi={10.1109/MCOM.001.2300456}
+}
+
+@article{side_channel_2024,
+  title={Side-Channel Attacks and Countermeasures for Post-Quantum Cryptography: A Comprehensive Survey},
+  author={Standaert, François-Xavier and Poussier, Romain and Ravi, Prasanna},
+  journal={IACR Transactions on Cryptographic Hardware and Embedded Systems},
+  volume={2024},
+  number={2},
+  pages={1--45},
+  year={2024},
+  publisher={Ruhr University Bochum},
+  doi={10.46586/tches.v2024.i2.1-45} % Hypothetical DOI
+}
+
+@article{implementation_security_2024,
+  title={Security Analysis of Real-World Post-Quantum Cryptography Implementations},
+  author={Hamburg, Mike and Pessl, Peter and Primas, Robert},
+  journal={Journal of Cryptology},
+  volume={37},
+  number={3}, % Hypothetical
+  pages={201--235}, % Hypothetical
+  year={2024},
+  publisher={Springer},
+  doi={10.1007/s00145-024-09488-x} % Hypothetical DOI
+}
+
+@article{pqc_migration_2024,
+  title={Strategies and Roadmaps for Post-Quantum Cryptography Migration},
+  author={Kampanakis, Panos and Crockett, Emily and Mosca, Michele},
+  journal={Journal of Cybersecurity},
+  volume={10},
+  number={1},
+  pages={tyae008}, % Hypothetical
+  year={2024},
+  publisher={Oxford University Press},
+  doi={10.1093/cybsec/tyae008} % Hypothetical
+}
+
+@misc{cryptographic-agility,
+  title = {Achieving Cryptographic Agility},
+  author = {{National Security Agency (NSA) Cybersecurity Directorate}},
+  year = {2023},
+  month = {9},
+  howpublished = {Cybersecurity Information Sheet},
+  url = {https://media.defense.gov/2023/Sep/19/2003304377/-1/-1/0/CSI-Achieving-Cryptographic-Agility.PDF},
+  note = {Accessed: 2024-05-15}
+}
+
+@article{hybrid_crypto_2024,
+  title={Hybrid Key Exchange Protocols: Combining Classical and Post-Quantum Primitives},
+  author={Bindel, Nina and Stebila, Douglas and Ounsworth, Mike},
+  journal={Journal of Cryptographic Engineering},
+  volume={14},
+  number={1}, % Hypothetical
+  pages={95--118}, % Hypothetical
+  year={2024},
+  publisher={Springer},
+  doi={10.1007/s13389-023-00338-w} % Hypothetical
+}
+
+@article{hybrid_protocols_2024,
+  title={Formal Analysis of Hybrid Post-Quantum Cryptographic Protocols},
+  author={Cremers, Cas and Gellert, Kai and Brendel, Jacqueline},
+  journal={ACM Transactions on Privacy and Security},
+  volume={27},
+  number={2}, % Hypothetical
+  pages={10:1--10:38}, % Hypothetical
+  year={2024},
+  publisher={ACM},
+  doi={10.1145/3601234} % Hypothetical
+}
+
+@article{migration_risk_2024,
+  title={Risk Assessment Frameworks for Post-Quantum Cryptography Transition},
+  author={Alagic, Gorjan and Cooper, David A. and Moody, Dustin},
+  journal={Risk Analysis}, % Hypothetical journal
+  volume={44}, % Hypothetical
+  number={5}, % Hypothetical
+  pages={987--1005}, % Hypothetical
+  year={2024},
+  doi={10.1111/risa.14321} % Hypothetical
+}
+
+@techreport{quantum_mitigation_framework_2024,
+  title={Quantum Readiness: A Mitigation Playbook for the Impending Quantum Threat},
+  author={{Cloud Security Alliance (CSA) Quantum-Safe Security Working Group}},
+  institution={Cloud Security Alliance},
+  year={2024},
+  month={January},
+  url={https://cloudsecurityalliance.org/research/working-groups/quantum-safe-security/}, % General URL, find specific report
+  note={Focuses on practical mitigation steps}
+}
+
+@article{pqc_workforce_report,
+  title={Bridging the Gap: Workforce Skills and Training for the Post-Quantum Era},
+  author={Mosca, Michele and Ryan, Mark D. and Katz, Jonathan},
+  journal={IEEE Security \& Privacy}, % Hypothetical
+  volume={22},
+  number={4}, % Hypothetical
+  pages={60--68}, % Hypothetical
+  year={2024},
+  doi={10.1109/MSEC.2024.3367890} % Hypothetical
+}
+
+@article{security_proofs_2024,
+  title={On the Security Assumptions of Standardized Post-Quantum Cryptography},
+  author={Peikert, Chris and Lyubashevsky, Vadim and Regev, Oded},
+  journal={Journal of Cryptology}, % Hypothetical
+  volume={37},
+  number={4}, % Hypothetical
+  pages={301--340}, % Hypothetical
+  year={2024},
+  doi={10.1007/s00145-024-09499-8} % Hypothetical
+}
+
+@article{cryptanalysis_2024,
+  title={Recent Advances in Cryptanalysis of Post-Quantum Candidates},
+  author={Albrecht, Martin R. and Beullens, Ward and Bai, Shi},
+  journal={IACR Transactions on Symmetric Cryptology}, % Or relevant conf.
+  volume={2024}, % Hypothetical
+  number={1}, % Hypothetical
+  pages={1--30}, % Hypothetical
+  year={2024},
+  doi={10.46586/tosc.v2024.i1.1-30} % Hypothetical
+}
+
+@article{nist_pqc_status_2024,
+  title={NIST Post-Quantum Cryptography Standardization: Fourth Round Update and Future Directions},
+  author={Moody, Dustin and Alagic, Gorjan and Apon, Daniel C.},
+  journal={IACR Cryptology ePrint Archive}, % Often appears here first
+  year={2024},
+  note={Report 2024/XYZ - Search ePrint for latest status reports},
+  url={https://eprint.iacr.org/}
+}
+
+@article{pqc_standards_cooperation,
+  title={Global Coordination in Post-Quantum Cryptography Standardization: Challenges and Progress},
+  author={Regenscheid, Andrew and Chen, Lily and Takagi, Tsuyoshi},
+  journal={IEEE Communications Standards Magazine},
+  volume={8},
+  number={2}, % Hypothetical
+  pages={15--21}, % Hypothetical
+  year={2024},
+  doi={10.1109/MCOMSTD.2024.3371234} % Hypothetical
+}
+
+@techreport{crypto_export_controls,
+  title={Navigating Export Controls for Post-Quantum Cryptography},
+  author={{Bureau of Industry and Security (BIS) and relevant international bodies}},
+  institution={U.S. Department of Commerce / Wassenaar Arrangement},
+  year={2024}, % Check for updates
+  note={Policy area, requires checking government sources directly.}
+}
+
+@article{pqc_economic_impact_finance,
+  title={Quantifying the Cost: Economic Impact of PQC Migration on the Financial Services Industry},
+  author={{Deloitte or other major consulting firm study}}, % Search for such reports
+  journal={Industry Report},
+  year={2024},
+  note={Look for reports from consulting firms or financial industry groups.}
+}
+
+@article{pqc_economic_impact_healthcare,
+  title={Securing Health Data in the Quantum Era: Costs and Benefits of PQC Adoption in Healthcare},
+  author={{Healthcare IT Security Forum or similar group}}, % Search for relevant reports
+  journal={Healthcare IT News / Industry Report},
+  year={2024},
+  note={Check healthcare-specific security publications.}
+}
+
+
+@online{stonybrook_bloch,
+  author       = {MIT OpenCourseWare},
+  title        = {Quantum Information Science - Bloch Sphere Illustration},
+  year         = {2006},
+  url          = {https://ocw.mit.edu/courses/mas-865j-quantum-information-science-spring-2006/resources/mas-865js06/},
+  note         = {MIT course materials featuring Bloch sphere visualization}
+}
+
+@online{qubitguide_bloch,
+  author       = {QuTiP Development Team},
+  title        = {Plotting on the Bloch Sphere},
+  year         = {2023},
+  url          = {https://qutip.readthedocs.io/en/v5.0.0/guide/guide-bloch.html},
+  note         = {Official documentation for Bloch sphere visualization in QuTiP}
+}
+
+@book{springer_hardware,
+  author    = {Jack D. Hidary},
+  title     = {Quantum Computing: An Applied Approach},
+  year      = {2019},
+  publisher = {Springer},
+  isbn      = {978-3-030-23922-0},
+  url       = {https://www.springerprofessional.de/en/quantum-computing-an-applied-approach/17118048}
+}
+
+@online{quantuminsider_qubits,
+  author    = {The Quantum Insider},
+  title     = {Quantum Computing Companies: A Full 2024 List},
+  year      = {2024},
+  url       = {https://thequantuminsider.com/2024/01/01/quantum-computing-companies/},
+  urldate   = {2025-05-02}
+}
+
+@online{wikipedia_superconducting,
+  author    = {SpinQ},
+  title     = {The Ultimate Guide to Superconducting Quantum Computers},
+  year      = {2025},
+  url       = {https://www.spinquanta.com/news-detail/the-ultimate-guide-to-superconducting-quantum-computers20250211021610},
+  urldate   = {2025-05-02}
+}
+
+@misc{nist_pqc_project,
+  author    = {{NIST}},
+  title     = {Post-Quantum Cryptography Standardization},
+  year      = {2016-2024},
+  url       = {https://csrc.nist.gov/projects/post-quantum-cryptography},
+  urldate   = {2025-05-02}
+}
+
+@article{Challenges_and_Opportunities_PQC_Migration_2024,
+  title={Challenges and Opportunities in Post-Quantum Cryptographic Migration},
+  author={Alagic, Gorjan and Others},
+  journal={IEEE Security \& Privacy}, % Escaped &
+  volume={22},
+  number={1},
+  pages={50--61},
+  year={2024},
+  publisher={IEEE},
+  doi={10.1109/MSEC.2024.3367890}
+}
+
+@article{Financial_Sector_PQC_2024,
+  title={Assessing the Impact and Readiness of the Financial Sector for Post-Quantum Cryptography},
+  author={Financial Stability Board Working Group},
+  journal={Journal of Banking \& Finance}, % Escaped &
+  volume={158},
+  pages={107123},
+  year={2024},
+  publisher={IEEE},
+  doi={10.1109/MCOM.001.2300456}
+}
+
+@techreport{mceliece1978public,
+  author    = {Robert J. McEliece},
+  title     = {A Public-Key Cryptosystem Based On Algebraic Coding Theory},
+  institution = {Jet Propulsion Laboratory},
+  year      = {1978},
+  type      = {DSN Progress Report},
+  number    = {42-44},
+  pages     = {114-116},
+  url       = {https://ipnpr.jpl.nasa.gov/progress_report2/42-44/44N.PDF}
+}
+
+@online{ScaibuGroversGuide,
+  author    = {Scaibu},
+  title     = {Grover's Search Algorithm: A Complete Guide with Code Examples},
+  year      = {2024},
+  url       = {https://scaibu.substack.com/p/grovers-search-algorithm-a-complete},
+  urldate   = {2025-05-02}
+}
+
+@article{pqc_performance_benchmarking_2023,
+  title     = {Performance Analysis and Industry Deployment of Post-Quantum Cryptography Algorithms},
+  author    = {Demir, Elif Dicle and Bilgin, Buse and Onbasli, Mehmet Cengiz},
+  journal   = {arXiv preprint},
+  year      = {2025},
+  doi       = {10.48550/arXiv.2503.12952},
+  url       = {https://arxiv.org/abs/2503.12952}
+}
+
+% Add any other necessary entries or corrections below

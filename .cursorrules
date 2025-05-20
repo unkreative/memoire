@@ -1,0 +1,109 @@
+{
+    "rules": {
+        "academic_writing": {
+            "style": {
+                "tone": "formal",
+                "voice": "passive",
+                "person": "third",
+                "tense": "present"
+            },
+            "formatting": {
+                "citations": {
+                    "required": true,
+                    "style": "author-year",
+                    "minimum_per_paragraph": 1
+                },
+                "paragraphs": {
+                    "minimum_length": 3,
+                    "maximum_length": 8,
+                    "topic_sentence_required": true
+                },
+                "sections": {
+                    "hierarchical_structure": true,
+                    "minimum_subsections": 2
+                }
+            },
+            "content": {
+                "avoid": [
+                    "colloquialisms",
+                    "contractions",
+                    "first_person_pronouns",
+                    "informal_language",
+                    "rhetorical_questions",
+                    "direct_address"
+                ],
+                "require": [
+                    "clear_thesis_statements",
+                    "evidence_based_arguments",
+                    "logical_transitions",
+                    "academic_vocabulary",
+                    "precise_terminology"
+                ]
+            },
+            "structure": {
+                "introduction": {
+                    "required_elements": [
+                        "research_context",
+                        "problem_statement",
+                        "research_questions",
+                        "thesis_statement",
+                        "significance",
+                        "structure_overview"
+                    ]
+                },
+                "body": {
+                    "required_elements": [
+                        "topic_sentences",
+                        "evidence",
+                        "analysis",
+                        "citations",
+                        "transitions"
+                    ]
+                },
+                "conclusion": {
+                    "required_elements": [
+                        "summary",
+                        "implications",
+                        "limitations",
+                        "future_research"
+                    ]
+                }
+            }
+        },
+        "latex_specific": {
+            "required_packages": [
+                "amsmath",
+                "biblatex",
+                "graphicx",
+                "hyperref",
+                "cleveref"
+            ],
+            "citation_style": "authoryear",
+            "figure_requirements": {
+                "caption": true,
+                "label": true,
+                "reference": true
+            },
+            "equation_requirements": {
+                "numbering": true,
+                "label": true,
+                "reference": true
+            }
+        },
+        "compilation": [
+            {
+                "name": "Compile LaTeX Thesis",
+                "description": "Run the full LaTeX compilation process with biber for references",
+                "pattern": ".*\\.tex$",
+                "command": "bash /Users/sergonnelou/memoire/src/scripts/compile-thesis.sh",
+                "runInBackground": true
+            }
+        ]
+    },
+    "enforcement": {
+        "strictness": "high",
+        "auto_correct": true,
+        "suggestions": true,
+        "warnings": true
+    }
+} 
