@@ -34,7 +34,6 @@
 *.pdfsync
 
 ## Other generated files - like the PDF itself:
-*.pdf
 
 ## Temporary files - editor backups and such:
 *~
